@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     
@@ -23,20 +23,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-        let region = MKCoordinateRegion(center: coordinateInit, span: span)
-        mapView.addAnnotations([Place.enfantsrouges, Place.gaumontcomedie, Place.mcdonalds, Place.pizzapapa, Place.shakesspeare])
-        mapView.setRegion(region, animated: true)
-        mapView.delegate = self
-        mapView.showsUserLocation = true
-        mapView.isRotateEnabled = true
-        
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
-        
-        locationManager.delegate = self
-        locationManager.startUpdatingHeading()
+        setup()
+        setupLocationManager()
         // Do any additional setup after loading the view.
     }
     
@@ -53,11 +41,31 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             setupMap(coordonnees: userPosition!.coordinate, myLat: 0.01, myLong: 0.01)
         }
     }
+}
+extension ViewController: MKMapViewDelegate {
+    func setup() {
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let region = MKCoordinateRegion(center: coordinateInit, span: span)
+        mapView.addAnnotations([Place.enfantsrouges, Place.gaumontcomedie, Place.mcdonalds, Place.pizzapapa, Place.shakesspeare])
+        mapView.setRegion(region, animated: true)
+        mapView.delegate = self
+        mapView.showsUserLocation = true
+        mapView.isRotateEnabled = true
+    }
     
     func setupMap(coordonnees: CLLocationCoordinate2D, myLat: Double, myLong: Double) {
         let span = MKCoordinateSpan(latitudeDelta: myLat , longitudeDelta: myLong)
         let region = MKCoordinateRegion(center: coordonnees, span: span)
         mapView.setRegion(region, animated: true)
+    }
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.startUpdatingHeading()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading
@@ -65,6 +73,4 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.camera.heading = newHeading.magneticHeading
         mapView.setCamera(mapView.camera, animated: true)
     }
-    
 }
-
