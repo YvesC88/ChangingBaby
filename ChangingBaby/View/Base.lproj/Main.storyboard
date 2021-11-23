@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6CK-ux-70Z">
+                                <rect key="frame" x="0.0" y="84" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="google" textContentType="location"/>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UKf-NA-hJD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh7-sA-Ki3">
+                                        <rect key="frame" x="0.0" y="4.5" width="45" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="list.bullet" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changing Baby" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j3-ev-hTF">
+                                        <rect key="frame" x="150" y="10" width="115.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIu-4r-3Vw">
+                                        <rect key="frame" x="370" y="4.5" width="44" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="location.circle" catalog="system" symbolScale="large" renderingMode="original"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="getPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5oT-bR-8tF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ocG-Ti-lq5"/>
+                                </constraints>
+                            </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bcb-Zj-Nw5">
+                                <rect key="frame" x="0.0" y="135" width="414" height="761"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6CK-ux-70Z" firstAttribute="top" secondItem="UKf-NA-hJD" secondAttribute="bottom" id="2vw-W5-w3I"/>
+                            <constraint firstItem="UKf-NA-hJD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9zV-JG-ddO"/>
+                            <constraint firstItem="UKf-NA-hJD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DNV-me-5q3"/>
+                            <constraint firstItem="bcb-Zj-Nw5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="De0-NK-Nxp"/>
+                            <constraint firstItem="bcb-Zj-Nw5" firstAttribute="top" secondItem="6CK-ux-70Z" secondAttribute="bottom" id="KJR-sd-ccp"/>
+                            <constraint firstAttribute="bottom" secondItem="bcb-Zj-Nw5" secondAttribute="bottom" id="Klu-Pd-ycS"/>
+                            <constraint firstItem="6CK-ux-70Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M2h-or-taR"/>
+                            <constraint firstItem="6CK-ux-70Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ogd-rM-Q5I"/>
+                            <constraint firstItem="UKf-NA-hJD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ULz-zg-VAl"/>
+                            <constraint firstItem="6CK-ux-70Z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XI4-F4-gBN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UKf-NA-hJD" secondAttribute="trailing" id="ent-D4-WrZ"/>
+                            <constraint firstItem="bcb-Zj-Nw5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xDC-Fj-vbK"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="bcb-Zj-Nw5" id="MS5-cA-G2s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="location.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
