@@ -11,11 +11,11 @@ import CoreLocation
 
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet var buttonStackView: UIButton!
-    @IBOutlet var buttonGetPosition: UIButton!
-    @IBOutlet var logoName: UILabel!
+    @IBOutlet weak var buttonStackView: UIButton!
+    @IBOutlet weak var buttonGetPosition: UIButton!
+    @IBOutlet weak var logoName: UILabel!
     
-    
+    // coordonnees geographiques par defaut
     var defaultLatitude: Double = 43.6112422
     var defaultLongitude: Double = 3.8767337
     var coordinateInit :  CLLocationCoordinate2D {
@@ -33,12 +33,12 @@ class ViewController: UIViewController {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if locations.count > 0 {
-            if let maPosition = locations.last {
-                userPosition = maPosition
+            if let myPosition = locations.last {
+                userPosition = myPosition
             }
         }
     }
-    
+    // donne sa position actuelle
     @IBAction func getPosition(_ sender: Any) {
         if userPosition != nil {
             setupMap(coordonnees: userPosition!.coordinate, myLat: 0.01, myLong: 0.01)
@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     }
 }
 extension ViewController: MKMapViewDelegate {
+    // position au lancement de l'application
     func setup() {
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: coordinateInit, span: span)
