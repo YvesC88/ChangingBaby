@@ -11,6 +11,9 @@ import CoreLocation
 
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet var buttonStackView: UIButton!
+    @IBOutlet var buttonGetPosition: UIButton!
+    @IBOutlet var logoName: UILabel!
     
     
     var defaultLatitude: Double = 43.6112422
@@ -66,11 +69,5 @@ extension ViewController: CLLocationManagerDelegate {
         locationManager.startUpdatingHeading()
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateHeading
-                         newHeading: CLHeading) {
-        mapView.camera.heading = newHeading.magneticHeading
-        mapView.setCamera(mapView.camera, animated: true)
     }
 }

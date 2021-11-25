@@ -18,26 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6CK-ux-70Z">
-                                <rect key="frame" x="0.0" y="84" width="414" height="51"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="google" textContentType="location"/>
-                            </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UKf-NA-hJD">
-                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh7-sA-Ki3">
-                                        <rect key="frame" x="0.0" y="4.5" width="45" height="31"/>
+                                        <rect key="frame" x="0.0" y="9.5" width="45" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="list.bullet" catalog="system"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changing Baby" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j3-ev-hTF">
-                                        <rect key="frame" x="150" y="10" width="115.5" height="20.5"/>
+                                        <rect key="frame" x="150" y="15" width="115.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIu-4r-3Vw">
-                                        <rect key="frame" x="370" y="4.5" width="44" height="31"/>
+                                        <rect key="frame" x="370" y="9.5" width="44" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <imageReference key="image" image="location.circle" catalog="system" symbolScale="large" renderingMode="original"/>
@@ -48,33 +44,32 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ocG-Ti-lq5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="t7D-2H-fz6"/>
                                 </constraints>
                             </stackView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bcb-Zj-Nw5">
-                                <rect key="frame" x="0.0" y="135" width="414" height="761"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6CK-ux-70Z" firstAttribute="top" secondItem="UKf-NA-hJD" secondAttribute="bottom" id="2vw-W5-w3I"/>
-                            <constraint firstItem="UKf-NA-hJD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9zV-JG-ddO"/>
-                            <constraint firstItem="UKf-NA-hJD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DNV-me-5q3"/>
-                            <constraint firstItem="bcb-Zj-Nw5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="De0-NK-Nxp"/>
-                            <constraint firstItem="bcb-Zj-Nw5" firstAttribute="top" secondItem="6CK-ux-70Z" secondAttribute="bottom" id="KJR-sd-ccp"/>
-                            <constraint firstAttribute="bottom" secondItem="bcb-Zj-Nw5" secondAttribute="bottom" id="Klu-Pd-ycS"/>
-                            <constraint firstItem="6CK-ux-70Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M2h-or-taR"/>
-                            <constraint firstItem="6CK-ux-70Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ogd-rM-Q5I"/>
-                            <constraint firstItem="UKf-NA-hJD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ULz-zg-VAl"/>
-                            <constraint firstItem="6CK-ux-70Z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XI4-F4-gBN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UKf-NA-hJD" secondAttribute="trailing" id="ent-D4-WrZ"/>
-                            <constraint firstItem="bcb-Zj-Nw5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xDC-Fj-vbK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UKf-NA-hJD" secondAttribute="trailing" id="4YO-Zx-70k"/>
+                            <constraint firstAttribute="bottom" secondItem="bcb-Zj-Nw5" secondAttribute="bottom" id="5v1-aT-xmC"/>
+                            <constraint firstItem="UKf-NA-hJD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NVU-0f-igr"/>
+                            <constraint firstItem="bcb-Zj-Nw5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XsZ-6C-LPG"/>
+                            <constraint firstItem="bcb-Zj-Nw5" firstAttribute="top" secondItem="UKf-NA-hJD" secondAttribute="bottom" id="ZhQ-IR-NHj"/>
+                            <constraint firstItem="UKf-NA-hJD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="aLL-fe-o6s"/>
+                            <constraint firstItem="bcb-Zj-Nw5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="auJ-D9-JiV"/>
+                            <constraint firstItem="bcb-Zj-Nw5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ztu-jD-2IY"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="buttonGetPosition" destination="sIu-4r-3Vw" id="PHz-1m-9ir"/>
+                        <outlet property="buttonStackView" destination="Dh7-sA-Ki3" id="OFI-CP-wXZ"/>
+                        <outlet property="logoName" destination="5j3-ev-hTF" id="R2d-7K-jb4"/>
                         <outlet property="mapView" destination="bcb-Zj-Nw5" id="MS5-cA-G2s"/>
                     </connections>
                 </viewController>
