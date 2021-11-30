@@ -11,9 +11,9 @@ import CoreLocation
 
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var buttonStackView: UIButton!
-    @IBOutlet weak var buttonGetPosition: UIButton!
+    @IBOutlet weak var getPosition: UIButton!
     @IBOutlet weak var logoName: UILabel!
+    @IBOutlet weak var mainMenu: UIButton!
     
     // coordonnees geographiques par defaut
     var defaultLatitude: Double = 43.6112422
@@ -41,12 +41,22 @@ class ViewController: UIViewController {
     // donne sa position actuelle
     @IBAction func getPosition(_ sender: Any) {
         if userPosition != nil {
-            setupMap(coordonnees: userPosition!.coordinate, myLat: 0.01, myLong: 0.01)
+            setupMap(coordonnees: userPosition!.coordinate, myLat: 0.005, myLong: 0.005)
         }
+    }
+    @IBAction func presentMenu() {
+        let detailViewController = MainMenuController()
+        let nav = UINavigationController(rootViewController: detailViewController)
+        
+        nav.modalPresentationStyle = .formSheet
+        
+        if let sheet = nav.sheetPresentationController {
+            sheet.detents = [.medium()]
+        }
+        present(nav, animated: true, completion: nil)
     }
 }
 extension ViewController: MKMapViewDelegate {
-    // position au lancement de l'application
     func setup() {
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: coordinateInit, span: span)
