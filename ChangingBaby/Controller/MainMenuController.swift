@@ -8,11 +8,7 @@
 import UIKit
 
 class MainMenuController: UIViewController {
-    @IBOutlet weak var closeButton: UIButton!
     
-    @IBAction func closeMenu() {
-        self.dismiss(animated: true, completion: nil)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
