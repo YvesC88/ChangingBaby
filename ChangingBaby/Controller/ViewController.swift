@@ -47,9 +47,7 @@ class ViewController: UIViewController {
     @IBAction func presentMenu() {
         let detailViewController = MainMenuController()
         let nav = UINavigationController(rootViewController: detailViewController)
-        
-        nav.modalPresentationStyle = .formSheet
-        
+        nav.modalTransitionStyle = .coverVertical
         if let sheet = nav.sheetPresentationController {
             sheet.detents = [.medium()]
         }
