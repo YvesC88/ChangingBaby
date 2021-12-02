@@ -45,20 +45,17 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func presentMenu() {
-        let detailViewController = MainMenuController()
-        let nav = UINavigationController(rootViewController: detailViewController)
-        nav.modalTransitionStyle = .coverVertical
-        if let sheet = nav.sheetPresentationController {
-            sheet.detents = [.medium()]
-        }
-        present(nav, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "MainMenu", bundle: nil)
+        let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "MainMenuController") as! MainMenuController
+        self.present(sheetPresentationController, animated: true, completion: nil)
     }
 }
+
 extension ViewController: MKMapViewDelegate {
     func setup() {
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: coordinateInit, span: span)
-        mapView.addAnnotations([Place.enfantsrouges, Place.gaumontcomedie, Place.mcdonalds, Place.pizzapapa, Place.shakesspeare])
+        mapView.addAnnotations([Places.enfantsrouges, Places.gaumontcomedie, Places.mcdonalds, Places.pizzapapa, Places.shakesspeare])
         mapView.setRegion(region, animated: true)
         mapView.delegate = self
         mapView.showsUserLocation = true

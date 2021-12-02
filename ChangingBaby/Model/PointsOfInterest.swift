@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-struct Place {
+struct Places {
     static let enfantsrouges = Poi(title: "Les Enfants Rouges", coordinate: CLLocationCoordinate2DMake(43.61021423339844, 3.875974416732788), info: "Restaurant")
     static let mcdonalds = Poi(title: "Mc Donald's", coordinate: CLLocationCoordinate2DMake(43.60868995132711, 3.879343621296849), info: "Fast Food")
     static let pizzapapa = Poi(title: "La Pizza Papa", coordinate: CLLocationCoordinate2DMake(43.60848617553711, 3.880244493484497), info: "Restaurant")

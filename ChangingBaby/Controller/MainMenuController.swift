@@ -8,13 +8,14 @@
 import UIKit
 
 class MainMenuController: UIViewController {
+    @IBOutlet weak var closeButton: UIButton!
     
-    
+    @IBAction func closeMenu() {
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        
-        
+        self.sheetPresentationController?.detents = [.medium()]
         // Do any additional setup after loading the view.
     }
 }
