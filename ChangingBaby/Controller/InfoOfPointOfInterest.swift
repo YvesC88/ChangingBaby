@@ -10,8 +10,6 @@ import UIKit
 class InfoOfPointOfInterest: UIViewController {
 
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.large()]
 
