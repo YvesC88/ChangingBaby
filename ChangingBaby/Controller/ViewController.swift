@@ -73,14 +73,6 @@ extension ViewController: MKMapViewDelegate {
         let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "InfoOfPointOfInterest") as! InfoOfPointOfInterest
         self.present(sheetPresentationController, animated: true, completion: nil)
     }
-    
-//    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-//        //        guard let pointOfInterest = view.annotation as? PointOfInterest else { return }
-//        
-//        let storyboard = UIStoryboard(name: "SheetOfPoi", bundle: nil)
-//        let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "InfoOfPointOfInterest") as! InfoOfPointOfInterest
-//        self.present(sheetPresentationController, animated: true, completion: nil)
-//    }
 }
 
 extension ViewController: CLLocationManagerDelegate {
@@ -91,17 +83,3 @@ extension ViewController: CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
 }
-
-/*
- guard let pointOfInterest = view.annotation as? PointOfInterest else { return }
- 
- let title = pointOfInterest.title
- let info = pointOfInterest.info
- 
- let presentInfoAnnotation = UIAlertController(title: title, message: info, preferredStyle: .actionSheet)
- presentInfoAnnotation.addAction(UIAlertAction(title: title, style: .default, handler: { _ in
- let storyboard = UIStoryboard(name: "SheetOfPoi", bundle: nil)
- let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "InfoOfPointOfInterest") as! InfoOfPointOfInterest
- self.present(sheetPresentationController, animated: true, completion: nil)
- }))
- */
