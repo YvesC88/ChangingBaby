@@ -7,9 +7,10 @@
 
 import UIKit
 
-class MainMenuController: UIViewController, UITableViewDelegate {
-    @IBOutlet var tableView: UITableView!
-//    let choice = ["Astuces", "Profil", "Autres"]
+class MainMenuController: UIViewController {
+    @IBOutlet weak var mainMenuView: UITableView!
+    
+    let menu = ["Astuces", "Contact"]
     
     @IBAction func closeTableView() {
         dismiss(animated: true, completion: nil)
@@ -18,18 +19,23 @@ class MainMenuController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        
+        mainMenuView.delegate = self
+        mainMenuView.dataSource = self
+        mainMenuView.allowsSelection = false
         // Do any additional setup after loading the view.
     }
 }
-//
-//extension MainMenuController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.choice.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        return choice.count
-//    }
-//}
+
+extension MainMenuController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menu.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = mainMenuView.dequeueReusableCell(withIdentifier: "customCell") as! MainMenuCell
+        let menu = menu[indexPath.row]
+        cell.labelLine.text = menu
+        return cell
+    }
+}

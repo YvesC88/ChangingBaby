@@ -11,7 +11,7 @@ class InfoOfPointOfInterest: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sheetPresentationController?.detents = [.large()]
+        self.sheetPresentationController?.detents = [.medium(), .large()]
 
         // Do any additional setup after loading the view.
     }

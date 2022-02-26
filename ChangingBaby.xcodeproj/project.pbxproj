@@ -21,6 +21,7 @@
 		FB827F27274C52ED0050903A /* ChangingBabyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F26274C52ED0050903A /* ChangingBabyTests.swift */; };
 		FB827F31274C52ED0050903A /* ChangingBabyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F30274C52ED0050903A /* ChangingBabyUITests.swift */; };
 		FB827F33274C52ED0050903A /* ChangingBabyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F32274C52ED0050903A /* ChangingBabyUITestsLaunchTests.swift */; };
+		FB88270A27C7F13200C3FBDA /* MainMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88270927C7F13200C3FBDA /* MainMenuCell.swift */; };
 		FBCAC93B274C5A3D00FE4093 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCAC93A274C5A3D00FE4093 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		FB827F2C274C52ED0050903A /* ChangingBabyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangingBabyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB827F30274C52ED0050903A /* ChangingBabyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingBabyUITests.swift; sourceTree = "<group>"; };
 		FB827F32274C52ED0050903A /* ChangingBabyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingBabyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB88270927C7F13200C3FBDA /* MainMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
 		FBCAC93A274C5A3D00FE4093 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 				FB827F13274C52EB0050903A /* ViewController.swift */,
 				FB54FEC427592B2600F320A5 /* InfoOfPointOfInterest.swift */,
 				FB54FEC027568E0A00F320A5 /* MainMenuController.swift */,
+				FB88270927C7F13200C3FBDA /* MainMenuCell.swift */,
 			);
 			name = Controller;
 			path = ChangingBaby/Controller;
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB827F14274C52EB0050903A /* ViewController.swift in Sources */,
+				FB88270A27C7F13200C3FBDA /* MainMenuCell.swift in Sources */,
 				FB463083274D047C0014E482 /* PointsOfInterest.swift in Sources */,
 				FB827F10274C52EB0050903A /* AppDelegate.swift in Sources */,
 				FB54FEC527592B2700F320A5 /* InfoOfPointOfInterest.swift in Sources */,
@@ -510,6 +514,8 @@
 				DEVELOPMENT_TEAM = 8ZV67K9B93;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChangingBaby/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Veuillez accepter la localisation";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Veuillez accepter la localisation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -539,6 +545,8 @@
 				DEVELOPMENT_TEAM = 8ZV67K9B93;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChangingBaby/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Veuillez accepter la localisation";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Veuillez accepter la localisation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

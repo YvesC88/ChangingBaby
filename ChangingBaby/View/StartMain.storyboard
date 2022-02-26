@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fru-YS-cut">
+            <objects>
+                <viewController id="Fa4-UG-e16" customClass="ViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="clx-j3-dX8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rtD-vz-hpA">
+                                <rect key="frame" x="0.0" y="821" width="414" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7A-Pk-B8E">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="list.dash" catalog="system"/>
+                                        <connections>
+                                            <action selector="presentMenu" destination="Fa4-UG-e16" eventType="touchUpInside" id="oPl-UM-x4p"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changing Baby" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXF-UM-3a1">
+                                        <rect key="frame" x="127" y="0.0" width="162" height="29"/>
+                                        <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1if-NV-kzp">
+                                        <rect key="frame" x="369" y="0.0" width="45" height="31"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="location" catalog="system" symbolScale="large" renderingMode="original"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="getPosition:" destination="Fa4-UG-e16" eventType="touchUpInside" id="ZNf-Aa-Bp3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99622011180000003" green="0.81292605399999995" blue="0.24755072480000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="okT-mJ-NMw"/>
+                                </constraints>
+                            </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EhV-E9-jE2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="821"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kiT-5x-Ke0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rtD-vz-hpA" firstAttribute="top" secondItem="EhV-E9-jE2" secondAttribute="bottom" id="0yl-1u-Mn9"/>
+                            <constraint firstItem="kiT-5x-Ke0" firstAttribute="trailing" secondItem="rtD-vz-hpA" secondAttribute="trailing" id="6VE-45-V4e"/>
+                            <constraint firstItem="EhV-E9-jE2" firstAttribute="leading" secondItem="kiT-5x-Ke0" secondAttribute="leading" id="IOP-aa-VQk"/>
+                            <constraint firstItem="EhV-E9-jE2" firstAttribute="top" secondItem="clx-j3-dX8" secondAttribute="top" id="IVj-Dt-8eX"/>
+                            <constraint firstItem="EhV-E9-jE2" firstAttribute="centerX" secondItem="clx-j3-dX8" secondAttribute="centerX" id="Jyt-dg-YOq"/>
+                            <constraint firstItem="EhV-E9-jE2" firstAttribute="trailing" secondItem="kiT-5x-Ke0" secondAttribute="trailing" id="dT8-ng-Lao"/>
+                            <constraint firstItem="rtD-vz-hpA" firstAttribute="leading" secondItem="kiT-5x-Ke0" secondAttribute="leading" id="mBn-Ch-aB8"/>
+                            <constraint firstAttribute="bottom" secondItem="rtD-vz-hpA" secondAttribute="bottom" id="yOa-H7-0Rj"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="HEX-AX-ONN"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="getPosition" destination="1if-NV-kzp" id="ldg-mH-Sth"/>
+                        <outlet property="logoName" destination="BXF-UM-3a1" id="7cv-A3-5lO"/>
+                        <outlet property="mainMenu" destination="f7A-Pk-B8E" id="z2K-9a-cav"/>
+                        <outlet property="mapView" destination="EhV-E9-jE2" id="1HT-XL-ph4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2H-37-Hxb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4578.2608695652179" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="location" catalog="system" width="128" height="118"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

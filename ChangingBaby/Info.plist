@@ -36,9 +36,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Veuillez accepter la localisation</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Veuillez accepter la localisation</string>
 </dict>
 </plist>
