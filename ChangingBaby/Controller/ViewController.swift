@@ -47,7 +47,17 @@ class ViewController: UIViewController {
     @IBAction func presentMenu() {
         let storyboard = UIStoryboard(name: "MainMenu", bundle: nil)
         let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "MainMenuController") as! MainMenuController
-        self.present(sheetPresentationController, animated: true, completion: nil)
+        let navMenuController = UINavigationController(rootViewController: sheetPresentationController)
+        navMenuController.navigationBar.prefersLargeTitles = true
+        navMenuController.navigationBar.isTranslucent = true
+        
+        let standardAppearance = UINavigationBarAppearance()
+        standardAppearance.configureWithDefaultBackground()
+        standardAppearance.backgroundColor = UIColor.gray.withAlphaComponent(0.05)
+        
+        navMenuController.navigationBar.scrollEdgeAppearance = standardAppearance
+        
+        self.present(navMenuController, animated: true, completion: nil)
     }
 }
 
@@ -71,7 +81,18 @@ extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let storyboard = UIStoryboard(name: "SheetOfPoi", bundle: nil)
         let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "InfoOfPointOfInterest") as! InfoOfPointOfInterest
-        self.present(sheetPresentationController, animated: true, completion: nil)
+        let navPlacesController = UINavigationController(rootViewController: sheetPresentationController)
+        
+        navPlacesController.navigationBar.prefersLargeTitles = true
+        navPlacesController.navigationBar.isTranslucent = true
+        
+        let standardAppearance = UINavigationBarAppearance()
+        standardAppearance.configureWithDefaultBackground()
+        standardAppearance.backgroundColor = UIColor.gray.withAlphaComponent(0.05)
+        
+        navPlacesController.navigationBar.scrollEdgeAppearance = standardAppearance
+        
+        self.present(navPlacesController, animated: true, completion: nil)
     }
 }
 

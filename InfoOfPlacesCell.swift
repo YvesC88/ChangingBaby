@@ -1,14 +1,14 @@
 //
-//  MainMenuCell.swift
+//  InfoOfPlacesCell.swift
 //  ChangingBaby
 //
-//  Created by Yves Charpentier on 24/02/2022.
+//  Created by Yves Charpentier on 26/02/2022.
 //
 
 import UIKit
 
-class MainMenuCell: UITableViewCell {
-    @IBOutlet weak var lineMenu: UIView!
+class InfoOfPlacesCell: UITableViewCell {
+    @IBOutlet weak var lineInfo: UIView!
     @IBOutlet weak var labelLine: UILabel!
 
     override func awakeFromNib() {

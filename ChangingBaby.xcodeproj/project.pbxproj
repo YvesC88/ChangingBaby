@@ -12,6 +12,7 @@
 		FB54FEC327568E1B00F320A5 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB54FEC227568E1B00F320A5 /* MainMenu.storyboard */; };
 		FB54FEC527592B2700F320A5 /* InfoOfPointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC427592B2600F320A5 /* InfoOfPointOfInterest.swift */; };
 		FB54FEC727592B4D00F320A5 /* SheetOfPoi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB54FEC627592B4D00F320A5 /* SheetOfPoi.storyboard */; };
+		FB779C4227CADE7600C7306F /* InfoOfPlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB779C4127CADE7600C7306F /* InfoOfPlacesCell.swift */; };
 		FB827F10274C52EB0050903A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F0F274C52EB0050903A /* AppDelegate.swift */; };
 		FB827F12274C52EB0050903A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F11274C52EB0050903A /* SceneDelegate.swift */; };
 		FB827F14274C52EB0050903A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F13274C52EB0050903A /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		FB54FEC227568E1B00F320A5 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
 		FB54FEC427592B2600F320A5 /* InfoOfPointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOfPointOfInterest.swift; sourceTree = "<group>"; };
 		FB54FEC627592B4D00F320A5 /* SheetOfPoi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SheetOfPoi.storyboard; sourceTree = "<group>"; };
+		FB779C4127CADE7600C7306F /* InfoOfPlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOfPlacesCell.swift; sourceTree = SOURCE_ROOT; };
 		FB827F0C274C52EB0050903A /* ChangingBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangingBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB827F0F274C52EB0050903A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB827F11274C52EB0050903A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				FB54FEC427592B2600F320A5 /* InfoOfPointOfInterest.swift */,
 				FB54FEC027568E0A00F320A5 /* MainMenuController.swift */,
 				FB88270927C7F13200C3FBDA /* MainMenuCell.swift */,
+				FB779C4127CADE7600C7306F /* InfoOfPlacesCell.swift */,
 			);
 			name = Controller;
 			path = ChangingBaby/Controller;
@@ -328,6 +331,7 @@
 			files = (
 				FB827F14274C52EB0050903A /* ViewController.swift in Sources */,
 				FB88270A27C7F13200C3FBDA /* MainMenuCell.swift in Sources */,
+				FB779C4227CADE7600C7306F /* InfoOfPlacesCell.swift in Sources */,
 				FB463083274D047C0014E482 /* PointsOfInterest.swift in Sources */,
 				FB827F10274C52EB0050903A /* AppDelegate.swift in Sources */,
 				FB54FEC527592B2700F320A5 /* InfoOfPointOfInterest.swift in Sources */,

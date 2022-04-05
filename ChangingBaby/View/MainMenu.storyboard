@@ -3,13 +3,12 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Menu Controller-->
+        <!--Menu-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="MainMenuController" id="Y6W-OH-hqX" customClass="MainMenuController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,40 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="dm6-K2-mqA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="xiy-uF-S3T">
-                                        <rect key="frame" x="0.0" y="0.0" width="47" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="xmark.circle.fill" catalog="system"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <imageReference key="image" image="list.dash" catalog="system" symbolScale="large"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="closeTableView" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GBx-cE-OCz"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjg-yI-De2">
-                                        <rect key="frame" x="174.5" y="0.0" width="62.5" height="70"/>
-                                        <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dol-pE-SHZ">
-                                        <rect key="frame" x="364" y="0.0" width="50" height="70"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.97354990239999994" green="0.84562683110000003" blue="0.40380698440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="TLg-du-WQN"/>
-                                </constraints>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="guK-v1-sMe">
                                 <rect key="frame" x="0.0" y="70" width="414" height="826"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,17 +47,27 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dm6-K2-mqA" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="0KR-2l-9b2"/>
-                            <constraint firstItem="dm6-K2-mqA" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="6Z7-Cm-CB7"/>
-                            <constraint firstItem="dm6-K2-mqA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Nns-tf-IjY"/>
                             <constraint firstItem="guK-v1-sMe" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Nym-Qc-rzi"/>
                             <constraint firstAttribute="bottom" secondItem="guK-v1-sMe" secondAttribute="bottom" id="Us4-1h-Bsa"/>
                             <constraint firstItem="guK-v1-sMe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gGQ-b7-JrF"/>
-                            <constraint firstItem="guK-v1-sMe" firstAttribute="top" secondItem="dm6-K2-mqA" secondAttribute="bottom" id="rRC-xg-ckC"/>
+                            <constraint firstItem="guK-v1-sMe" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="-18" id="sEP-00-GCj"/>
                             <constraint firstItem="guK-v1-sMe" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="v9W-kS-KuL"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Menu" id="hPZ-R8-dBo">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="yJr-pt-Kr2">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" id="SrO-Te-0OE">
+                                <rect key="frame" x="302" y="6" width="92" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="closeTableView" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tYf-zw-ADI"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mainMenuView" destination="guK-v1-sMe" id="2aK-b5-Xxd"/>
@@ -100,12 +75,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865.217391304348" y="48.883928571428569"/>
+            <point key="canvasLocation" x="3685.507246376812" y="48.883928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I7v-Hl-w05">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KGL-ha-ugV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KMe-4r-Ypv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3zG-uL-sN6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="uU2-of-Ja1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0iL-CD-EYY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775.36231884058" y="48.883928571428569"/>
         </scene>
     </scenes>
     <resources>
-        <image name="list.dash" catalog="system" width="128" height="85"/>
-        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
