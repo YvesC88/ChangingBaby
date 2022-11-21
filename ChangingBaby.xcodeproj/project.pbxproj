@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB463083274D047C0014E482 /* PointsOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB463082274D047C0014E482 /* PointsOfInterest.swift */; };
-		FB54FEC127568E0A00F320A5 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC027568E0A00F320A5 /* MainMenuController.swift */; };
-		FB54FEC327568E1B00F320A5 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB54FEC227568E1B00F320A5 /* MainMenu.storyboard */; };
-		FB54FEC527592B2700F320A5 /* InfoOfPointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC427592B2600F320A5 /* InfoOfPointOfInterest.swift */; };
-		FB54FEC727592B4D00F320A5 /* SheetOfPoi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB54FEC627592B4D00F320A5 /* SheetOfPoi.storyboard */; };
-		FB779C4227CADE7600C7306F /* InfoOfPlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB779C4127CADE7600C7306F /* InfoOfPlacesCell.swift */; };
+		FB12142529238DE200641E76 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB12142429238DE200641E76 /* SearchViewController.swift */; };
+		FB54FEC127568E0A00F320A5 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC027568E0A00F320A5 /* MenuController.swift */; };
+		FB54FEC527592B2700F320A5 /* PlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC427592B2600F320A5 /* PlaceController.swift */; };
+		FB60A0C52919473600E1B5BB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60A0C42919473600E1B5BB /* SignUpViewController.swift */; };
+		FB60A0C72919490D00E1B5BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60A0C62919490D00E1B5BB /* HomeViewController.swift */; };
+		FB60A0CA29195DFD00E1B5BB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FB60A0C929195DFD00E1B5BB /* FirebaseAnalytics */; };
+		FB60A0CC29195DFD00E1B5BB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FB60A0CB29195DFD00E1B5BB /* FirebaseAuth */; };
+		FB60A0CE29195DFD00E1B5BB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FB60A0CD29195DFD00E1B5BB /* FirebaseDatabase */; };
+		FB60A0D029195DFD00E1B5BB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB60A0CF29195DFD00E1B5BB /* FirebaseFirestore */; };
+		FB60A0D2291970E900E1B5BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60A0D1291970E900E1B5BB /* LoginViewController.swift */; };
 		FB827F10274C52EB0050903A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F0F274C52EB0050903A /* AppDelegate.swift */; };
 		FB827F12274C52EB0050903A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F11274C52EB0050903A /* SceneDelegate.swift */; };
-		FB827F14274C52EB0050903A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F13274C52EB0050903A /* ViewController.swift */; };
+		FB827F14274C52EB0050903A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F13274C52EB0050903A /* MapViewController.swift */; };
 		FB827F17274C52EB0050903A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB827F15274C52EB0050903A /* Main.storyboard */; };
 		FB827F19274C52ED0050903A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB827F18274C52ED0050903A /* Assets.xcassets */; };
 		FB827F1C274C52ED0050903A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB827F1A274C52ED0050903A /* LaunchScreen.storyboard */; };
-		FB827F27274C52ED0050903A /* ChangingBabyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F26274C52ED0050903A /* ChangingBabyTests.swift */; };
-		FB827F31274C52ED0050903A /* ChangingBabyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F30274C52ED0050903A /* ChangingBabyUITests.swift */; };
-		FB827F33274C52ED0050903A /* ChangingBabyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F32274C52ED0050903A /* ChangingBabyUITestsLaunchTests.swift */; };
-		FB88270A27C7F13200C3FBDA /* MainMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88270927C7F13200C3FBDA /* MainMenuCell.swift */; };
+		FB861F722922F1CC00D31207 /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB861F712922F1CB00D31207 /* UserServiceTest.swift */; };
+		FB88270A27C7F13200C3FBDA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88270927C7F13200C3FBDA /* MenuCell.swift */; };
+		FBC5C058291A994200A9BB49 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5C057291A994200A9BB49 /* UserService.swift */; };
+		FBC5C05E291BA0CA00A9BB49 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */; };
 		FBCAC93B274C5A3D00FE4093 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCAC93A274C5A3D00FE4093 /* MapKit.framework */; };
+		FBDCE2A42902E70E006A11C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBDCE2A32902E70E006A11C6 /* GoogleService-Info.plist */; };
+		FBDCE2B22906D97E006A11C6 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDCE2B12906D97E006A11C6 /* Place.swift */; };
+		FBDCE2B82906DA44006A11C6 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDCE2B72906DA44006A11C6 /* PlaceService.swift */; };
+		FBE098072924DF9000152A8D /* PlaceServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE098062924DF9000152A8D /* PlaceServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,37 +42,33 @@
 			remoteGlobalIDString = FB827F0B274C52EB0050903A;
 			remoteInfo = ChangingBaby;
 		};
-		FB827F2D274C52ED0050903A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB827F04274C52EB0050903A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB827F0B274C52EB0050903A;
-			remoteInfo = ChangingBaby;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FB463082274D047C0014E482 /* PointsOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsOfInterest.swift; sourceTree = "<group>"; };
-		FB54FEC027568E0A00F320A5 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
-		FB54FEC227568E1B00F320A5 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
-		FB54FEC427592B2600F320A5 /* InfoOfPointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOfPointOfInterest.swift; sourceTree = "<group>"; };
-		FB54FEC627592B4D00F320A5 /* SheetOfPoi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SheetOfPoi.storyboard; sourceTree = "<group>"; };
-		FB779C4127CADE7600C7306F /* InfoOfPlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOfPlacesCell.swift; sourceTree = SOURCE_ROOT; };
+		FB12142429238DE200641E76 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FB54FEC027568E0A00F320A5 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		FB54FEC427592B2600F320A5 /* PlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceController.swift; sourceTree = "<group>"; };
+		FB60A0C42919473600E1B5BB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FB60A0C62919490D00E1B5BB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FB60A0D1291970E900E1B5BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FB827F0C274C52EB0050903A /* ChangingBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangingBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB827F0F274C52EB0050903A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB827F11274C52EB0050903A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB827F13274C52EB0050903A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB827F13274C52EB0050903A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FB827F16274C52EB0050903A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB827F18274C52ED0050903A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB827F1B274C52ED0050903A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB827F1D274C52ED0050903A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB827F22274C52ED0050903A /* ChangingBabyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangingBabyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB827F26274C52ED0050903A /* ChangingBabyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingBabyTests.swift; sourceTree = "<group>"; };
-		FB827F2C274C52ED0050903A /* ChangingBabyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangingBabyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB827F30274C52ED0050903A /* ChangingBabyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingBabyUITests.swift; sourceTree = "<group>"; };
-		FB827F32274C52ED0050903A /* ChangingBabyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingBabyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FB88270927C7F13200C3FBDA /* MainMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
+		FB861F712922F1CB00D31207 /* UserServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
+		FB88270927C7F13200C3FBDA /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		FBC5C057291A994200A9BB49 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		FBCAC93A274C5A3D00FE4093 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FBDCE2A32902E70E006A11C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FBDCE2B12906D97E006A11C6 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		FBDCE2B72906DA44006A11C6 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		FBE098062924DF9000152A8D /* PlaceServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceServiceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,18 +76,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB60A0CA29195DFD00E1B5BB /* FirebaseAnalytics in Frameworks */,
+				FB60A0CC29195DFD00E1B5BB /* FirebaseAuth in Frameworks */,
+				FB60A0CE29195DFD00E1B5BB /* FirebaseDatabase in Frameworks */,
+				FB60A0D029195DFD00E1B5BB /* FirebaseFirestore in Frameworks */,
 				FBCAC93B274C5A3D00FE4093 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FB827F1F274C52ED0050903A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB827F29274C52ED0050903A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -102,7 +103,6 @@
 				FB827F42274C531B0050903A /* Ressources */,
 				FB827F0E274C52EB0050903A /* ChangingBaby */,
 				FB827F25274C52ED0050903A /* ChangingBabyTests */,
-				FB827F2F274C52ED0050903A /* ChangingBabyUITests */,
 				FB827F0D274C52EB0050903A /* Products */,
 				FBCAC939274C5A3D00FE4093 /* Frameworks */,
 			);
@@ -113,7 +113,6 @@
 			children = (
 				FB827F0C274C52EB0050903A /* ChangingBaby.app */,
 				FB827F22274C52ED0050903A /* ChangingBabyTests.xctest */,
-				FB827F2C274C52ED0050903A /* ChangingBabyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,24 +128,18 @@
 		FB827F25274C52ED0050903A /* ChangingBabyTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB827F26274C52ED0050903A /* ChangingBabyTests.swift */,
+				FB861F712922F1CB00D31207 /* UserServiceTest.swift */,
+				FBE098062924DF9000152A8D /* PlaceServiceTest.swift */,
 			);
 			path = ChangingBabyTests;
-			sourceTree = "<group>";
-		};
-		FB827F2F274C52ED0050903A /* ChangingBabyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FB827F30274C52ED0050903A /* ChangingBabyUITests.swift */,
-				FB827F32274C52ED0050903A /* ChangingBabyUITestsLaunchTests.swift */,
-			);
-			path = ChangingBabyUITests;
 			sourceTree = "<group>";
 		};
 		FB827F3F274C52FB0050903A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FB463082274D047C0014E482 /* PointsOfInterest.swift */,
+				FBDCE2B12906D97E006A11C6 /* Place.swift */,
+				FBDCE2B72906DA44006A11C6 /* PlaceService.swift */,
+				FBC5C057291A994200A9BB49 /* UserService.swift */,
 			);
 			name = Model;
 			path = ChangingBaby/Model;
@@ -156,22 +149,23 @@
 			isa = PBXGroup;
 			children = (
 				FB827F15274C52EB0050903A /* Main.storyboard */,
-				FB54FEC227568E1B00F320A5 /* MainMenu.storyboard */,
-				FB54FEC627592B4D00F320A5 /* SheetOfPoi.storyboard */,
 				FB827F1A274C52ED0050903A /* LaunchScreen.storyboard */,
+				FB88270927C7F13200C3FBDA /* MenuCell.swift */,
 			);
-			name = View;
-			path = ChangingBaby/View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		FB827F41274C53110050903A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FB827F13274C52EB0050903A /* ViewController.swift */,
-				FB54FEC427592B2600F320A5 /* InfoOfPointOfInterest.swift */,
-				FB54FEC027568E0A00F320A5 /* MainMenuController.swift */,
-				FB88270927C7F13200C3FBDA /* MainMenuCell.swift */,
-				FB779C4127CADE7600C7306F /* InfoOfPlacesCell.swift */,
+				FB60A0C62919490D00E1B5BB /* HomeViewController.swift */,
+				FB827F13274C52EB0050903A /* MapViewController.swift */,
+				FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */,
+				FB60A0C42919473600E1B5BB /* SignUpViewController.swift */,
+				FB60A0D1291970E900E1B5BB /* LoginViewController.swift */,
+				FB54FEC027568E0A00F320A5 /* MenuController.swift */,
+				FB54FEC427592B2600F320A5 /* PlaceController.swift */,
+				FB12142429238DE200641E76 /* SearchViewController.swift */,
 			);
 			name = Controller;
 			path = ChangingBaby/Controller;
@@ -180,6 +174,7 @@
 		FB827F42274C531B0050903A /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				FBDCE2A32902E70E006A11C6 /* GoogleService-Info.plist */,
 				FB827F18274C52ED0050903A /* Assets.xcassets */,
 				FB827F11274C52EB0050903A /* SceneDelegate.swift */,
 				FB827F0F274C52EB0050903A /* AppDelegate.swift */,
@@ -212,6 +207,12 @@
 			dependencies = (
 			);
 			name = ChangingBaby;
+			packageProductDependencies = (
+				FB60A0C929195DFD00E1B5BB /* FirebaseAnalytics */,
+				FB60A0CB29195DFD00E1B5BB /* FirebaseAuth */,
+				FB60A0CD29195DFD00E1B5BB /* FirebaseDatabase */,
+				FB60A0CF29195DFD00E1B5BB /* FirebaseFirestore */,
+			);
 			productName = ChangingBaby;
 			productReference = FB827F0C274C52EB0050903A /* ChangingBaby.app */;
 			productType = "com.apple.product-type.application";
@@ -234,24 +235,6 @@
 			productReference = FB827F22274C52ED0050903A /* ChangingBabyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FB827F2B274C52ED0050903A /* ChangingBabyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB827F3C274C52ED0050903A /* Build configuration list for PBXNativeTarget "ChangingBabyUITests" */;
-			buildPhases = (
-				FB827F28274C52ED0050903A /* Sources */,
-				FB827F29274C52ED0050903A /* Frameworks */,
-				FB827F2A274C52ED0050903A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB827F2E274C52ED0050903A /* PBXTargetDependency */,
-			);
-			name = ChangingBabyUITests;
-			productName = ChangingBabyUITests;
-			productReference = FB827F2C274C52ED0050903A /* ChangingBabyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -269,10 +252,6 @@
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = FB827F0B274C52EB0050903A;
 					};
-					FB827F2B274C52ED0050903A = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = FB827F0B274C52EB0050903A;
-					};
 				};
 			};
 			buildConfigurationList = FB827F07274C52EB0050903A /* Build configuration list for PBXProject "ChangingBaby" */;
@@ -284,13 +263,15 @@
 				Base,
 			);
 			mainGroup = FB827F03274C52EB0050903A;
+			packageReferences = (
+				FB60A0C829195DFD00E1B5BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = FB827F0D274C52EB0050903A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				FB827F0B274C52EB0050903A /* ChangingBaby */,
 				FB827F21274C52ED0050903A /* ChangingBabyTests */,
-				FB827F2B274C52ED0050903A /* ChangingBabyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,22 +281,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB54FEC327568E1B00F320A5 /* MainMenu.storyboard in Resources */,
-				FB54FEC727592B4D00F320A5 /* SheetOfPoi.storyboard in Resources */,
 				FB827F1C274C52ED0050903A /* LaunchScreen.storyboard in Resources */,
+				FBDCE2A42902E70E006A11C6 /* GoogleService-Info.plist in Resources */,
 				FB827F19274C52ED0050903A /* Assets.xcassets in Resources */,
 				FB827F17274C52EB0050903A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FB827F20274C52ED0050903A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB827F2A274C52ED0050903A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,14 +302,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB827F14274C52EB0050903A /* ViewController.swift in Sources */,
-				FB88270A27C7F13200C3FBDA /* MainMenuCell.swift in Sources */,
-				FB779C4227CADE7600C7306F /* InfoOfPlacesCell.swift in Sources */,
-				FB463083274D047C0014E482 /* PointsOfInterest.swift in Sources */,
+				FBDCE2B82906DA44006A11C6 /* PlaceService.swift in Sources */,
+				FB827F14274C52EB0050903A /* MapViewController.swift in Sources */,
+				FBC5C05E291BA0CA00A9BB49 /* AccountViewController.swift in Sources */,
+				FB60A0C72919490D00E1B5BB /* HomeViewController.swift in Sources */,
+				FB88270A27C7F13200C3FBDA /* MenuCell.swift in Sources */,
 				FB827F10274C52EB0050903A /* AppDelegate.swift in Sources */,
-				FB54FEC527592B2700F320A5 /* InfoOfPointOfInterest.swift in Sources */,
+				FB54FEC527592B2700F320A5 /* PlaceController.swift in Sources */,
 				FB827F12274C52EB0050903A /* SceneDelegate.swift in Sources */,
-				FB54FEC127568E0A00F320A5 /* MainMenuController.swift in Sources */,
+				FB12142529238DE200641E76 /* SearchViewController.swift in Sources */,
+				FB54FEC127568E0A00F320A5 /* MenuController.swift in Sources */,
+				FBC5C058291A994200A9BB49 /* UserService.swift in Sources */,
+				FBDCE2B22906D97E006A11C6 /* Place.swift in Sources */,
+				FB60A0C52919473600E1B5BB /* SignUpViewController.swift in Sources */,
+				FB60A0D2291970E900E1B5BB /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,16 +323,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB827F27274C52ED0050903A /* ChangingBabyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB827F28274C52ED0050903A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB827F31274C52ED0050903A /* ChangingBabyUITests.swift in Sources */,
-				FB827F33274C52ED0050903A /* ChangingBabyUITestsLaunchTests.swift in Sources */,
+				FB861F722922F1CC00D31207 /* UserServiceTest.swift in Sources */,
+				FBE098072924DF9000152A8D /* PlaceServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,11 +335,6 @@
 			isa = PBXTargetDependency;
 			target = FB827F0B274C52EB0050903A /* ChangingBaby */;
 			targetProxy = FB827F23274C52ED0050903A /* PBXContainerItemProxy */;
-		};
-		FB827F2E274C52ED0050903A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB827F0B274C52EB0050903A /* ChangingBaby */;
-			targetProxy = FB827F2D274C52ED0050903A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -396,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -457,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -518,21 +486,26 @@
 				DEVELOPMENT_TEAM = 8ZV67K9B93;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChangingBaby/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Veuillez accepter la localisation";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Veuillez accepter la localisation";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Veuillez accepter la localisation pour une meilleure expérience";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Veuillez accepter la localisation pour une meilleure expérience";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -549,21 +522,26 @@
 				DEVELOPMENT_TEAM = 8ZV67K9B93;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChangingBaby/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Veuillez accepter la localisation";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Veuillez accepter la localisation";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Veuillez accepter la localisation pour une meilleure expérience";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Veuillez accepter la localisation pour une meilleure expérience";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -620,52 +598,6 @@
 			};
 			name = Release;
 		};
-		FB827F3D274C52ED0050903A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8ZV67K9B93;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBabyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ChangingBaby;
-			};
-			name = Debug;
-		};
-		FB827F3E274C52ED0050903A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8ZV67K9B93;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBabyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ChangingBaby;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -696,16 +628,41 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB827F3C274C52ED0050903A /* Build configuration list for PBXNativeTarget "ChangingBabyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB827F3D274C52ED0050903A /* Debug */,
-				FB827F3E274C52ED0050903A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB60A0C829195DFD00E1B5BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB60A0C929195DFD00E1B5BB /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB60A0C829195DFD00E1B5BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FB60A0CB29195DFD00E1B5BB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB60A0C829195DFD00E1B5BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FB60A0CD29195DFD00E1B5BB /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB60A0C829195DFD00E1B5BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		FB60A0CF29195DFD00E1B5BB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB60A0C829195DFD00E1B5BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB827F04274C52EB0050903A /* Project object */;
 }
