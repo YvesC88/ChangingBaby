@@ -18,8 +18,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    
-//    let userService = UserService()
+    let userService = UserService()
     let homeViewController = HomeViewController()
     override func viewDidLoad() {
         super.viewDidLoad()

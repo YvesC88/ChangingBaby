@@ -13,8 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
-    private let userService = UserService()
-    private let homeViewController = HomeViewController()
+    let userService = UserService()
     
     override func viewDidLoad() {
         super.viewDidLoad()

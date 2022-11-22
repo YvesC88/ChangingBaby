@@ -344,8 +344,8 @@
                                             <action selector="presentMenu" destination="BYZ-38-t0r" eventType="touchUpInside" id="zMT-0k-aRY"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Baby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-a3-ASF">
-                                        <rect key="frame" x="113.33333333333333" y="0.0" width="168.66666666666669" height="34.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changing Baby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-a3-ASF">
+                                        <rect key="frame" x="100.33333333333333" y="0.0" width="194.33333333333337" height="34.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
