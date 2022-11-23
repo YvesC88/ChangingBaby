@@ -23,7 +23,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped() {
-        userService.signIn(mail: emailTextField.text!, password: passwordTextField.text!) { error in
+        userService.signIn(mail: emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines),
+                           password: passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)) { error in
             if error != "" {
                 self.errorLabel.isHidden = false
                 self.errorLabel.text = error
@@ -33,10 +34,10 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func presentAlert(title: String, message: String) {
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alertVC, animated: true, completion: nil)
+    @IBAction func forgotPassword() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ForgetPasswordViewController") as? ForgetPasswordViewController else { return }
+        present(vc, animated: true)
     }
     
     func setupUIButton(button: UIButton) {
@@ -45,15 +46,34 @@ class LoginViewController: UIViewController {
     }
 }
 
+//emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
 
-//        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-//            presentAlert(title: "Erreur", message: "Champs manquant !")
-//            errorLabel.isHidden = false
-//        } else {
-//            userService.signIn(mail: emailTextField.text!, password: passwordTextField.text!)
-////            presentAlert(title: "Succès !", message: "Connexion réussie")
-//            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//            let vc = storyBoard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-//            vc.modalPresentationStyle = .fullScreen
-//            self.present(vc, animated:true, completion:nil)
-//        }
+
+class ForgetPasswordViewController: UIViewController {
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    let userService = UserService()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.sheetPresentationController?.detents = [.medium()]
+    }
+    @IBAction func getNewPwd() {
+        userService.forgetPwd(userMail: (emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!) { error in
+            var err = ""
+            if err != error.localizedDescription {
+                self.errorLabel.isHidden = false
+                self.errorLabel.text = err
+            } else {
+                self.errorLabel.textColor = UIColor.tintColor
+                self.errorLabel.text = "Si cet email existe, vous receverez un mail !"
+                
+            }
+        }
+    }
+    
+    @IBAction func dismissForgetPwdViewController() {
+        dismiss(animated: true)
+    }
+}

@@ -63,4 +63,12 @@ class UserService {
     }
     
     func getUser() -> User? { Auth.auth().currentUser }
+    
+    func forgetPwd(userMail: String, completion: @escaping (Error) -> ()) {
+        Auth.auth().sendPasswordReset(withEmail: userMail) { error in
+            if let error = error {
+                completion(error)
+            }
+        }
+    }
 }

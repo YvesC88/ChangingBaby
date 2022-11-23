@@ -48,7 +48,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Connexion">
+                                        <state key="normal" title="Se connecter">
                                             <color key="titleColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -70,6 +70,9 @@
                                         <rect key="frame" x="0.0" y="210" width="313" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Mot de passe oublié ?"/>
+                                        <connections>
+                                            <action selector="forgotPassword" destination="Dip-Z8-ofr" eventType="touchUpInside" id="5xv-Xp-fmZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -102,6 +105,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIQ-IL-GHe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9112" y="832"/>
+        </scene>
+        <!--Forget Password View Controller-->
+        <scene sceneID="sbi-ds-qLa">
+            <objects>
+                <viewController storyboardIdentifier="ForgetPasswordViewController" id="d5g-DO-XaH" customClass="ForgetPasswordViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hxY-CJ-FHk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mot de passe oublié ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fs-3D-cjm">
+                                <rect key="frame" x="0.0" y="109" width="393" height="119.66666666666669"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yph-CR-8wK">
+                                <rect key="frame" x="40" y="248.66666666666663" width="313" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EPb-lp-UR2">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="aEe-BE-eWE"/>
+                                            <constraint firstAttribute="height" constant="50" id="qxX-WJ-fiP"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="emailAddress" textContentType="email"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUY-3e-Axw">
+                                        <rect key="frame" x="0.0" y="70.000000000000028" width="313" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Valider">
+                                            <color key="titleColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="getNewPwd" destination="d5g-DO-XaH" eventType="touchUpInside" id="tfq-p4-9nL"/>
+                                            <action selector="loginButtonTapped" destination="Dip-Z8-ofr" eventType="touchUpInside" id="S9e-iB-ZUa"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib3-PM-MaL">
+                                        <rect key="frame" x="0.0" y="120.00000000000003" width="313" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ib3-PM-MaL" firstAttribute="height" secondItem="EPb-lp-UR2" secondAttribute="height" id="RXu-5f-7BB"/>
+                                    <constraint firstItem="LUY-3e-Axw" firstAttribute="height" secondItem="EPb-lp-UR2" secondAttribute="height" id="Suc-Pz-zps"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21B-By-6Jh">
+                                <rect key="frame" x="339.33333333333331" y="10" width="43.666666666666686" height="43.666666666666671"/>
+                                <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="medium"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissAccountViewController:" destination="1aI-QE-jZL" eventType="touchUpInside" id="q8H-0x-s8T"/>
+                                    <action selector="dismissForgetPwdViewController" destination="d5g-DO-XaH" eventType="touchUpInside" id="C4T-OP-YGq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WdE-NT-XjX"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="WdE-NT-XjX" firstAttribute="trailing" secondItem="Yph-CR-8wK" secondAttribute="trailing" constant="40" id="561-Wy-4bQ"/>
+                            <constraint firstItem="3fs-3D-cjm" firstAttribute="leading" secondItem="WdE-NT-XjX" secondAttribute="leading" id="ATS-9e-y0W"/>
+                            <constraint firstItem="21B-By-6Jh" firstAttribute="top" secondItem="hxY-CJ-FHk" secondAttribute="top" constant="10" id="H7b-Mm-03D"/>
+                            <constraint firstItem="WdE-NT-XjX" firstAttribute="trailing" secondItem="3fs-3D-cjm" secondAttribute="trailing" id="STN-Ds-pDt"/>
+                            <constraint firstItem="Yph-CR-8wK" firstAttribute="leading" secondItem="WdE-NT-XjX" secondAttribute="leading" constant="40" id="TKr-fe-yo8"/>
+                            <constraint firstItem="Yph-CR-8wK" firstAttribute="top" secondItem="3fs-3D-cjm" secondAttribute="bottom" constant="20" id="aBW-oc-IOW"/>
+                            <constraint firstAttribute="trailing" secondItem="21B-By-6Jh" secondAttribute="trailing" constant="10" id="d1w-XI-Hga"/>
+                            <constraint firstItem="3fs-3D-cjm" firstAttribute="top" secondItem="WdE-NT-XjX" secondAttribute="top" constant="50" id="dMl-W0-db9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ivG-zN-7wc"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="EPb-lp-UR2" id="66i-vi-KZp"/>
+                        <outlet property="errorLabel" destination="Ib3-PM-MaL" id="LNd-6N-CHo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jiA-6d-iGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9111" y="1532"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tIT-3J-rbT">
