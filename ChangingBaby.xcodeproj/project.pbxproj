@@ -25,6 +25,7 @@
 		FB827F1C274C52ED0050903A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB827F1A274C52ED0050903A /* LaunchScreen.storyboard */; };
 		FB861F722922F1CC00D31207 /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB861F712922F1CB00D31207 /* UserServiceTest.swift */; };
 		FB88270A27C7F13200C3FBDA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88270927C7F13200C3FBDA /* MenuCell.swift */; };
+		FBB31C6A2932903A009A7DD0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB31C692932903A009A7DD0 /* Extension.swift */; };
 		FBC5C058291A994200A9BB49 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5C057291A994200A9BB49 /* UserService.swift */; };
 		FBC5C05E291BA0CA00A9BB49 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */; };
 		FBCAC93B274C5A3D00FE4093 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCAC93A274C5A3D00FE4093 /* MapKit.framework */; };
@@ -62,6 +63,7 @@
 		FB827F22274C52ED0050903A /* ChangingBabyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangingBabyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB861F712922F1CB00D31207 /* UserServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
 		FB88270927C7F13200C3FBDA /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		FBB31C692932903A009A7DD0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FBC5C057291A994200A9BB49 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		FBCAC93A274C5A3D00FE4093 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -151,6 +153,7 @@
 				FB827F15274C52EB0050903A /* Main.storyboard */,
 				FB827F1A274C52ED0050903A /* LaunchScreen.storyboard */,
 				FB88270927C7F13200C3FBDA /* MenuCell.swift */,
+				FBB31C692932903A009A7DD0 /* Extension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB31C6A2932903A009A7DD0 /* Extension.swift in Sources */,
 				FBDCE2B82906DA44006A11C6 /* PlaceService.swift in Sources */,
 				FB827F14274C52EB0050903A /* MapViewController.swift in Sources */,
 				FBC5C05E291BA0CA00A9BB49 /* AccountViewController.swift in Sources */,
@@ -500,7 +504,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -536,7 +540,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

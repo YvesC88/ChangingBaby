@@ -64,15 +64,14 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row < filteredPlace.count {
-            let selectedPlace = filteredPlace[indexPath.row]
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "PlaceController") as! PlaceController
-            vc.place = [selectedPlace]
-            let navPlacesController = UINavigationController(rootViewController: vc)
-            setupUINavigationBar(navController: navPlacesController)
-            self.present(navPlacesController, animated: true, completion: nil)
-        }
+        guard indexPath.row < filteredPlace.count else { return }
+        let selectedPlace = filteredPlace[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "PlaceController") as? PlaceController else { return }
+        vc.place = [selectedPlace]
+        let navPlacesController = UINavigationController(rootViewController: vc)
+        setupUINavigationBar(navController: navPlacesController)
+        self.present(navPlacesController, animated: true, completion: nil)
     }
 }
 

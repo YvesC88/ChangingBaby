@@ -41,5 +41,4 @@ class PlaceController: UIViewController {
         mapItem.name = place.first?.name
         mapItem.openInMaps()
     }
-    
 }

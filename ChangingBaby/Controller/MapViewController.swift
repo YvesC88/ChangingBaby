@@ -92,7 +92,7 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotation) {
         let selectedAnnotation = place.filter { $0.lat == view.coordinate.latitude && $0.long == view.coordinate.longitude }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "PlaceController") as! PlaceController
+        guard let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "PlaceController") as? PlaceController else { return }
         sheetPresentationController.place = selectedAnnotation
         let navPlacesController = UINavigationController(rootViewController: sheetPresentationController)
         setupUINavigationBar(navController: navPlacesController)

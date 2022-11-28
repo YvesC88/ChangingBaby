@@ -21,43 +21,25 @@ class HomeViewController: UIViewController {
         setUI()
     }
     
-    func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
-        navigationController?.popViewController(animated: true)
-    }
-    
     @IBAction func guestButtonTapped() {
+        guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        navController.setViewControllers([vc], animated: true)
     }
     
     func setUI() {
-        if userService.isLogin {
-            goToMapVC(animated: false)
+        guard userService.isLogin else {
+            loginViewController.setupUIButton(button: loginButton)
+            return
         }
-        loginViewController.setupUIButton(button: loginButton)
+        goToMapVC(animated: true)
     }
     
     func goToMapVC(animated: Bool) {
-        self.navigationController?.popViewController(animated: animated)
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        navigationController?.pushViewController(vc, animated: true)
+        guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+            navController.setViewControllers([vc], animated: animated)
     }
 }
-
-
-/* MARK: - Dépop un VC et remplacer par un autre
- self.navigationController?.popViewController(animated: animated)
- let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
- let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
- vc.modalPresentationStyle = .fullScreen
- present(vc, animated: animated)
- 
- MARK: - Push un VC au dessus d'un autre
- let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
- let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
- navigationController?.pushViewController(vc, animated: animated)
- 
- */

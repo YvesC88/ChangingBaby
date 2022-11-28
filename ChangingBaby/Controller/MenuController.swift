@@ -16,9 +16,9 @@ class MenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
-        tableView.rowHeight = 50
+        tableView.rowHeight = 60
         tableView.dataSource = self
-        tableView.allowsSelection = false
+        tableView.delegate = self
     }
     
     @IBAction func closeTableView() {
@@ -26,7 +26,7 @@ class MenuController: UIViewController {
     }
 }
 
-extension MenuController: UITableViewDataSource {
+extension MenuController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.count
     }
@@ -36,5 +36,9 @@ extension MenuController: UITableViewDataSource {
         let menu = menu[indexPath.row]
         cell.labelLine.text = menu
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let choice = menu[indexPath.row]
     }
 }

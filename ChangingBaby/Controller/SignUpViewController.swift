@@ -6,20 +6,14 @@
 //
 
 import UIKit
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseAuth
 
 class SignUpViewController: UIViewController {
-    @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
     
     let userService = UserService()
-    let homeViewController = HomeViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
@@ -27,39 +21,25 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        userNameTextField.resignFirstResponder()
-        emailTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-    }
-    
-    @IBAction func signUpTapped(_ sender: Any) {
-        userService.createUser(userName: userNameTextField.text!, mail: emailTextField.text!, password: passwordTextField.text!) { error in
-            if error != "" {
-                self.errorLabel.isHidden = false
-                self.errorLabel.text = error
-            } else {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let vc = storyBoard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated:true, completion:nil)
-            }
+        let textField = [userNameTextField, emailTextField, passwordTextField]
+        for field in textField {
+            self.dismissKeyboard(sender, textField: field!)
         }
     }
     
-    private func presentAlert(message: String) {
-        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alertVC, animated: true, completion: nil)
+    @IBAction func signUpTapped() {
+        userService.createUser(name: userNameTextField.text!, mail: emailTextField.text!, password: passwordTextField.text!) { error in
+            guard error != nil else {
+                self.dismiss(animated: true) {
+                    guard let navController = UIApplication.shared.windows.first!.rootViewController as? UINavigationController else { return }
+                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+                    navController.setViewControllers([vc], animated: true)
+                }
+                self.presentAlert(title: "Succès", message: "Compte créé avec succès !")
+                return
+            }
+            self.presentAlert(title: "Erreur", message: error ?? "")
+        }
     }
 }
-
-//        if userNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-//            presentAlert(message: "Champs manquant !")
-//            errorLabel.text = UserService.shared.errorMessage
-//        } else {
-//            UserService.shared.createUser(userName: userNameTextField.text!, mail: emailTextField.text!, password: passwordTextField.text!)
-//            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//            let vc = storyBoard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-//            vc.modalPresentationStyle = .fullScreen
-//            self.present(vc, animated:true, completion:nil)
-//        }

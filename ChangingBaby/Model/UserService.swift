@@ -5,7 +5,6 @@
 //  Created by Yves Charpentier on 08/11/2022.
 //
 
-import Foundation
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
@@ -23,33 +22,34 @@ class UserService {
     
     // create an user in FireStore
     
-    func createUser(userName: String, mail: String, password: String, completion: @escaping (String) -> ()) {
+    func createUser(name: String, mail: String, password: String, completion: @escaping (String?) -> ()) {
         Auth.auth().createUser(withEmail: mail, password: password) { result, error in
-            if let error = error {
-                // une erreur s'est produite puis la stock dans completion
-                completion(error.localizedDescription)
-            } else {
-                // création du compte réussie
+            guard error != nil else {
                 let db = Firestore.firestore()
-                db.collection("users").addDocument(data: ["userName": userName, "uid": result!.user.uid]) { (error) in
-                    if error != nil {
-                        // présenter un message d'erreur
-                        print("La création de compte n'a pas aboutie")
-                    } else {
-                        // présenter un message confirmant la création du compte
-                        print("Compte créé avec succès !")
+                db.collection("users").addDocument(data: ["name": name, "uid": result!.user.uid]) { (error) in
+                    guard error != nil else {
+                        self.updateUserProfile(userName: name)
+                        completion(nil)
+                        return
                     }
+                    guard let errorCode = AuthErrorCode.Code(rawValue: 0) else { return }
+                    completion(errorCode.errorMessage)
                 }
-            }
+                return }
+            guard let errorCode = AuthErrorCode.Code(rawValue: error?._code ?? 0) else { return }
+            completion(errorCode.errorMessage)
         }
     }
     
     // sign in an user
-    func signIn(mail: String, password: String, completion: @escaping (String) -> ()) {
-        Auth.auth().signIn(withEmail: mail, password: password) { result, error in
-            if let error = error {
-                completion(error.localizedDescription)
+    func signIn(mail: String, password: String, completion: @escaping (String?) ->()) {
+        Auth.auth().signIn(withEmail: mail, password: password) { user, error in
+            guard error != nil else {
+                completion(nil)
+                return
             }
+            guard let errorCode = AuthErrorCode.Code(rawValue: error?._code ?? 0) else { return }
+            completion(errorCode.errorMessage)
         }
     }
     
@@ -64,11 +64,20 @@ class UserService {
     
     func getUser() -> User? { Auth.auth().currentUser }
     
-    func forgetPwd(userMail: String, completion: @escaping (Error) -> ()) {
+    func updateUserProfile(userName: String) {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = userName
+        changeRequest?.commitChanges { error in }
+    }
+    
+    func forgetPwd(userMail: String, completion: @escaping (String?) -> ()) {
         Auth.auth().sendPasswordReset(withEmail: userMail) { error in
-            if let error = error {
-                completion(error)
+            guard error != nil else {
+                completion(nil)
+                return
             }
+            guard let errorCode = AuthErrorCode.Code(rawValue: error?._code ?? 0) else { return }
+            completion(errorCode.errorMessage)
         }
     }
 }

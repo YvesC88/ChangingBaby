@@ -19,46 +19,40 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
-        // vérifier le statut de l'utilisateur
         isUserLogin()
     }
     
     // check if user is login
     func isUserLogin() {
-        if userService.isLogin {
-            // affiche le nom de l'utilisateur
-            titleLabel.text = "Bienvenue"
-            loginButton.setTitle("Déconnexion", for: .normal)
-            signUpButton.isHidden = true
-        } else {
+        guard userService.isLogin else {
             titleLabel.text = "Bienvenue"
             loginButton.setTitle("Connexion", for: .normal)
             signUpButton.isHidden = false
+            return
         }
-    }
-    
-    @IBAction func test() {
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        self.present(vc, animated: true)
+        // show name'user
+        titleLabel.text = "Bienvenue \(userService.getUser()?.displayName ?? "")"
+        loginButton.setTitle("Déconnexion", for: .normal)
+        signUpButton.isHidden = true
     }
     
     @IBAction func logButtonTapped() {
         // if user is connected
-        if userService.isLogin {
-            // logout the user and go to HomeViewController
-            userService.signOut()
-            dismiss(animated: true) {
-                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
-        } else {
-            // if user isn't connected and pop LoginViewController
+        guard userService.isLogin else {
+            //             if user isn't connected and present LoginViewController
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let vc = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             vc.modalPresentationStyle = .automatic
             self.present(vc, animated:true)
+            return
+        }
+        // signOut the user and back to HomeViewController
+        userService.signOut()
+        dismiss(animated: true) {
+            guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            navController.setViewControllers([vc], animated: true)
         }
     }
     

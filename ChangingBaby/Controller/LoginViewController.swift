@@ -11,7 +11,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
     
     let userService = UserService()
     
@@ -19,25 +18,34 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
         setupUIButton(button: loginButton)
-        // vérifier si une erreur s'est produite lors du login
     }
     
     @IBAction func loginButtonTapped() {
-        userService.signIn(mail: emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines),
-                           password: passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)) { error in
-            if error != "" {
-                self.errorLabel.isHidden = false
-                self.errorLabel.text = error
-            } else {
-                self.dismiss(animated: true)
+        userService.signIn(mail: emailTextField.text!, password: passwordTextField.text!) { error in
+            guard error != nil else {
+                self.dismiss(animated: true) {
+                    guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
+                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+                    navController.setViewControllers([vc], animated: true)
+                }
+                return
             }
+            self.presentAlert(title: "Erreur", message: error ?? "")
         }
     }
     
-    @IBAction func forgotPassword() {
+    @IBAction func forgetPassword() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "ForgetPasswordViewController") as? ForgetPasswordViewController else { return }
         present(vc, animated: true)
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        let textField = [emailTextField, passwordTextField]
+        for field in textField {
+            self.dismissKeyboard(sender, textField: field!)
+        }
     }
     
     func setupUIButton(button: UIButton) {
@@ -46,12 +54,9 @@ class LoginViewController: UIViewController {
     }
 }
 
-//emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-
 
 class ForgetPasswordViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
     
     let userService = UserService()
     
@@ -61,19 +66,19 @@ class ForgetPasswordViewController: UIViewController {
     }
     @IBAction func getNewPwd() {
         userService.forgetPwd(userMail: (emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!) { error in
-            var err = ""
-            if err != error.localizedDescription {
-                self.errorLabel.isHidden = false
-                self.errorLabel.text = err
-            } else {
-                self.errorLabel.textColor = UIColor.tintColor
-                self.errorLabel.text = "Si cet email existe, vous receverez un mail !"
-                
+            guard error != nil else {
+                self.presentAlert(title: "Succès", message: "La demande de réinitialisation du mot de passe a été envoyé par email.")
+                return
             }
+            self.presentAlert(title: "Erreur", message: error ?? "")
         }
     }
     
     @IBAction func dismissForgetPwdViewController() {
         dismiss(animated: true)
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        self.dismissKeyboard(sender, textField: emailTextField)
     }
 }
