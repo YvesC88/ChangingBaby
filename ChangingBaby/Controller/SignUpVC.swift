@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  SignUpVC.swift
 //  ChangingBaby
 //
 //  Created by Yves Charpentier on 07/11/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
@@ -33,7 +33,7 @@ class SignUpViewController: UIViewController {
                 self.dismiss(animated: true) {
                     guard let navController = UIApplication.shared.windows.first!.rootViewController as? UINavigationController else { return }
                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+                    let vc = storyboard.instantiateViewController(withIdentifier: "MapVC") as! MapVC
                     navController.setViewControllers([vc], animated: true)
                 }
                 self.presentAlert(title: "Succès", message: "Compte créé avec succès !")

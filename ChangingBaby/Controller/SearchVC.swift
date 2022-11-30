@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  SearchVC.swift
 //  ChangingBaby
 //
 //  Created by Yves Charpentier on 15/11/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchVC: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -52,7 +52,7 @@ class SearchViewController: UIViewController {
     }
 }
 
-extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+extension SearchVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         filteredPlace.count
     }
@@ -67,7 +67,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         guard indexPath.row < filteredPlace.count else { return }
         let selectedPlace = filteredPlace[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "PlaceController") as? PlaceController else { return }
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "PlaceVC") as? PlaceVC else { return }
         vc.place = [selectedPlace]
         let navPlacesController = UINavigationController(rootViewController: vc)
         setupUINavigationBar(navController: navPlacesController)
@@ -75,7 +75,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension SearchViewController: UISearchBarDelegate {
+extension SearchVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredPlace = []
         for word in place {

@@ -1,5 +1,5 @@
 //
-//  AccountViewController.swift
+//  AccountVC.swift
 //  ChangingBaby
 //
 //  Created by Yves Charpentier on 09/11/2022.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class AccountVC: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
     
     let userService = UserService()
-    let homeViewController = HomeViewController()
+    let homeViewController = HomeVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +26,13 @@ class AccountViewController: UIViewController {
     func isUserLogin() {
         guard userService.isLogin else {
             titleLabel.text = "Bienvenue"
-            loginButton.setTitle("Connexion", for: .normal)
+            signInButton.setTitle("Connexion", for: .normal)
             signUpButton.isHidden = false
             return
         }
         // show name'user
         titleLabel.text = "Bienvenue \(userService.getUser()?.displayName ?? "")"
-        loginButton.setTitle("Déconnexion", for: .normal)
+        signInButton.setTitle("Déconnexion", for: .normal)
         signUpButton.isHidden = true
     }
     
@@ -41,7 +41,7 @@ class AccountViewController: UIViewController {
         guard userService.isLogin else {
             //             if user isn't connected and present LoginViewController
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            let vc = storyBoard.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
             vc.modalPresentationStyle = .automatic
             self.present(vc, animated:true)
             return
@@ -51,7 +51,7 @@ class AccountViewController: UIViewController {
         dismiss(animated: true) {
             guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
             navController.setViewControllers([vc], animated: true)
         }
     }
@@ -59,7 +59,7 @@ class AccountViewController: UIViewController {
     // objectif de signUp est de présenter SignUpViewController
     @IBAction func signUp() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "SignUpVC") as? SignUpVC else { return }
         present(vc, animated: true)
     }
     

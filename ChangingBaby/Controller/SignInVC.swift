@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  SignInVC.swift
 //  ChangingBaby
 //
 //  Created by Yves Charpentier on 07/11/2022.
@@ -7,17 +7,17 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SignInVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     
     let userService = UserService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
-        setupUIButton(button: loginButton)
+        setupUIButton(button: signInButton)
     }
     
     @IBAction func loginButtonTapped() {
@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
                 self.dismiss(animated: true) {
                     guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+                    let vc = storyboard.instantiateViewController(withIdentifier: "MapVC") as! MapVC
                     navController.setViewControllers([vc], animated: true)
                 }
                 return
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgetPassword() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "ForgetPasswordViewController") as? ForgetPasswordViewController else { return }
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ForgetPwdVC") as? ForgetPwdVC else { return }
         present(vc, animated: true)
     }
     
@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
 }
 
 
-class ForgetPasswordViewController: UIViewController {
+class ForgetPwdVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     let userService = UserService()

@@ -1,5 +1,5 @@
 //
-//  MainMenuController.swift
+//  MenuVC.swift
 //  ChangingBaby
 //
 //  Created by Yves Charpentier on 30/11/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MenuController: UIViewController {
+class MenuVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var closeButton: UIButton!
     
@@ -26,7 +26,7 @@ class MenuController: UIViewController {
     }
 }
 
-extension MenuController: UITableViewDataSource, UITableViewDelegate {
+extension MenuVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.count
     }

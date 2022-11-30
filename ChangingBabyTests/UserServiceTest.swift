@@ -14,7 +14,7 @@ final class UserServiceTest: XCTestCase {
         // Given
         let userService = UserService()
         // When
-        userService.createUser(userName: "Test", mail: "test@test.com", password: "Test05") { error in }
+        
         // Then
     }
     

@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB12142529238DE200641E76 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB12142429238DE200641E76 /* SearchViewController.swift */; };
+		FB12142529238DE200641E76 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB12142429238DE200641E76 /* SearchVC.swift */; };
 		FB42E13B292C10B7009224CB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FB42E13A292C10B7009224CB /* FirebaseAnalytics */; };
 		FB42E13D292C10B7009224CB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FB42E13C292C10B7009224CB /* FirebaseAuth */; };
 		FB42E13F292C10B7009224CB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FB42E13E292C10B7009224CB /* FirebaseDatabase */; };
 		FB42E141292C10B7009224CB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB42E140292C10B7009224CB /* FirebaseFirestore */; };
-		FB54FEC127568E0A00F320A5 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC027568E0A00F320A5 /* MenuController.swift */; };
-		FB54FEC527592B2700F320A5 /* PlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC427592B2600F320A5 /* PlaceController.swift */; };
-		FB60A0C52919473600E1B5BB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60A0C42919473600E1B5BB /* SignUpViewController.swift */; };
-		FB60A0C72919490D00E1B5BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60A0C62919490D00E1B5BB /* HomeViewController.swift */; };
-		FB60A0D2291970E900E1B5BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60A0D1291970E900E1B5BB /* LoginViewController.swift */; };
+		FB54FEC127568E0A00F320A5 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC027568E0A00F320A5 /* MenuVC.swift */; };
+		FB54FEC527592B2700F320A5 /* PlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC427592B2600F320A5 /* PlaceVC.swift */; };
+		FB60A0C52919473600E1B5BB /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60A0C42919473600E1B5BB /* SignUpVC.swift */; };
+		FB60A0C72919490D00E1B5BB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60A0C62919490D00E1B5BB /* HomeVC.swift */; };
+		FB60A0D2291970E900E1B5BB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60A0D1291970E900E1B5BB /* SignInVC.swift */; };
 		FB827F10274C52EB0050903A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F0F274C52EB0050903A /* AppDelegate.swift */; };
 		FB827F12274C52EB0050903A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F11274C52EB0050903A /* SceneDelegate.swift */; };
-		FB827F14274C52EB0050903A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F13274C52EB0050903A /* MapViewController.swift */; };
+		FB827F14274C52EB0050903A /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827F13274C52EB0050903A /* MapVC.swift */; };
 		FB827F17274C52EB0050903A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB827F15274C52EB0050903A /* Main.storyboard */; };
 		FB827F19274C52ED0050903A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB827F18274C52ED0050903A /* Assets.xcassets */; };
 		FB827F1C274C52ED0050903A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB827F1A274C52ED0050903A /* LaunchScreen.storyboard */; };
@@ -27,7 +27,7 @@
 		FB88270A27C7F13200C3FBDA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88270927C7F13200C3FBDA /* MenuCell.swift */; };
 		FBB31C6A2932903A009A7DD0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB31C692932903A009A7DD0 /* Extension.swift */; };
 		FBC5C058291A994200A9BB49 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5C057291A994200A9BB49 /* UserService.swift */; };
-		FBC5C05E291BA0CA00A9BB49 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */; };
+		FBC5C05E291BA0CA00A9BB49 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5C05D291BA0CA00A9BB49 /* AccountVC.swift */; };
 		FBCAC93B274C5A3D00FE4093 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCAC93A274C5A3D00FE4093 /* MapKit.framework */; };
 		FBDCE2A42902E70E006A11C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBDCE2A32902E70E006A11C6 /* GoogleService-Info.plist */; };
 		FBDCE2B22906D97E006A11C6 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDCE2B12906D97E006A11C6 /* Place.swift */; };
@@ -46,16 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FB12142429238DE200641E76 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		FB54FEC027568E0A00F320A5 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		FB54FEC427592B2600F320A5 /* PlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceController.swift; sourceTree = "<group>"; };
-		FB60A0C42919473600E1B5BB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		FB60A0C62919490D00E1B5BB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		FB60A0D1291970E900E1B5BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FB12142429238DE200641E76 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		FB54FEC027568E0A00F320A5 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		FB54FEC427592B2600F320A5 /* PlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceVC.swift; sourceTree = "<group>"; };
+		FB60A0C42919473600E1B5BB /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		FB60A0C62919490D00E1B5BB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		FB60A0D1291970E900E1B5BB /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		FB827F0C274C52EB0050903A /* ChangingBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangingBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB827F0F274C52EB0050903A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB827F11274C52EB0050903A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB827F13274C52EB0050903A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FB827F13274C52EB0050903A /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		FB827F16274C52EB0050903A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB827F18274C52ED0050903A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB827F1B274C52ED0050903A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		FB88270927C7F13200C3FBDA /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		FBB31C692932903A009A7DD0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FBC5C057291A994200A9BB49 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		FBC5C05D291BA0CA00A9BB49 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		FBCAC93A274C5A3D00FE4093 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FBDCE2A32902E70E006A11C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FBDCE2B12906D97E006A11C6 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -161,14 +161,14 @@
 		FB827F41274C53110050903A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FB60A0C62919490D00E1B5BB /* HomeViewController.swift */,
-				FB827F13274C52EB0050903A /* MapViewController.swift */,
-				FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */,
-				FB60A0C42919473600E1B5BB /* SignUpViewController.swift */,
-				FB60A0D1291970E900E1B5BB /* LoginViewController.swift */,
-				FB54FEC027568E0A00F320A5 /* MenuController.swift */,
-				FB54FEC427592B2600F320A5 /* PlaceController.swift */,
-				FB12142429238DE200641E76 /* SearchViewController.swift */,
+				FB60A0C62919490D00E1B5BB /* HomeVC.swift */,
+				FB827F13274C52EB0050903A /* MapVC.swift */,
+				FBC5C05D291BA0CA00A9BB49 /* AccountVC.swift */,
+				FB60A0C42919473600E1B5BB /* SignUpVC.swift */,
+				FB60A0D1291970E900E1B5BB /* SignInVC.swift */,
+				FB54FEC027568E0A00F320A5 /* MenuVC.swift */,
+				FB54FEC427592B2600F320A5 /* PlaceVC.swift */,
+				FB12142429238DE200641E76 /* SearchVC.swift */,
 			);
 			name = Controller;
 			path = ChangingBaby/Controller;
@@ -307,19 +307,19 @@
 			files = (
 				FBB31C6A2932903A009A7DD0 /* Extension.swift in Sources */,
 				FBDCE2B82906DA44006A11C6 /* PlaceService.swift in Sources */,
-				FB827F14274C52EB0050903A /* MapViewController.swift in Sources */,
-				FBC5C05E291BA0CA00A9BB49 /* AccountViewController.swift in Sources */,
-				FB60A0C72919490D00E1B5BB /* HomeViewController.swift in Sources */,
+				FB827F14274C52EB0050903A /* MapVC.swift in Sources */,
+				FBC5C05E291BA0CA00A9BB49 /* AccountVC.swift in Sources */,
+				FB60A0C72919490D00E1B5BB /* HomeVC.swift in Sources */,
 				FB88270A27C7F13200C3FBDA /* MenuCell.swift in Sources */,
 				FB827F10274C52EB0050903A /* AppDelegate.swift in Sources */,
-				FB54FEC527592B2700F320A5 /* PlaceController.swift in Sources */,
+				FB54FEC527592B2700F320A5 /* PlaceVC.swift in Sources */,
 				FB827F12274C52EB0050903A /* SceneDelegate.swift in Sources */,
-				FB12142529238DE200641E76 /* SearchViewController.swift in Sources */,
-				FB54FEC127568E0A00F320A5 /* MenuController.swift in Sources */,
+				FB12142529238DE200641E76 /* SearchVC.swift in Sources */,
+				FB54FEC127568E0A00F320A5 /* MenuVC.swift in Sources */,
 				FBC5C058291A994200A9BB49 /* UserService.swift in Sources */,
 				FBDCE2B22906D97E006A11C6 /* Place.swift in Sources */,
-				FB60A0C52919473600E1B5BB /* SignUpViewController.swift in Sources */,
-				FB60A0D2291970E900E1B5BB /* LoginViewController.swift in Sources */,
+				FB60A0C52919473600E1B5BB /* SignUpVC.swift in Sources */,
+				FB60A0D2291970E900E1B5BB /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

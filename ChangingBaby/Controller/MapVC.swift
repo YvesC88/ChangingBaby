@@ -1,5 +1,5 @@
 //
-//  MapViewController.swift
+//  MapVC.swift
 //  ChangingBaby
 //
 //  Created by Yves Charpentier on 22/11/2021.
@@ -9,12 +9,12 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+class MapVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var getPosition: UIButton!
-    @IBOutlet weak var logoName: UILabel!
-    @IBOutlet weak var mainMenu: UIButton!
-    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var getPositionButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var accountButton: UIButton!
     
     let locationManager = CLLocationManager()
     var userPosition: CLLocation?
@@ -44,7 +44,7 @@ class MapViewController: UIViewController {
     
     @IBAction func presentMenu() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "MenuController") as! MenuController
+        let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "MenuVC") as! MenuVC
         let navMenuController = UINavigationController(rootViewController: sheetPresentationController)
         setupUINavigationBar(navController: navMenuController)
         self.present(navMenuController, animated: true, completion: nil)
@@ -52,13 +52,13 @@ class MapViewController: UIViewController {
     
     @IBAction func backToHome(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        guard let vc = storyBoard.instantiateViewController(withIdentifier: "AccountViewController") as? AccountViewController else { return }
+        guard let vc = storyBoard.instantiateViewController(withIdentifier: "AccountVC") as? AccountVC else { return }
         self.present(vc, animated:true)
     }
     
     @IBAction func search() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController else { return }
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "SearchVC") as? SearchVC else { return }
         self.present(vc, animated: true)
     }
     
@@ -75,7 +75,7 @@ class MapViewController: UIViewController {
     }
 }
 
-extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
+extension MapVC: MKMapViewDelegate, CLLocationManagerDelegate {
     // affiche tous les points sur la carte
     func setupPin() {
         guard self.place.count > 0 else { return }
@@ -92,7 +92,7 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotation) {
         let selectedAnnotation = place.filter { $0.lat == view.coordinate.latitude && $0.long == view.coordinate.longitude }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "PlaceController") as? PlaceController else { return }
+        guard let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "PlaceVC") as? PlaceVC else { return }
         sheetPresentationController.place = selectedAnnotation
         let navPlacesController = UINavigationController(rootViewController: sheetPresentationController)
         setupUINavigationBar(navController: navPlacesController)

@@ -1,5 +1,5 @@
 //
-//  InfoOfPointOfInterest.swift
+//  PlaceVC.swift
 //  ChangingBaby
 //
 //  Created by Yves Charpentier on 02/12/2021.
@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class PlaceController: UIViewController {
+class PlaceVC: UIViewController {
     @IBOutlet weak var addressView: UIView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var itineraryButton: UIButton!

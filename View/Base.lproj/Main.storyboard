@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Sign InVC-->
         <scene sceneID="OXV-Vq-hcT">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="Dip-Z8-ofr" customClass="LoginViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInVC" id="Dip-Z8-ofr" customClass="SignInVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m6H-ft-vFl">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,8 +93,8 @@
                     <navigationItem key="navigationItem" id="wbE-87-YYL"/>
                     <connections>
                         <outlet property="emailTextField" destination="g3J-A3-Km7" id="gxe-ig-1w7"/>
-                        <outlet property="loginButton" destination="Nfb-rC-n58" id="ESE-av-lLX"/>
                         <outlet property="passwordTextField" destination="ISl-aD-qeX" id="D81-ur-2Dj"/>
+                        <outlet property="signInButton" destination="Nfb-rC-n58" id="ESE-av-lLX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIQ-IL-GHe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="9112" y="832"/>
         </scene>
-        <!--Forget Password View Controller-->
+        <!--Forget PwdVC-->
         <scene sceneID="sbi-ds-qLa">
             <objects>
-                <viewController storyboardIdentifier="ForgetPasswordViewController" id="d5g-DO-XaH" customClass="ForgetPasswordViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgetPasswordViewController" id="d5g-DO-XaH" customClass="ForgetPwdVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hxY-CJ-FHk">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,10 +202,10 @@
             </objects>
             <point key="canvasLocation" x="9111" y="1532"/>
         </scene>
-        <!--Home View Controller-->
+        <!--HomeVC-->
         <scene sceneID="tIT-3J-rbT">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="22t-oe-uGc" customClass="HomeViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="22t-oe-uGc" customClass="HomeVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Xq-l1-210">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,7 +313,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="guestButton" destination="k7h-Wl-3eD" id="kfR-M2-Z49"/>
-                        <outlet property="loginButton" destination="UHD-dR-OHj" id="MWR-ZN-iWj"/>
+                        <outlet property="signInButton" destination="UHD-dR-OHj" id="MWR-ZN-iWj"/>
                         <outlet property="signUpButton" destination="1bH-PF-okv" id="AZe-fE-7z0"/>
                         <outlet property="titleLabel" destination="ksE-aE-9tp" id="LDg-1Y-hYb"/>
                     </connections>
@@ -322,10 +322,10 @@
             </objects>
             <point key="canvasLocation" x="8646.5648854961837" y="66.901408450704224"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="qc7-tp-pGV">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="hoa-du-mBQ" customClass="SignUpViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpVC" id="hoa-du-mBQ" customClass="SignUpVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kem-Y5-bMc">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -420,10 +420,10 @@
             </objects>
             <point key="canvasLocation" x="8185" y="832"/>
         </scene>
-        <!--Map View Controller-->
+        <!--MapVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapVC" id="BYZ-38-t0r" customClass="MapVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -530,21 +530,21 @@
                     <navigationItem key="navigationItem" id="Ure-IU-aZo"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="getPosition" destination="sIu-4r-3Vw" id="B6y-mv-P2a"/>
-                        <outlet property="homeButton" destination="lwB-Pg-a9f" id="guX-Ik-lUg"/>
-                        <outlet property="logoName" destination="9gy-a3-ASF" id="xnL-nz-A5m"/>
-                        <outlet property="mainMenu" destination="9uF-fg-HDT" id="0sA-fI-f53"/>
+                        <outlet property="accountButton" destination="lwB-Pg-a9f" id="guX-Ik-lUg"/>
+                        <outlet property="getPositionButton" destination="sIu-4r-3Vw" id="B6y-mv-P2a"/>
                         <outlet property="mapView" destination="bcb-Zj-Nw5" id="MS5-cA-G2s"/>
+                        <outlet property="menuButton" destination="9uF-fg-HDT" id="0sA-fI-f53"/>
+                        <outlet property="nameLabel" destination="9gy-a3-ASF" id="xnL-nz-A5m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9650" y="68"/>
         </scene>
-        <!--Account View Controller-->
+        <!--AccountVC-->
         <scene sceneID="oax-Ho-rY2">
             <objects>
-                <viewController storyboardIdentifier="AccountViewController" id="1aI-QE-jZL" customClass="AccountViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountVC" id="1aI-QE-jZL" customClass="AccountVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eAp-ct-qjI">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -639,7 +639,7 @@
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="rVP-Xo-k4w" id="lil-45-dsN"/>
-                        <outlet property="loginButton" destination="IWo-aB-Jdy" id="OPy-80-AEJ"/>
+                        <outlet property="signInButton" destination="IWo-aB-Jdy" id="OPy-80-AEJ"/>
                         <outlet property="signUpButton" destination="3z9-FV-5Xx" id="8xn-ij-9ZB"/>
                         <outlet property="titleLabel" destination="7he-iN-XlL" id="vTo-2a-EWg"/>
                     </connections>
@@ -651,7 +651,7 @@
         <!--Recherche-->
         <scene sceneID="aS5-bd-agM">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" id="7pa-ef-Njy" customClass="SearchViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" id="7pa-ef-Njy" customClass="SearchVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mZt-GO-lsw">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -712,13 +712,13 @@
         <!--Menu-->
         <scene sceneID="VV1-gI-C2N">
             <objects>
-                <viewController storyboardIdentifier="MenuController" id="MEI-yf-1ZL" customClass="MenuController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuVC" id="MEI-yf-1ZL" customClass="MenuVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BlG-kp-EhD">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q79-5I-sBZ">
-                                <rect key="frame" x="0.0" y="175" width="430" height="757"/>
+                                <rect key="frame" x="0.0" y="123" width="430" height="809"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" rowHeight="80" id="P1X-DP-NRZ" customClass="MenuCell" customModule="ChangingBaby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="38" width="390" height="80"/>
@@ -789,7 +789,7 @@
         <!--Lieu-->
         <scene sceneID="jdS-u7-eML">
             <objects>
-                <viewController storyboardIdentifier="PlaceController" id="eY9-5g-AFB" customClass="PlaceController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaceVC" id="eY9-5g-AFB" customClass="PlaceVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M6J-e3-UKG">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
