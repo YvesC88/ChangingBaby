@@ -10,12 +10,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign InVC-->
+        <!--Sign In View Controller-->
         <scene sceneID="OXV-Vq-hcT">
             <objects>
-                <viewController storyboardIdentifier="SignInVC" id="Dip-Z8-ofr" customClass="SignInVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="Dip-Z8-ofr" customClass="SignInViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m6H-ft-vFl">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connexion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPY-yp-gaz">
@@ -106,23 +106,38 @@
             </objects>
             <point key="canvasLocation" x="9112" y="832"/>
         </scene>
-        <!--Forget PwdVC-->
+        <!--Forget Pwd View Controller-->
         <scene sceneID="sbi-ds-qLa">
             <objects>
-                <viewController storyboardIdentifier="ForgetPasswordViewController" id="d5g-DO-XaH" customClass="ForgetPwdVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgetPwdViewController" id="d5g-DO-XaH" customClass="ForgetPwdViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hxY-CJ-FHk">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mot de passe oublié ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fs-3D-cjm">
-                                <rect key="frame" x="0.0" y="109" width="430" height="48"/>
+                                <rect key="frame" x="0.0" y="129" width="430" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21B-By-6Jh">
+                                <rect key="frame" x="376.33333333333331" y="10" width="43.666666666666686" height="43.666666666666664"/>
+                                <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="medium"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissForgetPwdViewController" destination="d5g-DO-XaH" eventType="touchUpInside" id="lRj-2K-Nch"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yph-CR-8wK">
-                                <rect key="frame" x="40" y="177" width="350" height="110"/>
+                                <rect key="frame" x="40" y="207" width="350" height="110"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EPb-lp-UR2">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
@@ -148,7 +163,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="getNewPwd" destination="d5g-DO-XaH" eventType="touchUpInside" id="hfP-1p-LQo"/>
+                                            <action selector="getNewPwd" destination="d5g-DO-XaH" eventType="touchUpInside" id="nMC-qa-xYH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -156,33 +171,18 @@
                                     <constraint firstItem="LUY-3e-Axw" firstAttribute="height" secondItem="EPb-lp-UR2" secondAttribute="height" id="Suc-Pz-zps"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21B-By-6Jh">
-                                <rect key="frame" x="376.33333333333331" y="10" width="43.666666666666686" height="43.666666666666664"/>
-                                <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
-                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="medium"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="18"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="dismissForgetPwdViewController" destination="d5g-DO-XaH" eventType="touchUpInside" id="4eP-RJ-1G5"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WdE-NT-XjX"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="WdE-NT-XjX" firstAttribute="trailing" secondItem="Yph-CR-8wK" secondAttribute="trailing" constant="40" id="561-Wy-4bQ"/>
-                            <constraint firstItem="3fs-3D-cjm" firstAttribute="leading" secondItem="WdE-NT-XjX" secondAttribute="leading" id="ATS-9e-y0W"/>
+                            <constraint firstItem="3fs-3D-cjm" firstAttribute="leading" secondItem="WdE-NT-XjX" secondAttribute="leading" id="CkO-kZ-Tfv"/>
                             <constraint firstItem="21B-By-6Jh" firstAttribute="top" secondItem="hxY-CJ-FHk" secondAttribute="top" constant="10" id="H7b-Mm-03D"/>
-                            <constraint firstItem="WdE-NT-XjX" firstAttribute="trailing" secondItem="3fs-3D-cjm" secondAttribute="trailing" id="STN-Ds-pDt"/>
+                            <constraint firstItem="3fs-3D-cjm" firstAttribute="top" secondItem="WdE-NT-XjX" secondAttribute="top" constant="70" id="HGG-iZ-qwF"/>
                             <constraint firstItem="Yph-CR-8wK" firstAttribute="leading" secondItem="WdE-NT-XjX" secondAttribute="leading" constant="40" id="TKr-fe-yo8"/>
-                            <constraint firstItem="Yph-CR-8wK" firstAttribute="top" secondItem="3fs-3D-cjm" secondAttribute="bottom" constant="20" id="aBW-oc-IOW"/>
                             <constraint firstAttribute="trailing" secondItem="21B-By-6Jh" secondAttribute="trailing" constant="10" id="d1w-XI-Hga"/>
-                            <constraint firstItem="3fs-3D-cjm" firstAttribute="top" secondItem="WdE-NT-XjX" secondAttribute="top" constant="50" id="dMl-W0-db9"/>
+                            <constraint firstItem="Yph-CR-8wK" firstAttribute="top" secondItem="3fs-3D-cjm" secondAttribute="bottom" constant="30" id="j2l-6c-x34"/>
+                            <constraint firstItem="WdE-NT-XjX" firstAttribute="trailing" secondItem="3fs-3D-cjm" secondAttribute="trailing" id="qPJ-6P-iDN"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="4h6-gP-Lmq" appends="YES" id="LWQ-Xx-XYm"/>
@@ -190,22 +190,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="ivG-zN-7wc"/>
                     <connections>
-                        <outlet property="emailTextField" destination="EPb-lp-UR2" id="66i-vi-KZp"/>
+                        <outlet property="emailTextField" destination="EPb-lp-UR2" id="i86-Em-dRY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jiA-6d-iGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="4h6-gP-Lmq">
                     <connections>
-                        <action selector="dismissKeyboard:" destination="d5g-DO-XaH" id="H17-YE-uDC"/>
+                        <action selector="dismissKeyboard:" destination="d5g-DO-XaH" id="lFW-rw-m2D"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="9111" y="1532"/>
         </scene>
-        <!--HomeVC-->
+        <!--Home View Controller-->
         <scene sceneID="tIT-3J-rbT">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="22t-oe-uGc" customClass="HomeVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="22t-oe-uGc" customClass="HomeViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Xq-l1-210">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,7 +231,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="hoa-du-mBQ" kind="presentation" id="7Ti-lO-ObT"/>
+                                            <action selector="didTapSignUp" destination="22t-oe-uGc" eventType="touchUpInside" id="T5E-gd-BPV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHD-dR-OHj">
@@ -248,7 +248,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Dip-Z8-ofr" kind="presentation" id="201-RR-Cyc"/>
+                                            <action selector="didTapSignIn" destination="22t-oe-uGc" eventType="touchUpInside" id="N84-Bb-rBa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -322,12 +322,12 @@
             </objects>
             <point key="canvasLocation" x="8646.5648854961837" y="66.901408450704224"/>
         </scene>
-        <!--Sign UpVC-->
+        <!--Sign Up View Controller-->
         <scene sceneID="qc7-tp-pGV">
             <objects>
-                <viewController storyboardIdentifier="SignUpVC" id="hoa-du-mBQ" customClass="SignUpVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="hoa-du-mBQ" customClass="SignUpViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kem-Y5-bMc">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3El-HN-hdJ">
@@ -420,10 +420,10 @@
             </objects>
             <point key="canvasLocation" x="8185" y="832"/>
         </scene>
-        <!--MapVC-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MapVC" id="BYZ-38-t0r" customClass="MapVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -473,14 +473,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="852"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5ac-Hy-KiX">
-                                <rect key="frame" x="372.33333333333331" y="139" width="52.666666666666686" height="198"/>
+                                <rect key="frame" x="372.33333333333331" y="139" width="52.666666666666686" height="125.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwB-Pg-a9f">
                                         <rect key="frame" x="0.0" y="0.0" width="52.666666666666664" height="52.666666666666664"/>
                                         <color key="tintColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large"/>
+                                            <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="large"/>
                                         </state>
                                         <connections>
@@ -492,21 +492,12 @@
                                         <color key="tintColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="magnifyingglass.circle.fill" catalog="system" symbolScale="large"/>
+                                            <imageReference key="image" image="magnifyingglass.circle.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="large"/>
                                         </state>
                                         <connections>
                                             <action selector="search" destination="BYZ-38-t0r" eventType="touchUpInside" id="YvP-Ae-qJ3"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsR-kL-suN">
-                                        <rect key="frame" x="0.0" y="145.33333333333331" width="52.666666666666664" height="52.666666666666657"/>
-                                        <color key="tintColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal">
-                                            <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35"/>
-                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -541,10 +532,10 @@
             </objects>
             <point key="canvasLocation" x="9650" y="68"/>
         </scene>
-        <!--AccountVC-->
+        <!--Account View Controller-->
         <scene sceneID="oax-Ho-rY2">
             <objects>
-                <viewController storyboardIdentifier="AccountVC" id="1aI-QE-jZL" customClass="AccountVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" id="1aI-QE-jZL" customClass="AccountViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eAp-ct-qjI">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -651,7 +642,7 @@
         <!--Recherche-->
         <scene sceneID="aS5-bd-agM">
             <objects>
-                <viewController storyboardIdentifier="SearchVC" id="7pa-ef-Njy" customClass="SearchVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="7pa-ef-Njy" customClass="SearchViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mZt-GO-lsw">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -712,13 +703,13 @@
         <!--Menu-->
         <scene sceneID="VV1-gI-C2N">
             <objects>
-                <viewController storyboardIdentifier="MenuVC" id="MEI-yf-1ZL" customClass="MenuVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="MEI-yf-1ZL" customClass="MenuViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BlG-kp-EhD">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q79-5I-sBZ">
-                                <rect key="frame" x="0.0" y="123" width="430" height="809"/>
+                                <rect key="frame" x="0.0" y="175" width="430" height="757"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" rowHeight="80" id="P1X-DP-NRZ" customClass="MenuCell" customModule="ChangingBaby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="38" width="390" height="80"/>
@@ -728,7 +719,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg0-Ac-ltJ">
-                                                    <rect key="frame" x="40" y="11" width="311.66666666666669" height="58"/>
+                                                    <rect key="frame" x="40" y="11" width="311.66666666666663" height="58"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -789,7 +780,7 @@
         <!--Lieu-->
         <scene sceneID="jdS-u7-eML">
             <objects>
-                <viewController storyboardIdentifier="PlaceVC" id="eY9-5g-AFB" customClass="PlaceVC" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailPlaceViewController" id="eY9-5g-AFB" customClass="DetailPlaceViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M6J-e3-UKG">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -950,7 +941,6 @@
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

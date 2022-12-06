@@ -1,5 +1,5 @@
 //
-//  SearchVC.swift
+//  SearchViewController.swift
 //  ChangingBaby
 //
 //  Created by Yves Charpentier on 15/11/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchVC: UIViewController {
+class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -22,7 +22,6 @@ class SearchVC: UIViewController {
     }
     var filteredPlace: [Place]!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -30,6 +29,7 @@ class SearchVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         self.sheetPresentationController?.detents = [.medium()]
+        self.sheetPresentationController?.prefersGrabberVisible = true
     }
     
     func loadData() {
@@ -52,7 +52,7 @@ class SearchVC: UIViewController {
     }
 }
 
-extension SearchVC: UITableViewDataSource, UITableViewDelegate {
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         filteredPlace.count
     }
@@ -67,7 +67,7 @@ extension SearchVC: UITableViewDataSource, UITableViewDelegate {
         guard indexPath.row < filteredPlace.count else { return }
         let selectedPlace = filteredPlace[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "PlaceVC") as? PlaceVC else { return }
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "DetailPlaceViewController") as? DetailPlaceViewController else { return }
         vc.place = [selectedPlace]
         let navPlacesController = UINavigationController(rootViewController: vc)
         setupUINavigationBar(navController: navPlacesController)
@@ -75,7 +75,7 @@ extension SearchVC: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension SearchVC: UISearchBarDelegate {
+extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredPlace = []
         for word in place {

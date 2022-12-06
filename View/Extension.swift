@@ -19,6 +19,11 @@ extension UIViewController {
     func dismissKeyboard(_ sender: UITapGestureRecognizer, textField: UITextField) {
         textField.resignFirstResponder()
     }
+    
+    func setupUIButton(button: UIButton) {
+        button.layer.borderColor = UIColor.tintColor.cgColor
+        button.layer.borderWidth = 2
+    }
 }
 
 extension AuthErrorCode.Code {
@@ -42,4 +47,8 @@ extension AuthErrorCode.Code {
             return "Désolé, quelque chose ne va pas."
         }
     }
+}
+
+protocol SelectionDelegate {
+    func didFinishAction()
 }
