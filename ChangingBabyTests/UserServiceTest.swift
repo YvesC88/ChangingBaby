@@ -12,27 +12,29 @@ final class UserServiceTest: XCTestCase {
     
     let firebaseMock = FirebaseWrapperMock()
     
-//    func testGivenTryToCreateUserWhenCreateUserThenUserIsCreate() {
-//        // Given
-//        let expectation = XCTestExpectation(description: "Wait for queue change.")
-//        let userService = UserService(wrapper: firebaseMock)
-//        firebaseMock.createResult = "User"
-//        firebaseMock.createError = nil
-//        // When
-//        var resultUserIud: String?
-//        var resultError: String?
-//        userService.createUser(name: "Yves", mail: "test@test.fr", password: "Yves1234") { userIud, errorMessage in
-//            resultUserIud = userIud
-//            resultError = errorMessage
-//            expectation.fulfill()
-//        }
-//        // Then
-//        wait(for: [expectation], timeout: 0.01)
-//        XCTAssertEqual(resultUserIud, "User")
-//        XCTAssertNil(resultError)
-//        XCTAssertTrue(firebaseMock.isCreateCalled)
-//    }
+    // success to create an user without error message
+    func testGivenTryToCreateUserWhenCreateUserThenUserIsCreate() {
+        // Given
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        let userService = UserService(wrapper: firebaseMock)
+        firebaseMock.createResult = "Test"
+        firebaseMock.createError = nil
+        // When
+        var resultUserIud: String?
+        var resultError: String?
+        userService.createUser(name: "Test", mail: "test@test.fr", password: "Test1234") { userIud, errorMessage in
+            resultUserIud = userIud
+            resultError = errorMessage
+            expectation.fulfill()
+        }
+        // Then
+        wait(for: [expectation], timeout: 0.01)
+        XCTAssertEqual(resultUserIud, "Test")
+        XCTAssertNil(resultError)
+        XCTAssertTrue(firebaseMock.isCreateCalled)
+    }
     
+    // failure to create user with error message
     func testGivenTryToCreateUserWhenCreateUserThenUserIsNotCreate() {
         // Given
         let expectation = XCTestExpectation(description: "Wait for queue change.")
@@ -55,6 +57,7 @@ final class UserServiceTest: XCTestCase {
         XCTAssertFalse(firebaseMock.isUpdateProfileCalled)
     }
     
+    // success to signin an user without error message
     func testGivenUserTryToSignInWhenUserSignInThenHasUserIdAndNoErrorMessage() {
         // Given
         let expectation = XCTestExpectation(description: "Wait for queue change.")
@@ -76,6 +79,7 @@ final class UserServiceTest: XCTestCase {
         XCTAssertTrue(firebaseMock.isSignInCalled)
     }
     
+    // failure to signin an user with error message
     func testGivenUserTryToSignInWhenUserSignInThenHasNoUserIdAndErrorMessage() {
         // Given
         let expectation = XCTestExpectation(description: "Wait for queue change.")
@@ -97,6 +101,7 @@ final class UserServiceTest: XCTestCase {
         XCTAssertTrue(firebaseMock.isSignInCalled)
     }
     
+    // success to sign out an user without error message
     func testGivenUserTryToSignOutWhenUserSignOutThenHasNoUserIdAndNoErrorMessage() {
         // Given
         let expectation = XCTestExpectation(description: "Wait for queue change.")
@@ -118,6 +123,7 @@ final class UserServiceTest: XCTestCase {
         XCTAssertTrue(firebaseMock.isSignOutCalled)
     }
     
+    // failure to sign out an user with error message
     func testGivenUserTryToSignOutWhenUserSignOutThenHasUserIdAndErrorMessage() {
         // Given
         let expectation = XCTestExpectation(description: "Wait for queue change.")
@@ -137,5 +143,41 @@ final class UserServiceTest: XCTestCase {
         XCTAssertNil(resultUserIud)
         XCTAssertNil(resultError)
         XCTAssertTrue(firebaseMock.isSignOutCalled)
+    }
+    
+    // success to send a mail to the user without error message
+    func testGivenUserWantANewPwdWhenGetNewPwdThenHasNoErrorMessage() {
+        // Given
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        let userService = UserService(wrapper: firebaseMock)
+        firebaseMock.createError = nil
+        // When
+        var resultError: String?
+        userService.forgetPwd(userMail: "test@test.fr") { errorMessage in
+            resultError = errorMessage
+            expectation.fulfill()
+        }
+        // Then
+        wait(for: [expectation], timeout: 0.01)
+        XCTAssertNil(resultError)
+        XCTAssertTrue(firebaseMock.isForgetPwdCalled)
+    }
+    
+    // failure to send a mail to the user with error message
+    func testGivenUserWantANewPwdWhenGetNewPwdThenHasErrorMessage() {
+        // Given
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        let userService = UserService(wrapper: firebaseMock)
+        firebaseMock.createError = "error"
+        // When
+        var resultError: String?
+        userService.forgetPwd(userMail: "test@test.fr") { errorMessage in
+            resultError = errorMessage
+            expectation.fulfill()
+        }
+        // Then
+        wait(for: [expectation], timeout: 0.01)
+        XCTAssertEqual(resultError, "error")
+        XCTAssertTrue(firebaseMock.isForgetPwdCalled)
     }
 }

@@ -30,15 +30,9 @@ class UserService {
                 completion(nil, errorMessage)
             } else {
                 let db = Firestore.firestore()
-                db.collection("users").addDocument(data: ["name": name, "uid": userUid as Any]) { error in
-                    if error != nil {
-                        let errorCode = AuthErrorCode.Code(rawValue: error!._code)
-                        completion(nil, errorCode?.errorMessage)
-                    } else {
-                        self.updateUserProfile(userName: name)
-                        completion(userUid, nil)
-                    }
-                }
+                db.collection("users").addDocument(data: ["name": name, "uid": userUid as Any])
+                self.updateUserProfile(userName: name)
+                completion(userUid, nil)
             }
         }
     }
@@ -70,20 +64,17 @@ class UserService {
     
     // add an username for firebase
     func updateUserProfile(userName: String) {
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        changeRequest?.displayName = userName
-        changeRequest?.commitChanges { error in }
+        firebaseWrapper.updateUserProfile(userName: userName)
     }
     
     // send a mail to get a new password
     func forgetPwd(userMail: String, completion: @escaping (String?) -> ()) {
-        Auth.auth().sendPasswordReset(withEmail: userMail) { error in
-            guard error != nil else {
+        firebaseWrapper.forgetPwd(mail: userMail) { errorMessage in
+            if let errorMessage = errorMessage {
+                completion(errorMessage)
+            } else {
                 completion(nil)
-                return
             }
-            guard let errorCode = AuthErrorCode.Code(rawValue: error?._code ?? 0) else { return }
-            completion(errorCode.errorMessage)
         }
     }
 }

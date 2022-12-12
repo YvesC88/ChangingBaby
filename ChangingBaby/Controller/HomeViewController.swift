@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func guestButtonTapped() {
-        self.toNextVC(with: "MapViewController")
+        self.toChangeVC(with: "MapViewController")
     }
     
     @IBAction func didTapSignUp() {
@@ -43,14 +43,14 @@ class HomeViewController: UIViewController {
             self.setUIButton(buttons: [signUpButton, signInButton])
             return
         }
-        self.toNextVC(with: "MapViewController")
+        self.toChangeVC(with: "MapViewController")
     }
 }
 
 extension HomeViewController: SelectionDelegate {
     func didFinishAction() {
         dismiss(animated: true) {
-            self.toNextVC(with: "MapViewController")
+            self.toChangeVC(with: "MapViewController")
         }
     }
 }

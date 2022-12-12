@@ -29,7 +29,7 @@ extension UIViewController {
         }
     }
     
-    func toNextVC(with identifier: String) {
+    func toChangeVC(with identifier: String) {
         guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: identifier)

@@ -55,7 +55,7 @@ class AccountViewController: UIViewController {
                 self.presentAlert(title: "Erreur", message: "Une erreur s'est produite. Veuillez réessayer.")
             } else {
                 self.dismiss(animated: true) {
-                    self.toNextVC(with: "HomeViewController")
+                    self.toChangeVC(with: "HomeViewController")
                 }
             }
         }
