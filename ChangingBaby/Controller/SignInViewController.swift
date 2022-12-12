@@ -12,19 +12,18 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
-    let userService = UserService()
+    let userService = UserService(wrapper: FirebaseWrapper())
     var delegate: SelectionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
         self.sheetPresentationController?.prefersGrabberVisible = true
-        self.setupUIButton(button: signInButton)
-        
+        self.setUIButton(buttons: [signInButton])
     }
     
     @IBAction func loginButtonTapped() {
-        userService.signIn(mail: emailTextField.text!, password: passwordTextField.text!) { error in
+        userService.signIn(mail: emailTextField.text!, password: passwordTextField.text!) { result, error  in
             guard error != nil else {
                 self.delegate?.didFinishAction()
                 return
@@ -34,9 +33,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func forgetPassword() {
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "ForgetPwdViewController") as? ForgetPwdViewController else { return }
-        present(vc, animated: true)
+        self.presentVC(with: "ForgetPwdViewController")
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {

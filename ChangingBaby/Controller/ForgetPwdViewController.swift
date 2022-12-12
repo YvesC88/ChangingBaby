@@ -8,14 +8,16 @@
 import UIKit
 
 class ForgetPwdViewController: UIViewController {
+    @IBOutlet weak var validateButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     
-    let userService = UserService()
+    let userService = UserService(wrapper: FirebaseWrapper())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
         self.sheetPresentationController?.prefersGrabberVisible = true
+        self.setUIButton(buttons: [validateButton])
     }
     @IBAction func getNewPwd() {
         userService.forgetPwd(userMail: (emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!) { error in

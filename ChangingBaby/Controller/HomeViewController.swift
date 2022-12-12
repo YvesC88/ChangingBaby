@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var guestButton: UIButton!
     
-    let userService = UserService()
+    let userService = UserService(wrapper: FirebaseWrapper())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func guestButtonTapped() {
-        toNextViewController(animated: true)
+        self.toNextVC(with: "MapViewController")
     }
     
     @IBAction func didTapSignUp() {
@@ -40,27 +40,17 @@ class HomeViewController: UIViewController {
     
     func setUI() {
         guard userService.isLogin else {
-            self.setupUIButton(button: signInButton)
+            self.setUIButton(buttons: [signUpButton, signInButton])
             return
         }
-        toNextViewController(animated: true)
-    }
-    
-    func toNextViewController(animated: Bool) {
-        guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        navController.setViewControllers([vc], animated: animated)
+        self.toNextVC(with: "MapViewController")
     }
 }
 
 extension HomeViewController: SelectionDelegate {
     func didFinishAction() {
         dismiss(animated: true) {
-            guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-            navController.setViewControllers([vc], animated: true)
+            self.toNextVC(with: "MapViewController")
         }
     }
 }

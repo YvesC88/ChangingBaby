@@ -34,6 +34,8 @@
 		FBDCE2B22906D97E006A11C6 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDCE2B12906D97E006A11C6 /* Place.swift */; };
 		FBDCE2B82906DA44006A11C6 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDCE2B72906DA44006A11C6 /* PlaceService.swift */; };
 		FBE098072924DF9000152A8D /* PlaceServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE098062924DF9000152A8D /* PlaceServiceTest.swift */; };
+		FBF47EC929427FFD000E3EAA /* FirebaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF47EC7294228CC000E3EAA /* FirebaseWrapper.swift */; };
+		FBF47ECB29428053000E3EAA /* FirebaseWrapperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF47ECA29428053000E3EAA /* FirebaseWrapperMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		FBDCE2B12906D97E006A11C6 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		FBDCE2B72906DA44006A11C6 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
 		FBE098062924DF9000152A8D /* PlaceServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceServiceTest.swift; sourceTree = "<group>"; };
+		FBF47EC7294228CC000E3EAA /* FirebaseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWrapper.swift; sourceTree = "<group>"; };
+		FBF47ECA29428053000E3EAA /* FirebaseWrapperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWrapperMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 			children = (
 				FB861F712922F1CB00D31207 /* UserServiceTest.swift */,
 				FBE098062924DF9000152A8D /* PlaceServiceTest.swift */,
+				FBF47ECA29428053000E3EAA /* FirebaseWrapperMock.swift */,
 			);
 			path = ChangingBabyTests;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				FBDCE2B12906D97E006A11C6 /* Place.swift */,
 				FBDCE2B72906DA44006A11C6 /* PlaceService.swift */,
 				FBC5C057291A994200A9BB49 /* UserService.swift */,
+				FBF47EC7294228CC000E3EAA /* FirebaseWrapper.swift */,
 			);
 			name = Model;
 			path = ChangingBaby/Model;
@@ -309,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB31C6A2932903A009A7DD0 /* Extension.swift in Sources */,
+				FBF47EC929427FFD000E3EAA /* FirebaseWrapper.swift in Sources */,
 				FBDCE2B82906DA44006A11C6 /* PlaceService.swift in Sources */,
 				FB827F14274C52EB0050903A /* MapViewController.swift in Sources */,
 				FBC5C05E291BA0CA00A9BB49 /* AccountViewController.swift in Sources */,
@@ -333,6 +340,7 @@
 			files = (
 				FB861F722922F1CC00D31207 /* UserServiceTest.swift in Sources */,
 				FBE098072924DF9000152A8D /* PlaceServiceTest.swift in Sources */,
+				FBF47ECB29428053000E3EAA /* FirebaseWrapperMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

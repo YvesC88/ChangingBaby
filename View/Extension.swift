@@ -20,9 +20,26 @@ extension UIViewController {
         textField.resignFirstResponder()
     }
     
-    func setupUIButton(button: UIButton) {
-        button.layer.borderColor = UIColor.tintColor.cgColor
-        button.layer.borderWidth = 2
+    func setUIButton(buttons: [UIButton]) {
+        let buttons = buttons
+        for button in buttons {
+            button.layer.cornerRadius = 25
+            button.layer.borderColor = UIColor.tintColor.cgColor
+            button.layer.borderWidth = 2
+        }
+    }
+    
+    func toNextVC(with identifier: String) {
+        guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: identifier)
+        navController.setViewControllers([vc], animated: true)
+    }
+    
+    func presentVC(with identifier: String) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: identifier)
+        self.present(vc, animated:true)
     }
 }
 

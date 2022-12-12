@@ -8,18 +8,19 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     
-    let userService = UserService()
+    let userService = UserService(wrapper: FirebaseWrapper())
     var delegate: SelectionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
         self.sheetPresentationController?.prefersGrabberVisible = true
-        
+        self.setUIButton(buttons: [signUpButton])
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
@@ -30,7 +31,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpTapped() {
-        userService.createUser(name: userNameTextField.text!, mail: emailTextField.text!, password: passwordTextField.text!) { error in
+        userService.createUser(name: userNameTextField.text!, mail: emailTextField.text!, password: passwordTextField.text!) { result, error  in
             guard error != nil else {
                 self.delegate?.didFinishAction()
                 return

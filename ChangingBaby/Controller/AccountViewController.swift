@@ -13,13 +13,14 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
     
-    let userService = UserService()
+    let userService = UserService(wrapper: FirebaseWrapper())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sheetPresentationController?.detents = [.medium()]
         self.sheetPresentationController?.prefersGrabberVisible = true
         isUserLogin()
+        self.setUIButton(buttons: [signUpButton, signInButton])
     }
     
     // check if user is login
@@ -48,12 +49,15 @@ class AccountViewController: UIViewController {
             return
         }
         // signOut the user and back to HomeViewController
-        userService.signOut()
-        dismiss(animated: true) {
-            guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController else { return }
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            navController.setViewControllers([vc], animated: true)
+        userService.signOut { result, error in
+            if result != nil && error == nil {
+                // user isn't signouted and has an error
+                self.presentAlert(title: "Erreur", message: "Une erreur s'est produite. Veuillez réessayer.")
+            } else {
+                self.dismiss(animated: true) {
+                    self.toNextVC(with: "HomeViewController")
+                }
+            }
         }
     }
     

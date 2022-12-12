@@ -36,7 +36,7 @@ class MapViewController: UIViewController {
         }
     }
     
-    // donne sa position actuelle
+    // get current user's position
     @IBAction func getPosition(_ sender: Any) {
         guard userPosition != nil else { return }
         mapView.setRegion(MKCoordinateRegion(center: userPosition!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
@@ -44,22 +44,18 @@ class MapViewController: UIViewController {
     
     @IBAction func presentMenu() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+        guard let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else { return }
         let navMenuController = UINavigationController(rootViewController: sheetPresentationController)
         setupUINavigationBar(navController: navMenuController)
         self.present(navMenuController, animated: true, completion: nil)
     }
     
     @IBAction func backToHome(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        guard let vc = storyBoard.instantiateViewController(withIdentifier: "AccountViewController") as? AccountViewController else { return }
-        self.present(vc, animated:true)
+        self.presentVC(with: "AccountViewController")
     }
     
     @IBAction func search() {
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController else { return }
-        self.present(vc, animated: true)
+        self.presentVC(with: "SearchViewController")
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

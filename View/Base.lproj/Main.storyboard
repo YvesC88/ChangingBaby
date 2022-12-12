@@ -46,16 +46,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-rC-n58">
                                         <rect key="frame" x="0.0" y="120" width="350" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Se connecter">
                                             <color key="titleColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginButtonTapped" destination="Dip-Z8-ofr" eventType="touchUpInside" id="V0N-jB-ar0"/>
                                         </connections>
@@ -152,16 +147,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUY-3e-Axw">
                                         <rect key="frame" x="0.0" y="60" width="350" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Valider">
                                             <color key="titleColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="getNewPwd" destination="d5g-DO-XaH" eventType="touchUpInside" id="nMC-qa-xYH"/>
                                         </connections>
@@ -191,6 +181,7 @@
                     <navigationItem key="navigationItem" id="ivG-zN-7wc"/>
                     <connections>
                         <outlet property="emailTextField" destination="EPb-lp-UR2" id="i86-Em-dRY"/>
+                        <outlet property="validateButton" destination="LUY-3e-Axw" id="91E-ay-avU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jiA-6d-iGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -225,11 +216,6 @@
                                         <state key="normal" title="Inscription">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapSignUp" destination="22t-oe-uGc" eventType="touchUpInside" id="T5E-gd-BPV"/>
                                         </connections>
@@ -242,11 +228,6 @@
                                         <state key="normal" title="Connexion">
                                             <color key="titleColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapSignIn" destination="22t-oe-uGc" eventType="touchUpInside" id="N84-Bb-rBa"/>
                                         </connections>
@@ -364,20 +345,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uc-bv-JF0">
                                         <rect key="frame" x="0.0" y="180" width="350" height="50"/>
                                         <color key="backgroundColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="S'inscrire">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <buttonConfiguration key="configuration" style="plain" title="S'inscrire">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signUpTapped" destination="hoa-du-mBQ" eventType="touchUpInside" id="cuI-yL-VM5"/>
                                         </connections>
@@ -401,13 +373,14 @@
                             <constraint firstItem="BKW-qd-9yy" firstAttribute="trailing" secondItem="3El-HN-hdJ" secondAttribute="trailing" constant="50" id="oya-Yo-t0m"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="orU-PV-Ifj" appends="YES" id="Y02-Qb-Dnc"/>
+                            <outletCollection property="gestureRecognizers" destination="orU-PV-Ifj" appends="YES" id="VLy-O0-E7f"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="lgD-p8-KHC"/>
                     <connections>
                         <outlet property="emailTextField" destination="21Q-Z2-eNk" id="fqj-Cm-Ffo"/>
                         <outlet property="passwordTextField" destination="ZWT-b5-VuB" id="Ge2-uH-bpI"/>
+                        <outlet property="signUpButton" destination="4Uc-bv-JF0" id="0Wy-BZ-lsz"/>
                         <outlet property="userNameTextField" destination="puz-4q-qQn" id="pCW-sN-707"/>
                     </connections>
                 </viewController>
@@ -549,17 +522,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="vcy-bv-AYk"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <size key="titleShadowOffset" width="2" height="2"/>
                                         <state key="normal" title="Inscription">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signUp" destination="1aI-QE-jZL" eventType="touchUpInside" id="OEy-OM-uBV"/>
                                         </connections>
@@ -567,16 +535,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWo-aB-Jdy">
                                         <rect key="frame" x="0.0" y="60" width="350" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Connexion">
                                             <color key="titleColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="logButtonTapped" destination="1aI-QE-jZL" eventType="touchUpInside" id="znn-tr-aIc"/>
                                         </connections>

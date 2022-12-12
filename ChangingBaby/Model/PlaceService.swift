@@ -14,6 +14,18 @@ class PlaceService {
     
     // MARK: - Methods
     
+    // fetch places in FireStore
+    func fetchPlaces(collectionID: String, completion: @escaping ([Place]) -> Void) {
+        let db = Firestore.firestore()
+        db.collection("places").addSnapshotListener { (querySnapshot, error) in
+            guard let error = error else {
+                completion(self.build(from: querySnapshot?.documents ?? []))
+                return
+            }
+            print("Error getting documents: \(error)")
+        }
+    }
+    
     func build(from documents: [QueryDocumentSnapshot]) -> [Place] {
         var places = [Place]()
         for document in documents {
@@ -27,16 +39,5 @@ class PlaceService {
                                 long: document["long"] as? Double ?? 0.0))
         }
         return places
-    }
-    // fetch places in FireStore
-    func fetchPlaces(collectionID: String, completion: @escaping ([Place]) -> Void) {
-        let db = Firestore.firestore()
-        db.collection("places").addSnapshotListener { (querySnapshot, error) in
-            guard let error = error else {
-                completion(self.build(from: querySnapshot?.documents ?? []))
-                return
-            }
-            print("Error getting documents: \(error)")
-        }
     }
 }
