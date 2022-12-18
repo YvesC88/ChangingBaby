@@ -33,7 +33,7 @@ class SearchViewController: UIViewController {
     }
     
     func loadData() {
-        let service = PlaceService()
+        let service = PlaceService(wrapper: FirebaseWrapper())
         service.fetchPlaces(collectionID: "places") { place in
             for data in place {
                 self.place.append(data)

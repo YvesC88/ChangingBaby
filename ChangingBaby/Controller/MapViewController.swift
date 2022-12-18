@@ -29,9 +29,11 @@ class MapViewController: UIViewController {
     }
     
     func loadData() {
-        let service = PlaceService()
+        let service = PlaceService(wrapper: FirebaseWrapper())
         service.fetchPlaces(collectionID: "places") { place in
-            self.place = place
+            for data in place {
+                self.place.append(data)
+            }
             self.setupPin()
         }
     }

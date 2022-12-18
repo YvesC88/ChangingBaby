@@ -6,27 +6,41 @@
 //
 
 import Foundation
-import FirebaseFirestore
 import CoreLocation
+import Firebase
 
 class PlaceService {
     // MARK: - Properties
+    let firebaseWrapper: FirebaseProtocol
     
+    init(wrapper: FirebaseProtocol) {
+        self.firebaseWrapper = wrapper
+    }
     // MARK: - Methods
     
+//    func fetch(completion: @escaping (QuerySnapshot?, String?) -> ()) {
+//        firebaseWrapper.fetch(collectionID: "places") { querySnapshot, error in
+//            if let querySnapshot = querySnapshot {
+//                completion(querySnapshot, nil)
+//            } else {
+//                completion(nil, error)
+//            }
+//        }
+//    }
+    
     // fetch places in FireStore
-    func fetchPlaces(collectionID: String, completion: @escaping ([Place]) -> Void) {
+    func fetchPlaces(collectionID: String, completion: @escaping ([Place]) -> ()) {
         let db = Firestore.firestore()
         db.collection("places").addSnapshotListener { (querySnapshot, error) in
-            guard let error = error else {
+            guard error != nil else {
                 completion(self.build(from: querySnapshot?.documents ?? []))
                 return
             }
-            print("Error getting documents: \(error)")
+            completion([])
         }
     }
     
-    func build(from documents: [QueryDocumentSnapshot]) -> [Place] {
+    private func build(from documents: [QueryDocumentSnapshot]) -> [Place] {
         var places = [Place]()
         for document in documents {
             places.append(Place(name: document["name"] as? String ?? "",
