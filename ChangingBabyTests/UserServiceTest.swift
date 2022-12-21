@@ -75,7 +75,6 @@ final class UserServiceTest: XCTestCase {
         // Then
         wait(for: [expectation], timeout: 0.01)
         XCTAssertEqual(resultDbError, "error")
-        XCTAssertFalse(firebaseMock.isCreateCalled)
         XCTAssertTrue(firebaseMock.isAddDocumentCalled)
         XCTAssertFalse(firebaseMock.isUpdateProfileCalled)
     }
@@ -96,7 +95,6 @@ final class UserServiceTest: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
         XCTAssertEqual(resultUpdateError, "error")
         XCTAssertTrue(firebaseMock.isUpdateProfileCalled)
-        XCTAssertFalse(firebaseMock.isCreateCalled)
         XCTAssertFalse(firebaseMock.isAddDocumentCalled)
     }
     

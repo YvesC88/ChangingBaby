@@ -28,23 +28,23 @@ class SearchViewController: UIViewController {
         filteredPlace = place
         tableView.delegate = self
         tableView.dataSource = self
-        self.sheetPresentationController?.detents = [.medium()]
-        self.sheetPresentationController?.prefersGrabberVisible = true
     }
     
+    // load the place from firestore
     func loadData() {
         let service = PlaceService(wrapper: FirebaseWrapper())
-        service.fetchPlaces(collectionID: "places") { place in
+        service.fetchPlaces(collectionID: "places") { place, error in
             for data in place {
                 self.place.append(data)
             }
         }
     }
     
+    // set ui for nav bar
     func setupUINavigationBar(navController: UINavigationController) {
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.configureWithDefaultBackground()
-        standardAppearance.backgroundColor = UIColor.tintColor
+        standardAppearance.backgroundColor = UIColor(red: 49/255, green: 48/255, blue: 121/255, alpha: 1)
         standardAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navController.navigationBar.prefersLargeTitles = true
         navController.navigationBar.isTranslucent = true

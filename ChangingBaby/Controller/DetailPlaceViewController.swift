@@ -19,9 +19,9 @@ class DetailPlaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUIPlace()
-        self.sheetPresentationController?.detents = [.medium(), .large()]
     }
     
+    // set ui for place
     func setUIPlace() {
         for i in self.place {
             self.title = i.name
@@ -30,10 +30,12 @@ class DetailPlaceViewController: UIViewController {
         }
     }
     
-    @IBAction func closePlaceController() {
+    // dismiss DetailPlaceViewController
+    @IBAction func dismissDetailPlaceViewController() {
         dismiss(animated: true, completion: nil)
     }
     
+    // to use apple plan for itinerary
     @IBAction func itineraryTo() {
         let coordinate = CLLocationCoordinate2D(latitude: place.first?.lat ?? 0.0, longitude: place.first?.long ?? 0.0)
         let placemark = MKPlacemark(coordinate: coordinate)

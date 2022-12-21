@@ -20,10 +20,12 @@ class HomeViewController: UIViewController {
         setUI()
     }
     
+    // to ignore the homeViewController
     @IBAction func guestButtonTapped() {
         self.toChangeVC(with: "MapViewController")
     }
     
+    // to sign up a new user
     @IBAction func didTapSignUp() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
@@ -31,6 +33,7 @@ class HomeViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    // to log in a user
     @IBAction func didTapSignIn() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController else { return }
@@ -38,6 +41,7 @@ class HomeViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    // to custom ui button and set MapViewController is user is login
     func setUI() {
         guard userService.isLogin else {
             self.setUIButton(buttons: [signUpButton, signInButton])
@@ -48,6 +52,7 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: SelectionDelegate {
+    // action to perform if user is on HomeViewController
     func didFinishAction() {
         dismiss(animated: true) {
             self.toChangeVC(with: "MapViewController")

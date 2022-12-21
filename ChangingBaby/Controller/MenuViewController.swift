@@ -11,26 +11,28 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var closeButton: UIButton!
     
-    let menu = ["Astuces", "Favoris"]
+    let menu = ["Astuces"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sheetPresentationController?.detents = [.medium()]
         tableView.rowHeight = 60
         tableView.dataSource = self
         tableView.delegate = self
     }
     
-    @IBAction func closeTableView() {
+    // dismiss the menu
+    @IBAction func dismissMenu() {
         dismiss(animated: true, completion: nil)
     }
 }
 
 extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
+    // return the number of section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.count
     }
     
+    // display section
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
         let menu = menu[indexPath.row]
@@ -39,6 +41,6 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let choice = menu[indexPath.row]
+//        let choice = menu[indexPath.row]
     }
 }

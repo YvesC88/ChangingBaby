@@ -14,7 +14,7 @@ protocol FirebaseProtocol {
     func signIn(mail: String, password: String, completion: @escaping (String?, String?) -> ())
     func signOut(completion: @escaping (String?, String?) -> ())
     func forgetPwd(mail: String, completion: @escaping (String?) -> ())
-//    func fetch(collectionID: String, completion: @escaping (QuerySnapshot?, String?) -> ())
+    func fetch(collectionID: String, completion: @escaping ([Place]?, String?) -> ())
 }
 
 class FirebaseWrapper: FirebaseProtocol {
@@ -89,14 +89,29 @@ class FirebaseWrapper: FirebaseProtocol {
         }
     }
     
-//    func fetch(collectionID: String, completion: @escaping (QuerySnapshot?, String?) -> ()) {
-//        let db = Firestore.firestore()
-//        db.collection("places").addSnapshotListener { (querySnapshot, error) in
-//            if let querySnapshot = querySnapshot {
-//                completion(querySnapshot, nil)
-//            } else {
-//                completion(nil, error?.localizedDescription)
-//            }
-//        }
-//    }
+    func fetch(collectionID: String, completion: @escaping ([Place]?, String?) -> ()) {
+        let db = Firestore.firestore()
+        db.collection("places").addSnapshotListener { (querySnapshot, error) in
+            if let querySnapshot = querySnapshot {
+                completion(self.build(from: querySnapshot.documents), nil)
+            } else {
+                completion(nil, error?.localizedDescription)
+            }
+        }
+    }
+    
+    internal func build(from documents: [QueryDocumentSnapshot]) -> [Place] {
+        var places = [Place]()
+        for document in documents {
+            places.append(Place(name: document["name"] as? String ?? "",
+                                streetNumber: document["streetNumber"] as? String ?? "",
+                                streetName: document["streetName"] as? String ?? "",
+                                city: document["city"] as? String ?? "",
+                                category: document["category"] as? String ?? "",
+                                zip: document["zip"] as? Int ?? 00000,
+                                lat: document["lat"] as? Double ?? 0.0,
+                                long: document["long"] as? Double ?? 0.0))
+        }
+        return places
+    }
 }

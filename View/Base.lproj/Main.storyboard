@@ -70,16 +70,34 @@
                                     <constraint firstItem="CpC-IX-tuk" firstAttribute="height" secondItem="g3J-A3-Km7" secondAttribute="height" id="wn7-7h-qrJ"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWq-n9-BFR">
+                                <rect key="frame" x="376.33333333333331" y="69" width="43.666666666666686" height="43.666666666666657"/>
+                                <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="medium"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissAccountViewController:" destination="1aI-QE-jZL" eventType="touchUpInside" id="xO9-0K-1ce"/>
+                                    <action selector="dismissSignInViewController" destination="Dip-Z8-ofr" eventType="touchUpInside" id="S2c-HE-vnQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tv1-s6-57o"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="QYz-8L-2I5" firstAttribute="leading" secondItem="Tv1-s6-57o" secondAttribute="leading" constant="40" id="Kna-1S-9bY"/>
+                            <constraint firstItem="Tv1-s6-57o" firstAttribute="trailing" secondItem="eWq-n9-BFR" secondAttribute="trailing" constant="10" id="QY4-gP-uyf"/>
                             <constraint firstItem="Tv1-s6-57o" firstAttribute="trailing" secondItem="QYz-8L-2I5" secondAttribute="trailing" constant="40" id="aYo-Z3-ICb"/>
                             <constraint firstItem="RPY-yp-gaz" firstAttribute="leading" secondItem="Tv1-s6-57o" secondAttribute="leading" constant="50" id="bkI-p0-KpY"/>
                             <constraint firstItem="QYz-8L-2I5" firstAttribute="top" secondItem="RPY-yp-gaz" secondAttribute="bottom" constant="40" id="ffY-7v-5uO"/>
                             <constraint firstItem="RPY-yp-gaz" firstAttribute="top" secondItem="Tv1-s6-57o" secondAttribute="top" constant="20" id="g6t-rX-bzr"/>
                             <constraint firstItem="Tv1-s6-57o" firstAttribute="trailing" secondItem="RPY-yp-gaz" secondAttribute="trailing" constant="50" id="m2U-G8-tXy"/>
+                            <constraint firstItem="eWq-n9-BFR" firstAttribute="top" secondItem="Tv1-s6-57o" secondAttribute="top" constant="10" id="o1D-Y2-cz1"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="TGL-31-y5L" appends="YES" id="HwA-ed-0bf"/>
@@ -361,11 +379,29 @@
                                     <constraint firstItem="21Q-Z2-eNk" firstAttribute="height" secondItem="puz-4q-qQn" secondAttribute="height" id="GR3-bG-B0E"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qz-dF-ct5">
+                                <rect key="frame" x="376.33333333333331" y="69" width="43.666666666666686" height="43.666666666666657"/>
+                                <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="medium"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissAccountViewController:" destination="1aI-QE-jZL" eventType="touchUpInside" id="bu1-go-Af5"/>
+                                    <action selector="dismissSignUpViewController" destination="hoa-du-mBQ" eventType="touchUpInside" id="OSq-KY-nXm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BKW-qd-9yy"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="5qz-dF-ct5" firstAttribute="top" secondItem="BKW-qd-9yy" secondAttribute="top" constant="10" id="4pc-kO-JKA"/>
                             <constraint firstItem="ayT-QX-aWL" firstAttribute="leading" secondItem="BKW-qd-9yy" secondAttribute="leading" constant="40" id="EQ6-1D-Tq5"/>
+                            <constraint firstItem="BKW-qd-9yy" firstAttribute="trailing" secondItem="5qz-dF-ct5" secondAttribute="trailing" constant="10" id="Hcd-S5-mLO"/>
                             <constraint firstItem="BKW-qd-9yy" firstAttribute="trailing" secondItem="ayT-QX-aWL" secondAttribute="trailing" constant="40" id="N0T-D2-x1V"/>
                             <constraint firstItem="ayT-QX-aWL" firstAttribute="top" secondItem="3El-HN-hdJ" secondAttribute="bottom" constant="40" id="ZKv-uP-LZM"/>
                             <constraint firstItem="3El-HN-hdJ" firstAttribute="top" secondItem="BKW-qd-9yy" secondAttribute="top" constant="20" id="bJl-97-w7Z"/>
@@ -401,36 +437,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="15b-Xn-Y5s">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="15b-Xn-Y5s">
                                 <rect key="frame" x="0.0" y="852" width="430" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uF-fg-HDT">
-                                        <rect key="frame" x="0.0" y="0.0" width="56" height="37.666666666666664"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="list.bullet" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
-                                        </buttonConfiguration>
+                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="34.666666666666664"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="list.bullet" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                        </state>
                                         <connections>
                                             <action selector="presentMenu" destination="BYZ-38-t0r" eventType="touchUpInside" id="zMT-0k-aRY"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changing Baby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-a3-ASF">
-                                        <rect key="frame" x="119.00000000000001" y="0.0" width="194.33333333333337" height="34.666666666666664"/>
+                                        <rect key="frame" x="124.33333333333333" y="0.0" width="194.33333333333337" height="34.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIu-4r-3Vw">
-                                        <rect key="frame" x="376" y="0.0" width="54" height="37.666666666666664"/>
+                                        <rect key="frame" x="393" y="0.0" width="37" height="36.333333333333336"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="location" catalog="system" symbolScale="large" renderingMode="original"/>
-                                        </state>
-                                        <buttonConfiguration key="configuration" style="plain">
                                             <imageReference key="image" image="location.fill" catalog="system" symbolScale="large"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
-                                        </buttonConfiguration>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                        </state>
                                         <connections>
                                             <action selector="getPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I7x-OB-WjX"/>
                                         </connections>
@@ -457,7 +490,7 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="large"/>
                                         </state>
                                         <connections>
-                                            <action selector="backToHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uSn-3h-6J7"/>
+                                            <action selector="presentAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ujb-d0-s9G"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtT-sT-0Sv">
@@ -513,8 +546,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVP-Xo-k4w">
+                                <rect key="frame" x="376.33333333333331" y="69" width="43.666666666666686" height="43.666666666666657"/>
+                                <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="medium"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissAccountViewController:" destination="1aI-QE-jZL" eventType="touchUpInside" id="yfH-Tj-2e2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7he-iN-XlL">
+                                <rect key="frame" x="50" y="142.66666666666666" width="330" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cbh-Fe-nu1">
-                                <rect key="frame" x="40" y="788" width="350" height="110"/>
+                                <rect key="frame" x="40" y="768" width="350" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3z9-FV-5Xx">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
@@ -549,43 +610,15 @@
                                     <constraint firstItem="IWo-aB-Jdy" firstAttribute="height" secondItem="3z9-FV-5Xx" secondAttribute="height" id="UsR-1a-OsY"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVP-Xo-k4w">
-                                <rect key="frame" x="366.33333333333331" y="79" width="43.666666666666686" height="43.666666666666657"/>
-                                <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
-                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="medium"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="18"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="dismissAccountViewController:" destination="1aI-QE-jZL" eventType="touchUpInside" id="yfH-Tj-2e2"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7he-iN-XlL">
-                                <rect key="frame" x="50" y="152.66666666666666" width="330" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="50"/>
-                                <color key="textColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uvq-Zz-3DB"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="cbh-Fe-nu1" firstAttribute="bottom" secondItem="Uvq-Zz-3DB" secondAttribute="bottom" id="7sm-vh-CYi"/>
+                            <constraint firstItem="cbh-Fe-nu1" firstAttribute="bottom" secondItem="Uvq-Zz-3DB" secondAttribute="bottom" constant="-20" id="2pr-UQ-hEl"/>
                             <constraint firstItem="7he-iN-XlL" firstAttribute="leading" secondItem="Uvq-Zz-3DB" secondAttribute="leading" constant="50" id="9QO-2g-oR9"/>
                             <constraint firstItem="Uvq-Zz-3DB" firstAttribute="trailing" secondItem="7he-iN-XlL" secondAttribute="trailing" constant="50" id="GMC-kX-dtn"/>
-                            <constraint firstItem="Uvq-Zz-3DB" firstAttribute="trailing" secondItem="rVP-Xo-k4w" secondAttribute="trailing" constant="20" id="Yaq-DD-5Xt"/>
-                            <constraint firstItem="rVP-Xo-k4w" firstAttribute="top" secondItem="Uvq-Zz-3DB" secondAttribute="top" constant="20" id="aYm-fB-M4a"/>
+                            <constraint firstItem="Uvq-Zz-3DB" firstAttribute="trailing" secondItem="rVP-Xo-k4w" secondAttribute="trailing" constant="10" id="Yaq-DD-5Xt"/>
+                            <constraint firstItem="rVP-Xo-k4w" firstAttribute="top" secondItem="Uvq-Zz-3DB" secondAttribute="top" constant="10" id="aYm-fB-M4a"/>
                             <constraint firstItem="7he-iN-XlL" firstAttribute="top" secondItem="rVP-Xo-k4w" secondAttribute="bottom" constant="30" id="c6T-Bs-0rb"/>
                             <constraint firstItem="cbh-Fe-nu1" firstAttribute="leading" secondItem="Uvq-Zz-3DB" secondAttribute="leading" constant="40" id="fZv-0e-BcK"/>
                             <constraint firstItem="Uvq-Zz-3DB" firstAttribute="trailing" secondItem="cbh-Fe-nu1" secondAttribute="trailing" constant="40" id="nKe-o1-BxA"/>
@@ -672,7 +705,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q79-5I-sBZ">
-                                <rect key="frame" x="0.0" y="175" width="430" height="757"/>
+                                <rect key="frame" x="0.0" y="123" width="430" height="809"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" rowHeight="80" id="P1X-DP-NRZ" customClass="MenuCell" customModule="ChangingBaby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="38" width="390" height="80"/>
@@ -682,7 +715,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg0-Ac-ltJ">
-                                                    <rect key="frame" x="40" y="11" width="311.66666666666663" height="58"/>
+                                                    <rect key="frame" x="40" y="11" width="311.66666666666669" height="58"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -725,7 +758,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="closeTableView" destination="MEI-yf-1ZL" eventType="touchUpInside" id="Az9-SC-Ahr"/>
+                                    <action selector="dismissMenu" destination="MEI-yf-1ZL" eventType="touchUpInside" id="zAB-J9-ajG"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -767,18 +800,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLq-TV-gqS">
-                                        <rect key="frame" x="346" y="10" width="34" height="35"/>
+                                        <rect key="frame" x="350.33333333333331" y="10" width="29.666666666666686" height="35"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="dJE-fM-PkJ"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="arrow.triangle.turn.up.right.circle.fill" catalog="system" cornerStyle="capsule">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="medium"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="arrow.triangle.turn.up.right.circle.fill" catalog="system" symbolScale="default"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="medium"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="18"/>
+                                                <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -838,7 +872,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="closePlaceController" destination="eY9-5g-AFB" eventType="touchUpInside" id="dHa-x8-32c"/>
+                                    <action selector="dismissDetailPlaceViewController" destination="eY9-5g-AFB" eventType="touchUpInside" id="dHa-x8-32c"/>
                                 </connections>
                             </button>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -876,7 +910,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xf4-fX-b9C">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZJS-8S-UAP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Browser" automaticallyAdjustsScrollViewInsets="NO" id="ZJS-8S-UAP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="u0n-DQ-bRS">
                         <rect key="frame" x="0.0" y="59" width="430" height="96"/>
@@ -900,7 +934,6 @@
         <image name="BabyIcon" width="1024" height="1024"/>
         <image name="arrow.triangle.turn.up.right.circle.fill" catalog="system" width="128" height="123"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
-        <image name="location" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>

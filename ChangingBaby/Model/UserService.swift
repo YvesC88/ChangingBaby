@@ -25,29 +25,27 @@ class UserService {
     
     // create an user in FireStore
     func createUser(name: String, mail: String, password: String, completion: @escaping (String?, String?) -> ()) {
-            firebaseWrapper.create(name: name, mail: mail, password: password) { userId, errorMessage in
-                if let errorMessage = errorMessage {
-                    completion(nil, errorMessage)
-                } else {
-                    if let userId = userId {
-                        self.addDocument(name: name, userId: userId) { error in
-                            if let error = error {
-                                completion(nil, error)
-                            } else {
-                                self.updateUserProfile(userName: name) { errorMessage in
-                                    if let errorMessage = errorMessage {
-                                        completion(nil, errorMessage)
-                                    } else {
-                                        completion(userId, nil)
-                                    }
-                                }
-                            }
+        firebaseWrapper.create(name: name, mail: mail, password: password) { userId, errorMessage in
+            guard let userId = userId else {
+                completion(nil, errorMessage)
+                return
+            }
+            self.addDocument(name: name, userId: userId) { error in
+                guard error != nil else {
+                    self.updateUserProfile(userName: name) { error in
+                        guard error != nil else {
+                            completion(userId, nil)
+                            return
                         }
+                        completion(nil, error)
                     }
+                    return
                 }
+                completion(nil, error)
             }
         }
-    
+    }
+    // add name and userId in document in firebase
     func addDocument(name: String, userId: String, completion: @escaping (String?) -> ()) {
         firebaseWrapper.addDocument(name: name, userId: userId) { error in
             if let error = error {
@@ -60,8 +58,8 @@ class UserService {
     
     // add an username for firebase
     func updateUserProfile(userName: String, completion: @escaping (String?) ->()) {
-        firebaseWrapper.updateUserProfile(userName: userName) { errorMessage in
-            if let errorMessage = errorMessage {
+        firebaseWrapper.updateUserProfile(userName: userName) { error in
+            if let errorMessage = error {
                 completion(errorMessage)
             } else {
                 completion(nil)

@@ -18,11 +18,10 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sheetPresentationController?.detents = [.medium()]
-        self.sheetPresentationController?.prefersGrabberVisible = true
         self.setUIButton(buttons: [signUpButton])
     }
     
+    // to dismiss keyboard with a gesture
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         let textField = [userNameTextField, emailTextField, passwordTextField]
         for field in textField {
@@ -30,6 +29,12 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    // to dismiss SignUpViewController
+    @IBAction func dismissSignUpViewController() {
+        dismiss(animated: true)
+    }
+    
+    // call create func with error's checking
     @IBAction func signUpTapped() {
         userService.createUser(name: userNameTextField.text!, mail: emailTextField.text!, password: passwordTextField.text!) { result, error  in
             guard error != nil else {

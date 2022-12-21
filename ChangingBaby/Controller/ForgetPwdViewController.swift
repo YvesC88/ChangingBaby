@@ -15,10 +15,10 @@ class ForgetPwdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sheetPresentationController?.detents = [.medium()]
-        self.sheetPresentationController?.prefersGrabberVisible = true
         self.setUIButton(buttons: [validateButton])
     }
+    
+    // call new password func with error's checking
     @IBAction func getNewPwd() {
         userService.forgetPwd(userMail: (emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!) { error in
             guard error != nil else {
@@ -29,10 +29,12 @@ class ForgetPwdViewController: UIViewController {
         }
     }
     
+    // dismiss forgetPwdViewController
     @IBAction func dismissForgetPwdViewController() {
         dismiss(animated: true)
     }
     
+    // dismiss keyboard with gesture
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         self.dismissKeyboard(sender, textField: emailTextField)
     }

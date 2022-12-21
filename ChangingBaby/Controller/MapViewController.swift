@@ -28,9 +28,10 @@ class MapViewController: UIViewController {
         setupLocationManager()
     }
     
+    // load the place from firestore
     func loadData() {
         let service = PlaceService(wrapper: FirebaseWrapper())
-        service.fetchPlaces(collectionID: "places") { place in
+        service.fetchPlaces(collectionID: "places") { place, error in
             for data in place {
                 self.place.append(data)
             }
@@ -44,6 +45,7 @@ class MapViewController: UIViewController {
         mapView.setRegion(MKCoordinateRegion(center: userPosition!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
     }
     
+    // to present menu
     @IBAction func presentMenu() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else { return }
@@ -52,18 +54,21 @@ class MapViewController: UIViewController {
         self.present(navMenuController, animated: true, completion: nil)
     }
     
-    @IBAction func backToHome(_ sender: Any) {
+    // to present AccountViewController for more options
+    @IBAction func presentAccount(_ sender: Any) {
         self.presentVC(with: "AccountViewController")
     }
     
+    // to present a search bar for searching a place
     @IBAction func search() {
         self.presentVC(with: "SearchViewController")
     }
     
+    // to set the view of the current user's location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard locations.count > 0 else { return }
-        guard let myPosition = locations.last else { return }
-        userPosition = myPosition
+        guard let myLocation = locations.last else { return }
+        userPosition = myLocation
         guard firstRequest else { return }
         mapView.setRegion(MKCoordinateRegion(
             center: userPosition!.coordinate,
@@ -74,7 +79,7 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
-    // affiche tous les points sur la carte
+    // to set all of pins on map
     func setupPin() {
         guard self.place.count > 0 else { return }
         for object in 0...self.place.count - 1 {
@@ -87,6 +92,7 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
         }
     }
     
+    // filter and display the pin selected by user in DetailPlaceViewController
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotation) {
         let selectedAnnotation = place.filter { $0.lat == view.coordinate.latitude && $0.long == view.coordinate.longitude }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -97,6 +103,7 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
         self.present(navPlacesController, animated: true, completion: nil)
     }
     
+    // parameters for locationManager
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.startUpdatingHeading()
@@ -104,10 +111,11 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
+    // set custom ui for nav bar
     func setupUINavigationBar(navController: UINavigationController) {
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.configureWithDefaultBackground()
-        standardAppearance.backgroundColor = UIColor.tintColor
+        standardAppearance.backgroundColor = UIColor(red: 49/255, green: 48/255, blue: 121/255, alpha: 1)
         standardAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navController.navigationBar.prefersLargeTitles = true
         navController.navigationBar.isTranslucent = true

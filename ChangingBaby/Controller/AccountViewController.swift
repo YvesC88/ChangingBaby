@@ -17,8 +17,6 @@ class AccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sheetPresentationController?.detents = [.medium()]
-        self.sheetPresentationController?.prefersGrabberVisible = true
         isUserLogin()
         self.setUIButton(buttons: [signUpButton, signInButton])
     }
@@ -69,12 +67,14 @@ class AccountViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    // dismiss AccountViewController
     @IBAction func dismissAccountViewController(_ sender: Any) {
         dismiss(animated: true)
     }
 }
 
 extension AccountViewController: SelectionDelegate {
+    // action to perform if user is on AccountViewController
     func didFinishAction() {
         dismiss(animated: true) {
             self.dismiss(animated: true)

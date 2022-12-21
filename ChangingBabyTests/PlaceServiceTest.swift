@@ -1,36 +1,61 @@
-////
-////  PlaceServiceTest.swift
-////  ChangingBabyTests
-////
-////  Created by Yves Charpentier on 16/11/2022.
-////
 //
-//import XCTest
-//@testable import ChangingBaby
+//  PlaceServiceTest.swift
+//  ChangingBabyTests
 //
-//final class PlaceServiceTest: XCTestCase {
-//    
-//    func testGivenDataTestWhenFetchPlaceThenFetchIsOK() {
-//        // Given
-//        let placeTestName: String = "Pizza Papa"
-//        let placeTestZip: Int = 34000
-//        // When
-//        placeService.fetchPlaces(collectionID: "places") { place in
-//            XCTAssertEqual(place[0].name, placeTestName)
-//            XCTAssertEqual(place[0].zip, placeTestZip)
-//        }
-//        // Then
-//    }
-//    
-//    func testGivenDataTestWhenFetchPlaceThenFetchIsKO() {
-//        // Given
-//        let placeTestName: String = "Test"
-//        let placeTestZip: Int = 75000
-//        // When
-//        placeService.fetchPlaces(collectionID: "places") { place in
-//            XCTAssertNotEqual(place[0].name, placeTestName)
-//            XCTAssertNotEqual(place[0].zip, placeTestZip)
-//        }
-//        // Then
-//    }
-//}
+//  Created by Yves Charpentier on 16/11/2022.
+//
+
+import XCTest
+@testable import ChangingBaby
+
+final class PlaceServiceTest: XCTestCase {
+    
+    let firebaseMock = FirebaseWrapperMock()
+    
+    func testGivenDataTestWhenFetchPlaceThenFetchIsOK() {
+        // Given
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        let placeService = PlaceService(wrapper: firebaseMock)
+        firebaseMock.placeResult = [Place(name: "Test",
+                                          streetNumber: "",
+                                          streetName: "",
+                                          city: "",
+                                          category: "",
+                                          zip: 12345,
+                                          lat: 1.0,
+                                          long: 1.1)]
+        firebaseMock.placeError = nil
+
+        var resultPlace: [Place]?
+        var resultError: String?
+        // When
+        placeService.fetchPlaces(collectionID: "test") { (result, error) in
+            resultPlace = result
+            resultError = error
+            expectation.fulfill()
+        }
+        // Then
+        wait(for: [expectation], timeout: 0.01)
+        XCTAssertEqual(resultPlace?[0].name, "Test")
+        XCTAssertNil(resultError)
+        XCTAssertTrue(firebaseMock.isFetchPlaceCalled)
+    }
+    
+    func testGivenDataTestWhenFetchPlaceThenFetchIsKO() {
+        // Given
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        let placeService = PlaceService(wrapper: firebaseMock)
+        firebaseMock.placeError = "error"
+
+        var resultError: String?
+        // When
+        placeService.fetchPlaces(collectionID: "test") { (result, error) in
+            resultError = error
+            expectation.fulfill()
+        }
+        // Then
+        wait(for: [expectation], timeout: 0.01)
+        XCTAssertEqual(resultError, "error")
+        XCTAssertTrue(firebaseMock.isFetchPlaceCalled)
+    }
+}

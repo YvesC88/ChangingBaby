@@ -23,8 +23,8 @@ extension UIViewController {
     func setUIButton(buttons: [UIButton]) {
         let buttons = buttons
         for button in buttons {
+            button.layer.borderColor = CGColor(red: 49/255, green: 48/255, blue: 121/255, alpha: 1)
             button.layer.cornerRadius = 25
-            button.layer.borderColor = UIColor.tintColor.cgColor
             button.layer.borderWidth = 2
         }
     }

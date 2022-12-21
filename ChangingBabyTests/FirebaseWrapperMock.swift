@@ -8,11 +8,6 @@
 @testable import ChangingBaby
 
 final class FirebaseWrapperMock: FirebaseProtocol {
-//    func fetch(collectionID: String, completion: @escaping (QuerySnapshot?, String?) -> ()) {
-//        
-//    }
-    
-    
     var createResult: String?
     var createError: String?
     var createDbError: String?
@@ -22,6 +17,8 @@ final class FirebaseWrapperMock: FirebaseProtocol {
     var signOutResult: String?
     var signOutError: String?
     var forgetPwdError: String?
+    var placeResult: [Place]?
+    var placeError: String?
     var isCreateCalled: Bool = false
     var isAddDocumentCalled: Bool = false
     var isUpdateProfileCalled: Bool = false
@@ -58,5 +55,10 @@ final class FirebaseWrapperMock: FirebaseProtocol {
     func forgetPwd(mail: String, completion: @escaping (String?) -> ()) {
         isForgetPwdCalled = true
         completion(forgetPwdError)
+    }
+    
+    func fetch(collectionID: String, completion: @escaping ([Place]?, String?) -> ()) {
+        isFetchPlaceCalled = true
+        completion(placeResult, placeError)
     }
 }

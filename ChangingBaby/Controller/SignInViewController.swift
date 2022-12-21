@@ -17,11 +17,10 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sheetPresentationController?.detents = [.medium()]
-        self.sheetPresentationController?.prefersGrabberVisible = true
         self.setUIButton(buttons: [signInButton])
     }
     
+    // call signIn func with error's checking
     @IBAction func loginButtonTapped() {
         userService.signIn(mail: emailTextField.text!, password: passwordTextField.text!) { result, error  in
             guard error != nil else {
@@ -32,14 +31,21 @@ class SignInViewController: UIViewController {
         }
     }
     
+    // to go ForgetPwdViewController
     @IBAction func forgetPassword() {
         self.presentVC(with: "ForgetPwdViewController")
     }
     
+    // to dismiss Keyboard with gesture
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         let textField = [emailTextField, passwordTextField]
         for field in textField {
             self.dismissKeyboard(sender, textField: field!)
         }
+    }
+    
+    // to dismiss SignInViewController
+    @IBAction func dismissSignInViewController() {
+        dismiss(animated: true)
     }
 }
