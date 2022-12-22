@@ -15,6 +15,8 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let navBar = self.navigationController?.navigationBar
+        navBar?.barTintColor = UIColor.red
         tableView.rowHeight = 60
         tableView.dataSource = self
         tableView.delegate = self
@@ -41,6 +43,8 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let choice = menu[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "TipsViewController") as? TipsViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

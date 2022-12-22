@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -705,7 +706,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q79-5I-sBZ">
-                                <rect key="frame" x="0.0" y="123" width="430" height="809"/>
+                                <rect key="frame" x="0.0" y="175" width="430" height="757"/>
+                                <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" rowHeight="80" id="P1X-DP-NRZ" customClass="MenuCell" customModule="ChangingBaby" customModuleProvider="target">
                                         <rect key="frame" x="20" y="38" width="390" height="80"/>
@@ -771,7 +773,156 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4F-Rh-Azx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11003.720930232557" y="831.11587982832623"/>
+            <point key="canvasLocation" x="11235.348837209302" y="831.7596566523606"/>
+        </scene>
+        <!--Tips View Controller-->
+        <scene sceneID="ZPL-BE-tQW">
+            <objects>
+                <viewController storyboardIdentifier="TipsViewController" id="SzA-9q-3kz" customClass="TipsViewController" customModule="ChangingBaby" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u8U-78-aw1">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="1500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGd-eA-DMP">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="1500"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksh-IW-rTr">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="1500"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Les signes qui montrent que bébé doit être changé" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3b-Js-K6g">
+                                                <rect key="frame" x="20" y="20" width="390" height="60"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" name="AccentColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J78-aE-AW9">
+                                                <rect key="frame" x="20" y="80" width="390" height="240"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="Ei6-HU-1Aa"/>
+                                                </constraints>
+                                                <string key="text">Si les pleurs de bébé peuvent indiquer que sa couche est pleine, d'autres indicateurs peuvent être à prendre en compte. Ainsi, la couche peut paraître plus humide ou avoir une tâche. L'odeur peut aussi évidemment vous indiquer que la couche doit être changée. Il existe aussi un type de couche spécifique possédant un indicateur d'urine. Par un changement de couleur notamment, ce dernier permet de déterminer en un coup d'oeil si la couche est sale ou non.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où s'installer pour changer la couche de bébé ?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qar-JO-EFn">
+                                                <rect key="frame" x="20" y="320" width="390" height="60"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" name="AccentColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Les produits nécessaires pour changer la couche pleine de bébé :" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYO-Vk-1yh">
+                                                <rect key="frame" x="20" y="630" width="390" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <color key="textColor" name="AccentColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BLI-iG-TPf">
+                                                <rect key="frame" x="20" y="673" width="390" height="170"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="170" id="9HA-8e-sNi"/>
+                                                </constraints>
+                                                <string key="text">- du liniment oléo-calcaire
+- des couches
+- des carrés de coton
+- des lingettes hypoallergéniques
+- une crème de change
+- un petit gant de toilette humide
+- une tenue de rechange</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Comment nettoyer le siège de son bébé ?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoE-rb-mSI">
+                                                <rect key="frame" x="20" y="843" width="390" height="60"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" name="AccentColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ea5-TD-VOp">
+                                                <rect key="frame" x="20" y="903" width="390" height="500"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="500" id="Foi-jh-0Gx"/>
+                                                </constraints>
+                                                <mutableString key="text">Pour nettoyer les fesses de votre tout-petit, vous aurez besoin de liniment, d’un gros coton maxi format carré ou rectangulaire, éventuellement d’une compresses stérile et des lingettes pour bébé lorsque vous êtes en dehors de votre domicile.
+
+Le plus important à retenir est que vos gestes doivent toujours être réalisés de l’avant vers l’arrière pour ne pas ramener des bactéries fécales vers le ventre de l’enfant ainsi que son sexe. Le liniment doit être appliqué sur votre coton doux pour nettoyer le siège.
+
+Vous pouvez mettre deux couches de liniment pour créer une barrière protectrice sur la peau des fesses de votre bébé, mais dans tous les cas, ne le rincez surtout pas ! Ce faisant, vous annuleriez les effets protecteurs de ce produit.
+
+Ne frottez jamais, et n’utilisez pas de produits trop agressifs. En cas de selles collantes, vous rincerez d’abord le siège à l’eau tiède, que vous sécherez à l’aide d’une compresse avant d’appliquer une couche épaisse de liniment.</mutableString>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vjf-Bv-vpf">
+                                                <rect key="frame" x="20" y="380" width="390" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="9be-ab-Nm9"/>
+                                                </constraints>
+                                                <mutableString key="text">Une fois vos mains bien lavées et votre nécessaire de toilette préparé, soutenez la nuque de votre bébé et installez-le sur le dos, sur sa table à langer. Celle-ci doit être réglée à bonne hauteur afin que vous évitiez tout inconfort pendant ce moment de douceur. Bien sûr, tout au long de cette opération, ne quittez jamais votre bébé. Si vous êtes à l'extérieur de votre habitation, en vadrouille ou en voyage, prévoyez de vous déplacer avec un tapis ou matelas à langer nomade que vous installerez sur une surface plane et sécurisée.</mutableString>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="hoE-rb-mSI" firstAttribute="leading" secondItem="ksh-IW-rTr" secondAttribute="leading" constant="20" id="0RQ-i3-i9S"/>
+                                            <constraint firstAttribute="trailing" secondItem="S3b-Js-K6g" secondAttribute="trailing" constant="20" id="2ok-V9-MbM"/>
+                                            <constraint firstAttribute="trailing" secondItem="hoE-rb-mSI" secondAttribute="trailing" constant="20" id="4l2-Yo-9Ys"/>
+                                            <constraint firstAttribute="trailing" secondItem="LYO-Vk-1yh" secondAttribute="trailing" constant="20" id="9hr-yN-jfs"/>
+                                            <constraint firstItem="LYO-Vk-1yh" firstAttribute="top" secondItem="Vjf-Bv-vpf" secondAttribute="bottom" id="Ahc-DR-FZu"/>
+                                            <constraint firstItem="Vjf-Bv-vpf" firstAttribute="top" secondItem="qar-JO-EFn" secondAttribute="bottom" id="D6B-y0-pio"/>
+                                            <constraint firstAttribute="height" constant="1500" id="G4r-2U-NMK"/>
+                                            <constraint firstAttribute="trailing" secondItem="J78-aE-AW9" secondAttribute="trailing" constant="20" id="I64-eg-8t4"/>
+                                            <constraint firstItem="Ea5-TD-VOp" firstAttribute="top" secondItem="hoE-rb-mSI" secondAttribute="bottom" id="JpG-0e-VDS"/>
+                                            <constraint firstItem="Vjf-Bv-vpf" firstAttribute="leading" secondItem="ksh-IW-rTr" secondAttribute="leading" constant="20" id="NPd-el-i0i"/>
+                                            <constraint firstItem="LYO-Vk-1yh" firstAttribute="leading" secondItem="ksh-IW-rTr" secondAttribute="leading" constant="20" id="PaZ-A2-X9i"/>
+                                            <constraint firstItem="BLI-iG-TPf" firstAttribute="top" secondItem="LYO-Vk-1yh" secondAttribute="bottom" id="Qg8-rN-a4o"/>
+                                            <constraint firstItem="S3b-Js-K6g" firstAttribute="top" secondItem="ksh-IW-rTr" secondAttribute="top" constant="20" id="R7N-dA-onf"/>
+                                            <constraint firstItem="J78-aE-AW9" firstAttribute="top" secondItem="S3b-Js-K6g" secondAttribute="bottom" id="RcO-y1-Gak"/>
+                                            <constraint firstItem="Ea5-TD-VOp" firstAttribute="leading" secondItem="ksh-IW-rTr" secondAttribute="leading" constant="20" id="Tb7-bD-Pas"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ea5-TD-VOp" secondAttribute="trailing" constant="20" id="WzP-iL-izc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vjf-Bv-vpf" secondAttribute="trailing" constant="20" id="bGK-9G-QU4"/>
+                                            <constraint firstItem="BLI-iG-TPf" firstAttribute="leading" secondItem="ksh-IW-rTr" secondAttribute="leading" constant="20" id="bx5-Gz-JXl"/>
+                                            <constraint firstItem="qar-JO-EFn" firstAttribute="top" secondItem="J78-aE-AW9" secondAttribute="bottom" id="f3o-o5-jsF"/>
+                                            <constraint firstAttribute="trailing" secondItem="BLI-iG-TPf" secondAttribute="trailing" constant="20" id="fYd-gV-WZo"/>
+                                            <constraint firstItem="hoE-rb-mSI" firstAttribute="top" secondItem="BLI-iG-TPf" secondAttribute="bottom" id="k7x-No-JvA"/>
+                                            <constraint firstItem="S3b-Js-K6g" firstAttribute="leading" secondItem="ksh-IW-rTr" secondAttribute="leading" constant="20" id="mSx-VS-X8t"/>
+                                            <constraint firstAttribute="trailing" secondItem="qar-JO-EFn" secondAttribute="trailing" constant="20" id="t1X-fd-gEc"/>
+                                            <constraint firstItem="qar-JO-EFn" firstAttribute="leading" secondItem="ksh-IW-rTr" secondAttribute="leading" constant="20" id="xsv-EP-bIF"/>
+                                            <constraint firstItem="J78-aE-AW9" firstAttribute="leading" secondItem="ksh-IW-rTr" secondAttribute="leading" constant="20" id="zS4-ZE-jwc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ksh-IW-rTr" secondAttribute="trailing" id="3XN-kj-zEC"/>
+                                    <constraint firstItem="ksh-IW-rTr" firstAttribute="top" secondItem="IGd-eA-DMP" secondAttribute="top" id="90s-3V-55V"/>
+                                    <constraint firstAttribute="bottom" secondItem="ksh-IW-rTr" secondAttribute="bottom" id="HQ7-pq-7BD"/>
+                                    <constraint firstItem="ksh-IW-rTr" firstAttribute="leading" secondItem="IGd-eA-DMP" secondAttribute="leading" id="KHn-Ms-hGG"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="epJ-Ow-lwD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IGd-eA-DMP" firstAttribute="trailing" secondItem="epJ-Ow-lwD" secondAttribute="trailing" id="2fF-31-vNi"/>
+                            <constraint firstItem="ksh-IW-rTr" firstAttribute="width" secondItem="u8U-78-aw1" secondAttribute="width" id="7g1-Cx-EFB"/>
+                            <constraint firstAttribute="bottom" secondItem="IGd-eA-DMP" secondAttribute="bottom" id="Jwj-p8-SOx"/>
+                            <constraint firstItem="IGd-eA-DMP" firstAttribute="leading" secondItem="epJ-Ow-lwD" secondAttribute="leading" id="aLc-NV-er1"/>
+                            <constraint firstItem="IGd-eA-DMP" firstAttribute="top" secondItem="u8U-78-aw1" secondAttribute="top" id="hsP-SX-Wdg"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="430" height="1500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yoj-wZ-EAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12116" y="832"/>
         </scene>
         <!--Lieu-->
         <scene sceneID="jdS-u7-eML">
@@ -908,26 +1059,26 @@
             <point key="canvasLocation" x="7720" y="67"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="xf4-fX-b9C">
+        <scene sceneID="Jxk-bV-52K">
             <objects>
-                <navigationController storyboardIdentifier="Browser" automaticallyAdjustsScrollViewInsets="NO" id="ZJS-8S-UAP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Browser" automaticallyAdjustsScrollViewInsets="NO" id="ael-e9-H7O" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="u0n-DQ-bRS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TUf-PQ-wc3">
                         <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MEI-yf-1ZL" kind="relationship" relationship="rootViewController" id="eCf-Ie-2Ev"/>
+                        <segue destination="MEI-yf-1ZL" kind="relationship" relationship="rootViewController" id="Tqd-UV-RMa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j2t-mT-Wqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNx-1C-hvg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10105.116279069767" y="831.11587982832623"/>
+            <point key="canvasLocation" x="10336.744186046511" y="831.7596566523606"/>
         </scene>
     </scenes>
     <resources>
@@ -938,6 +1089,12 @@
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="AccentColor">
+            <color red="0.19300000369548798" green="0.18899999558925629" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

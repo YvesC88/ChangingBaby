@@ -118,6 +118,7 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
         standardAppearance.backgroundColor = UIColor(red: 49/255, green: 48/255, blue: 121/255, alpha: 1)
         standardAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navController.navigationBar.prefersLargeTitles = true
+        navController.navigationBar.tintColor = UIColor.white
         navController.navigationBar.isTranslucent = true
         navController.navigationBar.scrollEdgeAppearance = standardAppearance
     }

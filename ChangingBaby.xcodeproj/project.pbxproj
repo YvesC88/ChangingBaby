@@ -22,6 +22,7 @@
 		FB827F1C274C52ED0050903A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB827F1A274C52ED0050903A /* LaunchScreen.storyboard */; };
 		FB861F722922F1CC00D31207 /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB861F712922F1CB00D31207 /* UserServiceTest.swift */; };
 		FB88270A27C7F13200C3FBDA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88270927C7F13200C3FBDA /* MenuCell.swift */; };
+		FB887F68295370900073530D /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB887F67295370900073530D /* TipsViewController.swift */; };
 		FBA7A7F6294BD4DE004B6D2C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FBA7A7F5294BD4DE004B6D2C /* FirebaseAnalytics */; };
 		FBA7A7F8294BD4DE004B6D2C /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = FBA7A7F7294BD4DE004B6D2C /* FirebaseAppCheck */; };
 		FBA7A7FA294BD4DE004B6D2C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FBA7A7F9294BD4DE004B6D2C /* FirebaseAuth */; };
@@ -70,6 +71,7 @@
 		FB827F22274C52ED0050903A /* ChangingBabyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangingBabyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB861F712922F1CB00D31207 /* UserServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
 		FB88270927C7F13200C3FBDA /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		FB887F67295370900073530D /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		FBB31C692932903A009A7DD0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FBC5C057291A994200A9BB49 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				FB54FEC027568E0A00F320A5 /* MenuViewController.swift */,
 				FB54FEC427592B2600F320A5 /* DetailPlaceViewController.swift */,
 				FB12142429238DE200641E76 /* SearchViewController.swift */,
+				FB887F67295370900073530D /* TipsViewController.swift */,
 			);
 			name = Controller;
 			path = ChangingBaby/Controller;
@@ -361,6 +364,7 @@
 				FB12142529238DE200641E76 /* SearchViewController.swift in Sources */,
 				FB54FEC127568E0A00F320A5 /* MenuViewController.swift in Sources */,
 				FBC5C058291A994200A9BB49 /* UserService.swift in Sources */,
+				FB887F68295370900073530D /* TipsViewController.swift in Sources */,
 				FBDCE2B22906D97E006A11C6 /* Place.swift in Sources */,
 				FB60A0C52919473600E1B5BB /* SignUpViewController.swift in Sources */,
 				FB60A0D2291970E900E1B5BB /* SignInViewController.swift in Sources */,
