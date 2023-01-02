@@ -578,11 +578,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cbh-Fe-nu1">
                                 <rect key="frame" x="40" y="768" width="350" height="110"/>
                                 <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wla-pM-cif">
+                                        <rect key="frame" x="0.0" y="-50" width="350" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Suppression du compte">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteUser" destination="1aI-QE-jZL" eventType="touchUpInside" id="cew-dd-zz2"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3z9-FV-5Xx">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                                         <color key="backgroundColor" red="0.19256323580000001" green="0.18879714610000001" blue="0.47453570369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="vcy-bv-AYk"/>
+                                            <constraint firstAttribute="height" constant="50" id="iKV-Sh-8YO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -608,7 +619,8 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="IWo-aB-Jdy" firstAttribute="height" secondItem="3z9-FV-5Xx" secondAttribute="height" id="UsR-1a-OsY"/>
+                                    <constraint firstItem="IWo-aB-Jdy" firstAttribute="height" secondItem="wla-pM-cif" secondAttribute="height" id="29Z-eW-huS"/>
+                                    <constraint firstItem="3z9-FV-5Xx" firstAttribute="height" secondItem="wla-pM-cif" secondAttribute="height" id="n7T-Yw-ZwN"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -626,6 +638,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteButton" destination="wla-pM-cif" id="l0k-qD-men"/>
                         <outlet property="dismissButton" destination="rVP-Xo-k4w" id="lil-45-dsN"/>
                         <outlet property="signInButton" destination="IWo-aB-Jdy" id="OPy-80-AEJ"/>
                         <outlet property="signUpButton" destination="3z9-FV-5Xx" id="8xn-ij-9ZB"/>
@@ -706,7 +719,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q79-5I-sBZ">
-                                <rect key="frame" x="0.0" y="175" width="430" height="757"/>
+                                <rect key="frame" x="0.0" y="123" width="430" height="809"/>
                                 <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" rowHeight="80" id="P1X-DP-NRZ" customClass="MenuCell" customModule="ChangingBaby" customModuleProvider="target">
@@ -847,13 +860,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="500" id="Foi-jh-0Gx"/>
                                                 </constraints>
-                                                <mutableString key="text">Pour nettoyer les fesses de votre tout-petit, vous aurez besoin de liniment, d’un gros coton maxi format carré ou rectangulaire, éventuellement d’une compresses stérile et des lingettes pour bébé lorsque vous êtes en dehors de votre domicile.
+                                                <string key="text">Pour nettoyer les fesses de votre tout-petit, vous aurez besoin de liniment, d’un gros coton maxi format carré ou rectangulaire, éventuellement d’une compresses stérile et des lingettes pour bébé lorsque vous êtes en dehors de votre domicile.
 
 Le plus important à retenir est que vos gestes doivent toujours être réalisés de l’avant vers l’arrière pour ne pas ramener des bactéries fécales vers le ventre de l’enfant ainsi que son sexe. Le liniment doit être appliqué sur votre coton doux pour nettoyer le siège.
 
 Vous pouvez mettre deux couches de liniment pour créer une barrière protectrice sur la peau des fesses de votre bébé, mais dans tous les cas, ne le rincez surtout pas ! Ce faisant, vous annuleriez les effets protecteurs de ce produit.
 
-Ne frottez jamais, et n’utilisez pas de produits trop agressifs. En cas de selles collantes, vous rincerez d’abord le siège à l’eau tiède, que vous sécherez à l’aide d’une compresse avant d’appliquer une couche épaisse de liniment.</mutableString>
+Ne frottez jamais, et n’utilisez pas de produits trop agressifs. En cas de selles collantes, vous rincerez d’abord le siège à l’eau tiède, que vous sécherez à l’aide d’une compresse avant d’appliquer une couche épaisse de liniment.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -864,7 +877,7 @@ Ne frottez jamais, et n’utilisez pas de produits trop agressifs. En cas de sel
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="9be-ab-Nm9"/>
                                                 </constraints>
-                                                <mutableString key="text">Une fois vos mains bien lavées et votre nécessaire de toilette préparé, soutenez la nuque de votre bébé et installez-le sur le dos, sur sa table à langer. Celle-ci doit être réglée à bonne hauteur afin que vous évitiez tout inconfort pendant ce moment de douceur. Bien sûr, tout au long de cette opération, ne quittez jamais votre bébé. Si vous êtes à l'extérieur de votre habitation, en vadrouille ou en voyage, prévoyez de vous déplacer avec un tapis ou matelas à langer nomade que vous installerez sur une surface plane et sécurisée.</mutableString>
+                                                <string key="text">Une fois vos mains bien lavées et votre nécessaire de toilette préparé, soutenez la nuque de votre bébé et installez-le sur le dos, sur sa table à langer. Celle-ci doit être réglée à bonne hauteur afin que vous évitiez tout inconfort pendant ce moment de douceur. Bien sûr, tout au long de cette opération, ne quittez jamais votre bébé. Si vous êtes à l'extérieur de votre habitation, en vadrouille ou en voyage, prévoyez de vous déplacer avec un tapis ou matelas à langer nomade que vous installerez sur une surface plane et sécurisée.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1100,6 +1113,9 @@ Ne frottez jamais, et n’utilisez pas de produits trop agressifs. En cas de sel
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

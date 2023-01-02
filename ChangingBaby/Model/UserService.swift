@@ -102,4 +102,11 @@ class UserService {
             }
         }
     }
+    
+    func deleteUser() {
+        let currentUser = Auth.auth().currentUser
+        let db = Firestore.firestore()
+        currentUser?.delete()
+        db.collection("users").document(currentUser?.uid ?? "").delete()
+    }
 }

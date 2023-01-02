@@ -10,6 +10,7 @@ import UIKit
 class AccountViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
     
@@ -18,7 +19,7 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         isUserLogin()
-        self.setUIButton(buttons: [signUpButton, signInButton])
+        self.setUIButton(buttons: [signUpButton, signInButton, deleteButton])
     }
     
     // check if user is login
@@ -33,6 +34,7 @@ class AccountViewController: UIViewController {
         titleLabel.text = "Bienvenue \(userService.getUser()?.displayName ?? "")"
         signInButton.setTitle("Déconnexion", for: .normal)
         signUpButton.isHidden = true
+        deleteButton.isHidden = false
     }
     
     @IBAction func logButtonTapped() {
@@ -59,12 +61,26 @@ class AccountViewController: UIViewController {
         }
     }
     
-    // objectif de signUp est de présenter SignUpViewController
     @IBAction func signUp() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
         vc.delegate = self
         present(vc, animated: true)
+    }
+    
+    @IBAction func deleteUser() {
+        let alertVC = UIAlertController(title: "Attention", message: "Êtes-vous sûr de vouloir supprimer votre compte ?", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Oui", style: .default) { action in
+            self.userService.deleteUser()
+            self.dismiss(animated: true) {
+                self.toChangeVC(with: "HomeViewController")
+            }
+        }
+        alertVC.addAction(confirmAction)
+        let cancelAction = UIAlertAction(title: "Annuler", style: .destructive)
+        alertVC.addAction(cancelAction)
+        alertVC.preferredAction = confirmAction
+        present(alertVC, animated: true, completion: nil)
     }
     
     // dismiss AccountViewController

@@ -540,20 +540,21 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChangingBaby/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Veuillez accepter la localisation pour une meilleure expérience";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Veuillez accepter la localisation pour une meilleure expérience";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Votre position actuelle sera affichée sur la carte et sera utilisée pour vous fournir un itinéraire vers un lieu sélectionné.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Votre position actuelle sera affichée sur la carte et sera utilisée pour vous fournir un itinéraire vers un lieu sélectionné.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = NO;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -576,20 +577,21 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChangingBaby/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Veuillez accepter la localisation pour une meilleure expérience";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Veuillez accepter la localisation pour une meilleure expérience";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Votre position actuelle sera affichée sur la carte et sera utilisée pour vous fournir un itinéraire vers un lieu sélectionné.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Votre position actuelle sera affichée sur la carte et sera utilisée pour vous fournir un itinéraire vers un lieu sélectionné.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = NO;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

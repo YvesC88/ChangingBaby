@@ -32,7 +32,7 @@ class FirebaseWrapper: FirebaseProtocol {
     
     func addDocument(name: String, userId: String, completion: @escaping (String?) -> ()) {
         let db = Firestore.firestore()
-        db.collection("users").addDocument(data: ["name": name, "uid": userId as Any]) { error in
+        db.collection("users").document(userId).setData(["name": name, "uid": userId as Any]) { error in
             if let error = error {
                 let errorMessage = AuthErrorCode.Code(rawValue: error._code)
                 completion(errorMessage?.errorMessage)
