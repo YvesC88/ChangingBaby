@@ -12,7 +12,6 @@ import CoreLocation
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var getPositionButton: UIButton!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var accountButton: UIButton!
     

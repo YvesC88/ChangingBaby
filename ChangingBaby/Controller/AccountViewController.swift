@@ -69,15 +69,14 @@ class AccountViewController: UIViewController {
     }
     
     @IBAction func deleteUser() {
-        let alertVC = UIAlertController(title: "Attention", message: "Êtes-vous sûr de vouloir supprimer votre compte ?", preferredStyle: .alert)
-        let confirmAction = UIAlertAction(title: "Oui", style: .default) { action in
-            self.userService.deleteUser()
+        let alertVC = UIAlertController(title: "Supprimer le compte", message: "Êtes-vous sûr de vouloir supprimer votre compte ? Cela effacera définitivement vos données.", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Annuler", style: .default)
+        alertVC.addAction(confirmAction)
+        let cancelAction = UIAlertAction(title: "Effacer", style: .destructive) { action in
             self.dismiss(animated: true) {
-                self.toChangeVC(with: "HomeViewController")
+                self.userService.deleteUser()
             }
         }
-        alertVC.addAction(confirmAction)
-        let cancelAction = UIAlertAction(title: "Annuler", style: .destructive)
         alertVC.addAction(cancelAction)
         alertVC.preferredAction = confirmAction
         present(alertVC, animated: true, completion: nil)
