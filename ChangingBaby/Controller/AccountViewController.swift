@@ -12,14 +12,19 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dismissButton: UIButton!
     
     let userService = UserService(wrapper: FirebaseWrapper())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         isUserLogin()
-        self.setUIButton(buttons: [signUpButton, signInButton, deleteButton])
+        self.setUIButton(button: [signUpButton, signInButton, deleteButton])
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        isUserLogin()
+        self.setUIButton(button: [signUpButton, signInButton, deleteButton])
     }
     
     // check if user is login
@@ -28,6 +33,7 @@ class AccountViewController: UIViewController {
             titleLabel.text = "Bienvenue"
             signInButton.setTitle("Connexion", for: .normal)
             signUpButton.isHidden = false
+            deleteButton.isHidden = true
             return
         }
         // show name'user
@@ -42,10 +48,8 @@ class AccountViewController: UIViewController {
         guard userService.isLogin else {
             // if user isn't connected and present LoginViewController
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-            vc.delegate = self
-            vc.modalPresentationStyle = .automatic
-            self.present(vc, animated:true)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "SignInViewController")
+            navigationController?.pushViewController(vc, animated: true)
             return
         }
         // signOut the user and back to HomeViewController
@@ -55,7 +59,7 @@ class AccountViewController: UIViewController {
                 self.presentAlert(title: "Erreur", message: "Une erreur s'est produite. Veuillez réessayer.")
             } else {
                 self.dismiss(animated: true) {
-                    self.toChangeVC(with: "HomeViewController")
+                    self.isUserLogin()
                 }
             }
         }
@@ -63,12 +67,12 @@ class AccountViewController: UIViewController {
     
     @IBAction func signUp() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
-        vc.delegate = self
-        present(vc, animated: true)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func deleteUser() {
+        isUserLogin()
         let alertVC = UIAlertController(title: "Supprimer le compte", message: "Êtes-vous sûr de vouloir supprimer votre compte ? Cela effacera définitivement vos données.", preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "Annuler", style: .default)
         alertVC.addAction(confirmAction)
@@ -80,19 +84,10 @@ class AccountViewController: UIViewController {
         alertVC.addAction(cancelAction)
         alertVC.preferredAction = confirmAction
         present(alertVC, animated: true, completion: nil)
+        isUserLogin()
     }
     
-    // dismiss AccountViewController
-    @IBAction func dismissAccountViewController(_ sender: Any) {
+    @IBAction func dismissAccount() {
         dismiss(animated: true)
-    }
-}
-
-extension AccountViewController: SelectionDelegate {
-    // action to perform if user is on AccountViewController
-    func didFinishAction() {
-        dismiss(animated: true) {
-            self.dismiss(animated: true)
-        }
     }
 }

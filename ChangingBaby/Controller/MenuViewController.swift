@@ -9,17 +9,11 @@ import UIKit
 
 class MenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var closeButton: UIButton!
     
     let menu = ["Astuces"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navBar = self.navigationController?.navigationBar
-        navBar?.barTintColor = UIColor.red
-        tableView.rowHeight = 60
-        tableView.dataSource = self
-        tableView.delegate = self
     }
     
     // dismiss the menu
@@ -36,9 +30,9 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     
     // display section
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let menu = menu[indexPath.row]
-        cell.labelLine.text = menu
+        cell.textLabel?.text = menu
         return cell
     }
     

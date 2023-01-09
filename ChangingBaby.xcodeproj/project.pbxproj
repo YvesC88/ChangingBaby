@@ -21,7 +21,6 @@
 		FB827F19274C52ED0050903A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB827F18274C52ED0050903A /* Assets.xcassets */; };
 		FB827F1C274C52ED0050903A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB827F1A274C52ED0050903A /* LaunchScreen.storyboard */; };
 		FB861F722922F1CC00D31207 /* UserServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB861F712922F1CB00D31207 /* UserServiceTest.swift */; };
-		FB88270A27C7F13200C3FBDA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88270927C7F13200C3FBDA /* MenuCell.swift */; };
 		FB887F68295370900073530D /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB887F67295370900073530D /* TipsViewController.swift */; };
 		FBA7A7F6294BD4DE004B6D2C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FBA7A7F5294BD4DE004B6D2C /* FirebaseAnalytics */; };
 		FBA7A7F8294BD4DE004B6D2C /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = FBA7A7F7294BD4DE004B6D2C /* FirebaseAppCheck */; };
@@ -70,7 +69,6 @@
 		FB827F1D274C52ED0050903A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB827F22274C52ED0050903A /* ChangingBabyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangingBabyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB861F712922F1CB00D31207 /* UserServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTest.swift; sourceTree = "<group>"; };
-		FB88270927C7F13200C3FBDA /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		FB887F67295370900073530D /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		FBB31C692932903A009A7DD0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FBC5C057291A994200A9BB49 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 			children = (
 				FB827F15274C52EB0050903A /* Main.storyboard */,
 				FB827F1A274C52ED0050903A /* LaunchScreen.storyboard */,
-				FB88270927C7F13200C3FBDA /* MenuCell.swift */,
 				FBB31C692932903A009A7DD0 /* Extension.swift */,
 			);
 			path = View;
@@ -356,7 +353,6 @@
 				FB827F14274C52EB0050903A /* MapViewController.swift in Sources */,
 				FBC5C05E291BA0CA00A9BB49 /* AccountViewController.swift in Sources */,
 				FB60A0C72919490D00E1B5BB /* HomeViewController.swift in Sources */,
-				FB88270A27C7F13200C3FBDA /* MenuCell.swift in Sources */,
 				FB827F10274C52EB0050903A /* AppDelegate.swift in Sources */,
 				FB54FEC527592B2700F320A5 /* DetailPlaceViewController.swift in Sources */,
 				FB827F12274C52EB0050903A /* SceneDelegate.swift in Sources */,
@@ -554,7 +550,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.4;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -591,7 +587,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.4;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

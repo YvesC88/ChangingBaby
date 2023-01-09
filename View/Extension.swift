@@ -20,8 +20,21 @@ extension UIViewController {
         textField.resignFirstResponder()
     }
     
-    func setUIButton(buttons: [UIButton]) {
-        let buttons = buttons
+    func setUIView(view: [UIView]) {
+        let views = view
+        for view in views {
+            view.layer.cornerRadius = 25
+            view.layer.shadowColor = UIColor.black.cgColor
+            view.layer.shadowOpacity = 0.1
+            view.center = self.view.center
+            view.layer.shadowOffset = CGSize.zero
+            view.layer.shadowRadius = 15
+            view.layer.backgroundColor = UIColor.white.cgColor
+        }
+    }
+    
+    func setUIButton(button: [UIButton]) {
+        let buttons = button
         for button in buttons {
             button.layer.borderColor = CGColor(red: 49/255, green: 48/255, blue: 121/255, alpha: 1)
             button.layer.cornerRadius = 25

@@ -13,18 +13,19 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     
     let userService = UserService(wrapper: FirebaseWrapper())
-    var delegate: SelectionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUIButton(buttons: [signInButton])
+        self.setUIButton(button: [signInButton])
     }
     
     // call signIn func with error's checking
     @IBAction func loginButtonTapped() {
         userService.signIn(mail: emailTextField.text!, password: passwordTextField.text!) { result, error  in
             guard error != nil else {
-                self.delegate?.didFinishAction()
+                if let navController = self.navigationController {
+                    navController.popViewController(animated: true)
+                }
                 return
             }
             self.presentAlert(title: "Erreur", message: error ?? "")
@@ -42,10 +43,5 @@ class SignInViewController: UIViewController {
         for field in textField {
             self.dismissKeyboard(sender, textField: field!)
         }
-    }
-    
-    // to dismiss SignInViewController
-    @IBAction func dismissSignInViewController() {
-        dismiss(animated: true)
     }
 }

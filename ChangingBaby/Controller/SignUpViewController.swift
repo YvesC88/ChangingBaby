@@ -14,11 +14,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     
     let userService = UserService(wrapper: FirebaseWrapper())
-    var delegate: SelectionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUIButton(buttons: [signUpButton])
+        self.setUIButton(button: [signUpButton])
     }
     
     // to dismiss keyboard with a gesture
@@ -29,16 +28,13 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    // to dismiss SignUpViewController
-    @IBAction func dismissSignUpViewController() {
-        dismiss(animated: true)
-    }
-    
     // call create func with error's checking
     @IBAction func signUpTapped() {
         userService.createUser(name: userNameTextField.text!, mail: emailTextField.text!, password: passwordTextField.text!) { result, error  in
             guard error != nil else {
-                self.delegate?.didFinishAction()
+                if let navController = self.navigationController {
+                    navController.popViewController(animated: true)
+                }
                 return
             }
             self.presentAlert(title: "Erreur", message: error ?? "")

@@ -9,10 +9,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    let searchController = UISearchController()
     var place: [Place] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -24,11 +22,19 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.keyboardDismissMode = .onDrag
         loadData()
         filteredPlace = place
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        if navigationItem.searchController == nil {
+//            navigationItem.searchController = searchController
+//        }
+//    }
     
     // load the place from firestore
     func loadData() {

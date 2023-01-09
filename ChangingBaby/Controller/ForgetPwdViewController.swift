@@ -15,7 +15,7 @@ class ForgetPwdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUIButton(buttons: [validateButton])
+        self.setUIButton(button: [validateButton])
     }
     
     // call new password func with error's checking
