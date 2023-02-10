@@ -10,11 +10,19 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var orangeView: UIView!
-    @IBOutlet weak var pinkView: UIView!
-    @IBOutlet weak var purpleView: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUIView(view: [topView, orangeView, pinkView, purpleView])
+        self.setUIView(view: [topView, orangeView])
+        dayDate()
+    }
+    
+    private func dayDate() {
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        dateFormatter.locale = Locale(identifier: "FR-fr")
+        dateLabel.text = "\(dateFormatter.string(from: now))"
     }
 }

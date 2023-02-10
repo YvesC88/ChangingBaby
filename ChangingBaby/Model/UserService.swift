@@ -109,4 +109,20 @@ class UserService {
         currentUser?.delete()
         db.collection("users").document(currentUser?.uid ?? "").delete()
     }
+    
+    func updateUserName(userName: String, completion: @escaping (String?, String?) -> ()) {
+        self.addDocument(name: userName, userId: getUser()!.uid) { error in
+            guard error != nil else {
+                self.updateUserProfile(userName: userName) { error in
+                    guard error != nil else {
+                        completion(userName, nil)
+                        return
+                    }
+                    completion(nil, error)
+                }
+                return
+            }
+            completion(nil, error)
+        }
+    }
 }

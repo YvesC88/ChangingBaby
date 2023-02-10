@@ -110,7 +110,8 @@ class FirebaseWrapper: FirebaseProtocol {
                                 category: document["category"] as? String ?? "",
                                 zip: document["zip"] as? Int ?? 00000,
                                 lat: document["lat"] as? Double ?? 0.0,
-                                long: document["long"] as? Double ?? 0.0))
+                                long: document["long"] as? Double ?? 0.0,
+                                hours: document["hours"] as? [String] ?? []))
         }
         return places
     }

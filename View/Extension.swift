@@ -37,7 +37,7 @@ extension UIViewController {
         let buttons = button
         for button in buttons {
             button.layer.borderColor = CGColor(red: 49/255, green: 48/255, blue: 121/255, alpha: 1)
-            button.layer.cornerRadius = 25
+            button.layer.cornerRadius = view.frame.width / 20
             button.layer.borderWidth = 2
         }
     }
@@ -66,19 +66,15 @@ extension AuthErrorCode.Code {
         case .wrongPassword:
             return "Le mot de passe est invalide ou l'utilisateur n'a pas de mot de passe."
         case .invalidEmail:
-            return "L'adresse email n'est pas correctement formatée."
+            return "L'adresse e-mail n'est pas correctement formatée."
         case .emailAlreadyInUse:
-            return "L'adresse email est déjà utilisée par un autre compte."
+            return "L'adresse e-mail est déjà utilisée par un autre compte."
         case .userNotFound:
-            return "Il n'y a pas d'utilisateur correspondant à cet email."
+            return "Il n'y a pas d'utilisateur correspondant à cet e-mail."
         case .missingEmail:
-            return "L'adresse email est manquante."
+            return "L'adresse e-mail est manquante."
         default:
             return "Désolé, quelque chose ne va pas."
         }
     }
-}
-
-protocol SelectionDelegate {
-    func didFinishAction()
 }

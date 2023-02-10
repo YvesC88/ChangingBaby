@@ -28,7 +28,7 @@ class SignInViewController: UIViewController {
                 }
                 return
             }
-            self.presentAlert(title: "Erreur", message: error ?? "")
+            self.presentAlert(title: "Oups", message: error ?? "")
         }
     }
     

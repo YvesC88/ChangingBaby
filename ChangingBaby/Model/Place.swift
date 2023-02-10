@@ -16,18 +16,5 @@ struct Place: Codable {
     let name, streetNumber, streetName, city, category: String
     let zip: Int
     let lat, long: Double
-}
-
-// class Poi for add annotation
-class Poi: NSObject, MKAnnotation {
-    // MARK: - Properties
-    
-    var name: String
-    var coordinate: CLLocationCoordinate2D
-    
-    // initialize the properties
-    init(name: String, coordinate: CLLocationCoordinate2D) {
-        self.name = name
-        self.coordinate = coordinate
-    }
+    let hours: [String]
 }

@@ -12,6 +12,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var confirmTextField: UITextField!
     
     let userService = UserService(wrapper: FirebaseWrapper())
     
@@ -30,14 +31,20 @@ class SignUpViewController: UIViewController {
     
     // call create func with error's checking
     @IBAction func signUpTapped() {
-        userService.createUser(name: userNameTextField.text!, mail: emailTextField.text!, password: passwordTextField.text!) { result, error  in
-            guard error != nil else {
-                if let navController = self.navigationController {
-                    navController.popViewController(animated: true)
+        if let userName = userNameTextField.text, let email = emailTextField.text, let password = passwordTextField.text {
+            if !userName.isEmpty, !email.isEmpty, !password.isEmpty {
+                userService.createUser(name: userName, mail: email, password: password) { result, error  in
+                    guard error != nil else {
+                        if let navController = self.navigationController {
+                            navController.popViewController(animated: true)
+                        }
+                        return
+                    }
+                    self.presentAlert(title: "Oups", message: error ?? "")
                 }
-                return
+            } else {
+                self.presentAlert(title: "Oups", message: "Un champ est manquant.")
             }
-            self.presentAlert(title: "Erreur", message: error ?? "")
         }
     }
 }

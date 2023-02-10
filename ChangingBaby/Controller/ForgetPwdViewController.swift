@@ -20,12 +20,14 @@ class ForgetPwdViewController: UIViewController {
     
     // call new password func with error's checking
     @IBAction func getNewPwd() {
-        userService.forgetPwd(userMail: (emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines))!) { error in
-            guard error != nil else {
-                self.presentAlert(title: "Succès", message: "La demande de réinitialisation du mot de passe a été envoyé par email.")
-                return
+        if let email = emailTextField.text {
+            userService.forgetPwd(userMail: email) { error in
+                guard error != nil else {
+                    self.presentAlert(title: "Succès", message: "La demande de réinitialisation du mot de passe a été envoyé par email.")
+                    return
+                }
+                self.presentAlert(title: "Oups", message: error ?? "")
             }
-            self.presentAlert(title: "Erreur", message: error ?? "")
         }
     }
     

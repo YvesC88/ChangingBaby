@@ -10,10 +10,9 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController {
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var getPositionButton: UIButton!
-    @IBOutlet weak var menuButton: UIButton!
-    @IBOutlet weak var accountButton: UIButton!
     
     let locationManager = CLLocationManager()
     var userPosition: CLLocation?
@@ -44,25 +43,6 @@ class MapViewController: UIViewController {
         mapView.setRegion(MKCoordinateRegion(center: userPosition!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
     }
     
-    // to present menu
-    @IBAction func presentMenu() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else { return }
-        let navMenuController = UINavigationController(rootViewController: sheetPresentationController)
-        setupUINavigationBar(navController: navMenuController)
-        self.present(navMenuController, animated: true, completion: nil)
-    }
-    
-    // to present AccountViewController for more options
-    @IBAction func presentAccount(_ sender: Any) {
-        self.presentVC(with: "AccountViewController")
-    }
-    
-    // to present a search bar for searching a place
-    @IBAction func search() {
-        self.presentVC(with: "SearchViewController")
-    }
-    
     // to set the view of the current user's location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard locations.count > 0 else { return }
@@ -82,10 +62,10 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     func setupPin() {
         guard self.place.count > 0 else { return }
         for object in 0...self.place.count - 1 {
-            mapView.addAnnotation(Poi(name: place[object].name,
-                                      coordinate: CLLocationCoordinate2D(
-                                        latitude: place[object].lat,
-                                        longitude: place[object].long)))
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: place[object].lat, longitude: place[object].long)
+            annotation.title = place[object].name
+            mapView.addAnnotation(annotation)
             mapView.delegate = self
             mapView.isRotateEnabled = true
         }

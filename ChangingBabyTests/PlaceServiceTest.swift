@@ -23,7 +23,8 @@ final class PlaceServiceTest: XCTestCase {
                                           category: "",
                                           zip: 12345,
                                           lat: 1.0,
-                                          long: 1.1)]
+                                          long: 1.1,
+                                          hours: [])]
         firebaseMock.placeError = nil
 
         var resultPlace: [Place]?

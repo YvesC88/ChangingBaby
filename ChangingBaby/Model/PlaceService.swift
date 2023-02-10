@@ -28,4 +28,13 @@ class PlaceService {
             }
         }
     }
+    
+    func addNewPlace(name: String, streetNumber: String?, streetName: String, city: String) {
+        let newPlace: [String: Any] = ["name": name,
+                                       "streetNumber": streetNumber ?? "",
+                                       "streetName": streetName,
+                                       "city": city]
+        let db = Firestore.firestore()
+        db.collection("inholdplace").document().setData(newPlace)
+    }
 }

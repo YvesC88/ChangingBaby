@@ -10,6 +10,7 @@ import MapKit
 
 class DetailPlaceViewController: UIViewController {
     @IBOutlet weak var addressView: UIView!
+    @IBOutlet weak var openingHoursTextView: UITextView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var itineraryButton: UIButton!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -27,6 +28,11 @@ class DetailPlaceViewController: UIViewController {
             self.title = i.name
             self.addressLabel.text = "\(i.streetNumber) \(i.streetName) \n\(i.zip) \(i.city)\nFrance"
             self.categoryLabel.text = i.category
+            var hoursLine: String = ""
+            for hour in i.hours {
+                hoursLine += "• \(hour)\n"
+            }
+            self.openingHoursTextView.text = hoursLine
         }
     }
     

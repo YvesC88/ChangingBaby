@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB03D60B298A775D00F45814 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03D60A298A775D00F45814 /* AccountTableViewController.swift */; };
+		FB03D62F298D202C00F45814 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03D62E298D202C00F45814 /* SettingsViewController.swift */; };
+		FB03D631298D50A700F45814 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03D630298D50A700F45814 /* EditProfileViewController.swift */; };
 		FB11870D293E3AE800BF84CF /* ForgetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11870C293E3AE800BF84CF /* ForgetPwdViewController.swift */; };
-		FB12142529238DE200641E76 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB12142429238DE200641E76 /* SearchViewController.swift */; };
+		FB12142529238DE200641E76 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB12142429238DE200641E76 /* SearchResultsViewController.swift */; };
+		FB15CA7F2972E11C00FEE718 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = FB15CA7E2972E11C00FEE718 /* MessageKit */; };
+		FB49475C29848F5F00405500 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB49475B29848F5E00405500 /* SearchViewController.swift */; };
 		FB54FEC127568E0A00F320A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC027568E0A00F320A5 /* MenuViewController.swift */; };
 		FB54FEC527592B2700F320A5 /* DetailPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB54FEC427592B2600F320A5 /* DetailPlaceViewController.swift */; };
 		FB60A0C52919473600E1B5BB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB60A0C42919473600E1B5BB /* SignUpViewController.swift */; };
@@ -31,7 +36,7 @@
 		FBA7A802294BD4DE004B6D2C /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = FBA7A801294BD4DE004B6D2C /* FirebasePerformance */; };
 		FBB31C6A2932903A009A7DD0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB31C692932903A009A7DD0 /* Extension.swift */; };
 		FBC5C058291A994200A9BB49 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5C057291A994200A9BB49 /* UserService.swift */; };
-		FBC5C05E291BA0CA00A9BB49 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */; };
+		FBC85B2329910B3700364B58 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC85B2229910B3700364B58 /* FormViewController.swift */; };
 		FBCAC93B274C5A3D00FE4093 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCAC93A274C5A3D00FE4093 /* MapKit.framework */; };
 		FBDCE2A42902E70E006A11C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBDCE2A32902E70E006A11C6 /* GoogleService-Info.plist */; };
 		FBDCE2B22906D97E006A11C6 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDCE2B12906D97E006A11C6 /* Place.swift */; };
@@ -52,8 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB03D60A298A775D00F45814 /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
+		FB03D62E298D202C00F45814 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FB03D630298D50A700F45814 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		FB11870C293E3AE800BF84CF /* ForgetPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdViewController.swift; sourceTree = "<group>"; };
-		FB12142429238DE200641E76 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FB12142429238DE200641E76 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		FB49475B29848F5E00405500 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FB50BB042986F99C0035DAD7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB50BB092987BD5E0035DAD7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB54FEC027568E0A00F320A5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FB54FEC427592B2600F320A5 /* DetailPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceViewController.swift; sourceTree = "<group>"; };
 		FB60A0C42919473600E1B5BB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +83,7 @@
 		FB887F67295370900073530D /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		FBB31C692932903A009A7DD0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FBC5C057291A994200A9BB49 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		FBC85B2229910B3700364B58 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		FBCAC93A274C5A3D00FE4093 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FBDCE2A32902E70E006A11C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FBDCE2B12906D97E006A11C6 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -90,6 +101,7 @@
 				FBA7A7FE294BD4DE004B6D2C /* FirebaseDatabase in Frameworks */,
 				FBA7A7F6294BD4DE004B6D2C /* FirebaseAnalytics in Frameworks */,
 				FBA7A7F8294BD4DE004B6D2C /* FirebaseAppCheck in Frameworks */,
+				FB15CA7F2972E11C00FEE718 /* MessageKit in Frameworks */,
 				FBA7A7FC294BD4DE004B6D2C /* FirebaseCrashlytics in Frameworks */,
 				FBCAC93B274C5A3D00FE4093 /* MapKit.framework in Frameworks */,
 				FBA7A7FA294BD4DE004B6D2C /* FirebaseAuth in Frameworks */,
@@ -176,13 +188,17 @@
 			children = (
 				FB60A0C62919490D00E1B5BB /* HomeViewController.swift */,
 				FB827F13274C52EB0050903A /* MapViewController.swift */,
-				FBC5C05D291BA0CA00A9BB49 /* AccountViewController.swift */,
+				FB03D60A298A775D00F45814 /* AccountTableViewController.swift */,
+				FB03D62E298D202C00F45814 /* SettingsViewController.swift */,
+				FB03D630298D50A700F45814 /* EditProfileViewController.swift */,
+				FBC85B2229910B3700364B58 /* FormViewController.swift */,
 				FB60A0C42919473600E1B5BB /* SignUpViewController.swift */,
 				FB60A0D1291970E900E1B5BB /* SignInViewController.swift */,
 				FB11870C293E3AE800BF84CF /* ForgetPwdViewController.swift */,
 				FB54FEC027568E0A00F320A5 /* MenuViewController.swift */,
 				FB54FEC427592B2600F320A5 /* DetailPlaceViewController.swift */,
-				FB12142429238DE200641E76 /* SearchViewController.swift */,
+				FB49475B29848F5E00405500 /* SearchViewController.swift */,
+				FB12142429238DE200641E76 /* SearchResultsViewController.swift */,
 				FB887F67295370900073530D /* TipsViewController.swift */,
 			);
 			name = Controller;
@@ -234,6 +250,7 @@
 				FBA7A7FD294BD4DE004B6D2C /* FirebaseDatabase */,
 				FBA7A7FF294BD4DE004B6D2C /* FirebaseFirestore */,
 				FBA7A801294BD4DE004B6D2C /* FirebasePerformance */,
+				FB15CA7E2972E11C00FEE718 /* MessageKit */,
 			);
 			productName = ChangingBaby;
 			productReference = FB827F0C274C52EB0050903A /* ChangingBaby.app */;
@@ -283,10 +300,12 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = FB827F03274C52EB0050903A;
 			packageReferences = (
 				FBA7A7F4294BD4DE004B6D2C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FB15CA7D2972E11C00FEE718 /* XCRemoteSwiftPackageReference "MessageKit" */,
 			);
 			productRefGroup = FB827F0D274C52EB0050903A /* Products */;
 			projectDirPath = "";
@@ -347,18 +366,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB03D62F298D202C00F45814 /* SettingsViewController.swift in Sources */,
 				FBB31C6A2932903A009A7DD0 /* Extension.swift in Sources */,
 				FBF47EC929427FFD000E3EAA /* FirebaseWrapper.swift in Sources */,
 				FBDCE2B82906DA44006A11C6 /* PlaceService.swift in Sources */,
 				FB827F14274C52EB0050903A /* MapViewController.swift in Sources */,
-				FBC5C05E291BA0CA00A9BB49 /* AccountViewController.swift in Sources */,
 				FB60A0C72919490D00E1B5BB /* HomeViewController.swift in Sources */,
+				FB03D60B298A775D00F45814 /* AccountTableViewController.swift in Sources */,
 				FB827F10274C52EB0050903A /* AppDelegate.swift in Sources */,
+				FB03D631298D50A700F45814 /* EditProfileViewController.swift in Sources */,
+				FBC85B2329910B3700364B58 /* FormViewController.swift in Sources */,
 				FB54FEC527592B2700F320A5 /* DetailPlaceViewController.swift in Sources */,
 				FB827F12274C52EB0050903A /* SceneDelegate.swift in Sources */,
 				FB11870D293E3AE800BF84CF /* ForgetPwdViewController.swift in Sources */,
-				FB12142529238DE200641E76 /* SearchViewController.swift in Sources */,
+				FB12142529238DE200641E76 /* SearchResultsViewController.swift in Sources */,
 				FB54FEC127568E0A00F320A5 /* MenuViewController.swift in Sources */,
+				FB49475C29848F5F00405500 /* SearchViewController.swift in Sources */,
 				FBC5C058291A994200A9BB49 /* UserService.swift in Sources */,
 				FB887F68295370900073530D /* TipsViewController.swift in Sources */,
 				FBDCE2B22906D97E006A11C6 /* Place.swift in Sources */,
@@ -392,6 +415,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FB827F16274C52EB0050903A /* Base */,
+				FB50BB042986F99C0035DAD7 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -400,6 +424,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FB827F1B274C52ED0050903A /* Base */,
+				FB50BB092987BD5E0035DAD7 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -682,6 +707,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FB15CA7D2972E11C00FEE718 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		FBA7A7F4294BD4DE004B6D2C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -693,6 +726,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FB15CA7E2972E11C00FEE718 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB15CA7D2972E11C00FEE718 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
 		FBA7A7F5294BD4DE004B6D2C /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FBA7A7F4294BD4DE004B6D2C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
