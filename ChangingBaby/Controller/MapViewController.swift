@@ -39,8 +39,8 @@ class MapViewController: UIViewController {
     
     // get current user's position
     @IBAction func getPosition(_ sender: Any) {
-        guard userPosition != nil else { return }
-        mapView.setRegion(MKCoordinateRegion(center: userPosition!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
+        guard let userPosition = userPosition else { return }
+        mapView.setRegion(MKCoordinateRegion(center: userPosition.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
     }
     
     // to set the view of the current user's location
@@ -60,16 +60,27 @@ class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     // to set all of pins on map
     func setupPin() {
-        guard self.place.count > 0 else { return }
-        for object in 0...self.place.count - 1 {
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: place[object].lat, longitude: place[object].long)
-            annotation.title = place[object].name
-            mapView.addAnnotation(annotation)
-            mapView.delegate = self
-            mapView.isRotateEnabled = true
+            guard !place.isEmpty else { return }
+            for object in place {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = CLLocationCoordinate2D(latitude: object.lat, longitude: object.long)
+                annotation.title = object.name
+                mapView.addAnnotation(annotation)
+                mapView.delegate = self
+                mapView.isRotateEnabled = true
+            }
         }
-    }
+//    func setupPin() {
+//        guard self.place.count > 0 else { return }
+//        for object in 0...self.place.count - 1 {
+//            let annotation = MKPointAnnotation()
+//            annotation.coordinate = CLLocationCoordinate2D(latitude: place[object].lat, longitude: place[object].long)
+//            annotation.title = place[object].name
+//            mapView.addAnnotation(annotation)
+//            mapView.delegate = self
+//            mapView.isRotateEnabled = true
+//        }
+//    }
     
     // filter and display the pin selected by user in DetailPlaceViewController
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotation) {

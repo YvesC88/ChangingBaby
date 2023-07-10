@@ -30,7 +30,7 @@ class DetailPlaceViewController: UIViewController {
             self.categoryLabel.text = i.category
             var hoursLine: String = ""
             for hour in i.hours {
-                hoursLine += "• \(hour)\n"
+                hoursLine += "\(hour)\n"
             }
             self.openingHoursTextView.text = hoursLine
         }

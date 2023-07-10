@@ -15,10 +15,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUIView(view: [topView, orangeView])
-        dayDate()
+        updateDateLabel()
     }
     
-    private func dayDate() {
+    private func updateDateLabel() {
         let now = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .full

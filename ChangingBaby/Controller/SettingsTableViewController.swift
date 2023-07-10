@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UITableViewController {
+class SettingsTableViewController: UITableViewController {
     
     let userService = UserService(wrapper: FirebaseWrapper())
     
