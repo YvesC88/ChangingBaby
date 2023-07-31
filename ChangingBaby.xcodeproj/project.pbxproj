@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB03D60B298A775D00F45814 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03D60A298A775D00F45814 /* AccountTableViewController.swift */; };
-		FB03D62F298D202C00F45814 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03D62E298D202C00F45814 /* SettingsViewController.swift */; };
+		FB03D62F298D202C00F45814 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03D62E298D202C00F45814 /* SettingsTableViewController.swift */; };
 		FB03D631298D50A700F45814 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03D630298D50A700F45814 /* EditProfileViewController.swift */; };
 		FB11870D293E3AE800BF84CF /* ForgetPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11870C293E3AE800BF84CF /* ForgetPwdViewController.swift */; };
 		FB12142529238DE200641E76 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB12142429238DE200641E76 /* SearchResultsViewController.swift */; };
@@ -58,13 +58,11 @@
 
 /* Begin PBXFileReference section */
 		FB03D60A298A775D00F45814 /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
-		FB03D62E298D202C00F45814 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FB03D62E298D202C00F45814 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		FB03D630298D50A700F45814 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		FB11870C293E3AE800BF84CF /* ForgetPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdViewController.swift; sourceTree = "<group>"; };
 		FB12142429238DE200641E76 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		FB49475B29848F5E00405500 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		FB50BB042986F99C0035DAD7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FB50BB092987BD5E0035DAD7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB54FEC027568E0A00F320A5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FB54FEC427592B2600F320A5 /* DetailPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceViewController.swift; sourceTree = "<group>"; };
 		FB60A0C42919473600E1B5BB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -189,7 +187,7 @@
 				FB60A0C62919490D00E1B5BB /* HomeViewController.swift */,
 				FB827F13274C52EB0050903A /* MapViewController.swift */,
 				FB03D60A298A775D00F45814 /* AccountTableViewController.swift */,
-				FB03D62E298D202C00F45814 /* SettingsViewController.swift */,
+				FB03D62E298D202C00F45814 /* SettingsTableViewController.swift */,
 				FB03D630298D50A700F45814 /* EditProfileViewController.swift */,
 				FBC85B2229910B3700364B58 /* FormViewController.swift */,
 				FB60A0C42919473600E1B5BB /* SignUpViewController.swift */,
@@ -366,7 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB03D62F298D202C00F45814 /* SettingsViewController.swift in Sources */,
+				FB03D62F298D202C00F45814 /* SettingsTableViewController.swift in Sources */,
 				FBB31C6A2932903A009A7DD0 /* Extension.swift in Sources */,
 				FBF47EC929427FFD000E3EAA /* FirebaseWrapper.swift in Sources */,
 				FBDCE2B82906DA44006A11C6 /* PlaceService.swift in Sources */,
@@ -415,7 +413,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				FB827F16274C52EB0050903A /* Base */,
-				FB50BB042986F99C0035DAD7 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -424,7 +421,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				FB827F1B274C52ED0050903A /* Base */,
-				FB50BB092987BD5E0035DAD7 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -560,6 +556,7 @@
 				DEVELOPMENT_TEAM = 8ZV67K9B93;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChangingBaby/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Changing Baby";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Votre position actuelle sera affichée sur la carte et sera utilisée pour vous fournir un itinéraire vers un lieu sélectionné.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Votre position actuelle sera affichée sur la carte et sera utilisée pour vous fournir un itinéraire vers un lieu sélectionné.";
@@ -575,7 +572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -597,6 +594,7 @@
 				DEVELOPMENT_TEAM = 8ZV67K9B93;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChangingBaby/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Changing Baby";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Votre position actuelle sera affichée sur la carte et sera utilisée pour vous fournir un itinéraire vers un lieu sélectionné.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Votre position actuelle sera affichée sur la carte et sera utilisée pour vous fournir un itinéraire vers un lieu sélectionné.";
@@ -612,7 +610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.yvescharpentier.ChangingBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

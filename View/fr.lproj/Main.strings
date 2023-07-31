@@ -1,0 +1,180 @@
+
+/* Class = "UILabel"; text = "Supprimer le compte"; ObjectID = "07Y-fV-nSB"; */
+"07Y-fV-nSB.text" = "Supprimer le compte";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "0LG-en-nfo"; */
+"0LG-en-nfo.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Menu"; ObjectID = "1IE-uc-VbC"; */
+"1IE-uc-VbC.title" = "Menu";
+
+/* Class = "UITabBarItem"; title = "Lieux"; ObjectID = "23W-0R-qxv"; */
+"23W-0R-qxv.title" = "Lieux";
+
+/* Class = "UINavigationItem"; title = "Accueil"; ObjectID = "42u-MY-3YR"; */
+"42u-MY-3YR.title" = "Accueil";
+
+/* Class = "UITextField"; placeholder = "Adresse e-mail"; ObjectID = "500-rq-1vj"; */
+"500-rq-1vj.placeholder" = "Adresse e-mail";
+
+/* Class = "UILabel"; text = "Comment nettoyer le siège de son bébé ?"; ObjectID = "5SE-bZ-psV"; */
+"5SE-bZ-psV.text" = "Comment nettoyer le siège de son bébé ?";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5eG-hH-cfu"; */
+"5eG-hH-cfu.text" = "Label";
+
+/* Class = "UILabel"; text = "Connexion"; ObjectID = "5hU-of-hKM"; */
+"5hU-of-hKM.text" = "Connexion";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6Lw-0s-M3a"; */
+"6Lw-0s-M3a.text" = "Label";
+
+/* Class = "UILabel"; text = "Où s'installer pour changer la couche de bébé ?"; ObjectID = "6st-A9-P99"; */
+"6st-A9-P99.text" = "Où s'installer pour changer la couche de bébé ?";
+
+/* Class = "UILabel"; text = "Paramètres"; ObjectID = "7MU-Th-lDc"; */
+"7MU-Th-lDc.text" = "Paramètres";
+
+/* Class = "UITextView"; text = "C'est aussi la possibilité de se créer un compte, et ainsi obtenir des fonctionnalités inédites !\n\nComme par exemple la possibilité de suggérer un nouveau lieu qui ne serait pas présent sur la carte."; ObjectID = "AOh-yi-jKJ"; */
+"AOh-yi-jKJ.text" = "C'est aussi la possibilité de se créer un compte, et ainsi obtenir des fonctionnalités inédites !\n\nComme par exemple la possibilité de suggérer un nouveau lieu qui ne serait pas présent sur la carte.";
+
+/* Class = "UIButton"; normalTitle = "Mettre à jour"; ObjectID = "B8U-2z-0lW"; */
+"B8U-2z-0lW.normalTitle" = "Mettre à jour";
+
+/* Class = "UINavigationItem"; title = "Profil"; ObjectID = "Bvw-v5-X34"; */
+"Bvw-v5-X34.title" = "Profil";
+
+/* Class = "UILabel"; text = "Connexion"; ObjectID = "CPz-gV-f1t"; */
+"CPz-gV-f1t.text" = "Connexion";
+
+/* Class = "UILabel"; text = "Les signes qui montrent que bébé doit être changé"; ObjectID = "E0T-7T-MFB"; */
+"E0T-7T-MFB.text" = "Les signes qui montrent que bébé doit être changé";
+
+/* Class = "UITextField"; placeholder = "Nom du lieu"; ObjectID = "E2J-5i-dqn"; */
+"E2J-5i-dqn.placeholder" = "Nom du lieu";
+
+/* Class = "UILabel"; text = "Un e-mail de réinitialisation du mot de passe sera envoyé."; ObjectID = "GGw-NP-0vs"; */
+"GGw-NP-0vs.text" = "Un e-mail de réinitialisation du mot de passe sera envoyé.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "I87-IA-RfT"; */
+"I87-IA-RfT.text" = "Label";
+
+/* Class = "UITextField"; text = "Label"; ObjectID = "IBK-iR-wZ9"; */
+"IBK-iR-wZ9.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Paramètres"; ObjectID = "IFy-LL-UOq"; */
+"IFy-LL-UOq.title" = "Paramètres";
+
+/* Class = "UILabel"; text = "Remplissez ce formulaire afin de proposer un nouvel emplacement qui n'apparaît pas sur la carte."; ObjectID = "IYx-Df-gTP"; */
+"IYx-Df-gTP.text" = "Remplissez ce formulaire afin de proposer un nouvel emplacement qui n'apparaît pas sur la carte.";
+
+/* Class = "UIButton"; normalTitle = "Valider"; ObjectID = "Iq8-bJ-wEh"; */
+"Iq8-bJ-wEh.normalTitle" = "Valider";
+
+/* Class = "UITextField"; placeholder = "N° de rue (facultatif)"; ObjectID = "JhS-cF-awV"; */
+"JhS-cF-awV.placeholder" = "N° de rue (facultatif)";
+
+/* Class = "UITextView"; text = "Si les pleurs de bébé peuvent indiquer que sa couche est pleine, d'autres indicateurs peuvent être à prendre en compte. Ainsi, la couche peut paraître plus humide ou avoir une tâche. L'odeur peut aussi évidemment vous indiquer que la couche doit être changée. Il existe aussi un type de couche spécifique possédant un indicateur d'urine. Par un changement de couleur notamment, ce dernier permet de déterminer en un coup d'oeil si la couche est sale ou non."; ObjectID = "Kf1-QJ-OA9"; */
+"Kf1-QJ-OA9.text" = "Si les pleurs de bébé peuvent indiquer que sa couche est pleine, d'autres indicateurs peuvent être à prendre en compte. Ainsi, la couche peut paraître plus humide ou avoir une tâche. L'odeur peut aussi évidemment vous indiquer que la couche doit être changée. Il existe aussi un type de couche spécifique possédant un indicateur d'urine. Par un changement de couleur notamment, ce dernier permet de déterminer en un coup d'oeil si la couche est sale ou non.";
+
+/* Class = "UILabel"; text = "Modifier le profil"; ObjectID = "Li8-gI-MWK"; */
+"Li8-gI-MWK.text" = "Modifier le profil";
+
+/* Class = "UITabBarItem"; title = "Accueil"; ObjectID = "P0A-2c-sxM"; */
+"P0A-2c-sxM.title" = "Accueil";
+
+/* Class = "UILabel"; text = "Inscription"; ObjectID = "Pi0-yd-cRP"; */
+"Pi0-yd-cRP.text" = "Inscription";
+
+/* Class = "UITextField"; placeholder = "Ville"; ObjectID = "Qaj-WW-SS3"; */
+"Qaj-WW-SS3.placeholder" = "Ville";
+
+/* Class = "UILabel"; text = "Nouveau lieu"; ObjectID = "Qic-Rv-WKp"; */
+"Qic-Rv-WKp.text" = "Nouveau lieu";
+
+/* Class = "UIButton"; normalTitle = "Mot de passe oublié ?"; ObjectID = "ROY-4r-Ksa"; */
+"ROY-4r-Ksa.normalTitle" = "Mot de passe oublié ?";
+
+/* Class = "UITextField"; placeholder = "Mot de passe (6 caractères minimum)"; ObjectID = "RhW-pL-LV8"; */
+"RhW-pL-LV8.placeholder" = "Mot de passe (6 caractères minimum)";
+
+/* Class = "UILabel"; text = "Les produits nécessaires pour changer la couche pleine de bébé :"; ObjectID = "T0h-cQ-Qfs"; */
+"T0h-cQ-Qfs.text" = "Les produits nécessaires pour changer la couche pleine de bébé :";
+
+/* Class = "UITextField"; placeholder = "Nom d'utilisateur"; ObjectID = "VBm-v9-TQK"; */
+"VBm-v9-TQK.placeholder" = "Nom d'utilisateur";
+
+/* Class = "UILabel"; text = "Déconnexion"; ObjectID = "XbY-gx-NQP"; */
+"XbY-gx-NQP.text" = "Déconnexion";
+
+/* Class = "UITextField"; placeholder = "Adresse e-mail"; ObjectID = "Z3k-NX-k2g"; */
+"Z3k-NX-k2g.placeholder" = "Adresse e-mail";
+
+/* Class = "UITextField"; placeholder = "Confirmer"; ObjectID = "aXS-d1-FfZ"; */
+"aXS-d1-FfZ.placeholder" = "Confirmer";
+
+/* Class = "UITextView"; text = "Pour nettoyer les fesses de votre tout-petit, vous aurez besoin de liniment, d’un gros coton maxi format carré ou rectangulaire, éventuellement d’une compresses stérile et des lingettes pour bébé lorsque vous êtes en dehors de votre domicile.\n\nLe plus important à retenir est que vos gestes doivent toujours être réalisés de l’avant vers l’arrière pour ne pas ramener des bactéries fécales vers le ventre de l’enfant ainsi que son sexe. Le liniment doit être appliqué sur votre coton doux pour nettoyer le siège.\n\nVous pouvez mettre deux couches de liniment pour créer une barrière protectrice sur la peau des fesses de votre bébé, mais dans tous les cas, ne le rincez surtout pas ! Ce faisant, vous annuleriez les effets protecteurs de ce produit.\n\nNe frottez jamais, et n’utilisez pas de produits trop agressifs. En cas de selles collantes, vous rincerez d’abord le siège à l’eau tiède, que vous sécherez à l’aide d’une compresse avant d’appliquer une couche épaisse de liniment."; ObjectID = "aug-7W-Bk5"; */
+"aug-7W-Bk5.text" = "Pour nettoyer les fesses de votre tout-petit, vous aurez besoin de liniment, d’un gros coton maxi format carré ou rectangulaire, éventuellement d’une compresses stérile et des lingettes pour bébé lorsque vous êtes en dehors de votre domicile.\n\nLe plus important à retenir est que vos gestes doivent toujours être réalisés de l’avant vers l’arrière pour ne pas ramener des bactéries fécales vers le ventre de l’enfant ainsi que son sexe. Le liniment doit être appliqué sur votre coton doux pour nettoyer le siège.\n\nVous pouvez mettre deux couches de liniment pour créer une barrière protectrice sur la peau des fesses de votre bébé, mais dans tous les cas, ne le rincez surtout pas ! Ce faisant, vous annuleriez les effets protecteurs de ce produit.\n\nNe frottez jamais, et n’utilisez pas de produits trop agressifs. En cas de selles collantes, vous rincerez d’abord le siège à l’eau tiède, que vous sécherez à l’aide d’une compresse avant d’appliquer une couche épaisse de liniment.";
+
+/* Class = "UILabel"; text = "Inscription"; ObjectID = "bBB-7k-TO0"; */
+"bBB-7k-TO0.text" = "Inscription";
+
+/* Class = "UIButton"; normalTitle = "Envoyer l'e-mail"; ObjectID = "dyR-oP-lEt"; */
+"dyR-oP-lEt.normalTitle" = "Envoyer l'e-mail";
+
+/* Class = "UITextField"; placeholder = "Rue"; ObjectID = "eYv-1M-DRl"; */
+"eYv-1M-DRl.placeholder" = "Rue";
+
+/* Class = "UITextView"; text = "Une fois vos mains bien lavées et votre nécessaire de toilette préparé, soutenez la nuque de votre bébé et installez-le sur le dos, sur sa table à langer. Celle-ci doit être réglée à bonne hauteur afin que vous évitiez tout inconfort pendant ce moment de douceur. Bien sûr, tout au long de cette opération, ne quittez jamais votre bébé. Si vous êtes à l'extérieur de votre habitation, en vadrouille ou en voyage, prévoyez de vous déplacer avec un tapis ou matelas à langer nomade que vous installerez sur une surface plane et sécurisée."; ObjectID = "fo0-tE-0Q1"; */
+"fo0-tE-0Q1.text" = "Une fois vos mains bien lavées et votre nécessaire de toilette préparé, soutenez la nuque de votre bébé et installez-le sur le dos, sur sa table à langer. Celle-ci doit être réglée à bonne hauteur afin que vous évitiez tout inconfort pendant ce moment de douceur. Bien sûr, tout au long de cette opération, ne quittez jamais votre bébé. Si vous êtes à l'extérieur de votre habitation, en vadrouille ou en voyage, prévoyez de vous déplacer avec un tapis ou matelas à langer nomade que vous installerez sur une surface plane et sécurisée.";
+
+/* Class = "UINavigationItem"; title = "Lieu"; ObjectID = "gFV-FY-kQK"; */
+"gFV-FY-kQK.title" = "Lieu";
+
+/* Class = "UIButton"; normalTitle = "S'inscrire"; ObjectID = "gWz-mH-iPU"; */
+"gWz-mH-iPU.normalTitle" = "S'inscrire";
+
+/* Class = "UINavigationItem"; title = "Nouveau lieu"; ObjectID = "iE1-3u-3g2"; */
+"iE1-3u-3g2.title" = "Nouveau lieu";
+
+/* Class = "UITextView"; text = "L’outil malin qui rendra vos sorties avec bébé beaucoup plus simples.\n Vous ne serez jamais en recherche de lieux pour changer votre bébé, l’application se charge de les localiser pour vous !"; ObjectID = "jHr-74-Nbv"; */
+"jHr-74-Nbv.text" = "L’outil malin qui rendra vos sorties avec bébé beaucoup plus simples.\n Vous ne serez jamais en recherche de lieux pour changer votre bébé, l’application se charge de les localiser pour vous !";
+
+/* Class = "UILabel"; text = "Adresse"; ObjectID = "kVa-sP-4lJ"; */
+"kVa-sP-4lJ.text" = "Adresse";
+
+/* Class = "UILabel"; text = "Changing Baby"; ObjectID = "lbr-UZ-zTh"; */
+"lbr-UZ-zTh.text" = "Changing Baby";
+
+/* Class = "UILabel"; text = "Saisissez l'adresse e-mail lors de votre inscription."; ObjectID = "nGn-Dy-Ymz"; */
+"nGn-Dy-Ymz.text" = "Saisissez l'adresse e-mail lors de votre inscription.";
+
+/* Class = "UIButton"; normalTitle = "Se connecter"; ObjectID = "qDj-7q-d72"; */
+"qDj-7q-d72.normalTitle" = "Se connecter";
+
+/* Class = "UIBarButtonItem"; title = "Précédent"; ObjectID = "r6e-QT-qwV"; */
+"r6e-QT-qwV.title" = "Précédent";
+
+/* Class = "UILabel"; text = "Horaires"; ObjectID = "rA7-hv-WPo"; */
+"rA7-hv-WPo.text" = "Horaires";
+
+/* Class = "UILabel"; text = "Fonctionnalités"; ObjectID = "rvl-rt-hlH"; */
+"rvl-rt-hlH.text" = "Fonctionnalités";
+
+/* Class = "UIButton"; normalTitle = "Changer ma photo de profil"; ObjectID = "s9B-Nm-3WS"; */
+"s9B-Nm-3WS.normalTitle" = "Changer ma photo de profil";
+
+/* Class = "UITextField"; placeholder = "Adresse e-mail"; ObjectID = "sNH-MV-RJN"; */
+"sNH-MV-RJN.placeholder" = "Adresse e-mail";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "tBO-uj-xVY"; */
+"tBO-uj-xVY.text" = "Title";
+
+/* Class = "UITextView"; text = "- du liniment oléo-calcaire\n- des couches\n- des carrés de coton\n- des lingettes hypoallergéniques\n- une crème de change\n- un petit gant de toilette humide\n- une tenue de rechange"; ObjectID = "wXf-AG-96H"; */
+"wXf-AG-96H.text" = "- du liniment oléo-calcaire\n- des couches\n- des carrés de coton\n- des lingettes hypoallergéniques\n- une crème de change\n- un petit gant de toilette humide\n- une tenue de rechange";
+
+/* Class = "UITextField"; placeholder = "Mot de passe"; ObjectID = "xbJ-O4-IqO"; */
+"xbJ-O4-IqO.placeholder" = "Mot de passe";
+
+/* Class = "UINavigationItem"; title = "Menu"; ObjectID = "zYX-IY-1vP"; */
+"zYX-IY-1vP.title" = "Menu";
