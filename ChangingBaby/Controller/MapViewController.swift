@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var getPositionButton: UIButton!
     
     let locationManager = CLLocationManager()
+    let userService = UserService(wrapper: FirebaseWrapper())
     var userPosition: CLLocation?
     var firstRequest: Bool = true
     
@@ -22,12 +23,11 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
+        loadPlaces()
         setupLocationManager()
     }
     
-    // load the place from firestore
-    func loadData() {
+    func loadPlaces() {
         let service = PlaceService(wrapper: FirebaseWrapper())
         service.fetchPlaces(collectionID: "places") { place, error in
             for data in place {
@@ -37,10 +37,21 @@ class MapViewController: UIViewController {
         }
     }
     
-    // get current user's position
     @IBAction func getPosition(_ sender: Any) {
         guard let userPosition = userPosition else { return }
         mapView.setRegion(MKCoordinateRegion(center: userPosition.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
+    }
+    
+    @IBAction func newPlace() {
+        if userService.isLogin {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "FormViewController") as? FormViewController else { return }
+            let navPlacesController = UINavigationController(rootViewController: sheetPresentationController)
+            setupUINavigationBar(navController: navPlacesController)
+            self.present(navPlacesController, animated: true, completion: nil)
+        } else {
+            self.presentAlert(title: "Oups", message: "Vous devez être connecté pour ajouter un lieu.")
+        }
     }
     
     // to set the view of the current user's location
@@ -70,17 +81,6 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
                 mapView.isRotateEnabled = true
             }
         }
-//    func setupPin() {
-//        guard self.place.count > 0 else { return }
-//        for object in 0...self.place.count - 1 {
-//            let annotation = MKPointAnnotation()
-//            annotation.coordinate = CLLocationCoordinate2D(latitude: place[object].lat, longitude: place[object].long)
-//            annotation.title = place[object].name
-//            mapView.addAnnotation(annotation)
-//            mapView.delegate = self
-//            mapView.isRotateEnabled = true
-//        }
-//    }
     
     // filter and display the pin selected by user in DetailPlaceViewController
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotation) {
