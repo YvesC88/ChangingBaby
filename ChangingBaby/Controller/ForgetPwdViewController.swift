@@ -18,7 +18,6 @@ class ForgetPwdViewController: UIViewController {
         self.setUIButton(button: [validateButton])
     }
     
-    // call new password func with error's checking
     @IBAction func getNewPwd() {
         if let email = emailTextField.text {
             userService.forgetPwd(userMail: email) { error in
@@ -31,12 +30,10 @@ class ForgetPwdViewController: UIViewController {
         }
     }
     
-    // dismiss forgetPwdViewController
     @IBAction func dismissForgetPwdViewController() {
         dismiss(animated: true)
     }
     
-    // dismiss keyboard with gesture
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         self.dismissKeyboard(sender, textField: emailTextField)
     }

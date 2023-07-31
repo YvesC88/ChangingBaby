@@ -15,11 +15,6 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    // dismiss the menu
-    @IBAction func dismissMenu() {
-        dismiss(animated: true, completion: nil)
-    }
 }
 
 extension MenuViewController: UITableViewDataSource, UITableViewDelegate {

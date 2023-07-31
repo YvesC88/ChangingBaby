@@ -19,7 +19,6 @@ class SignInViewController: UIViewController {
         self.setUIButton(button: [signInButton])
     }
     
-    // call signIn func with error's checking
     @IBAction func loginButtonTapped() {
         userService.signIn(mail: emailTextField.text!, password: passwordTextField.text!) { result, error  in
             guard error != nil else {
@@ -32,12 +31,10 @@ class SignInViewController: UIViewController {
         }
     }
     
-    // to go ForgetPwdViewController
     @IBAction func forgetPassword() {
         self.presentVC(with: "ForgetPwdViewController")
     }
     
-    // to dismiss Keyboard with gesture
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         let textField = [emailTextField, passwordTextField]
         for field in textField {

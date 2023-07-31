@@ -1148,14 +1148,14 @@ Comme par exemple la possibilité de suggérer un nouveau lieu qui ne serait pas
                             <tableViewSection id="Hgw-mc-KpZ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Uib-fm-obp">
-                                        <rect key="frame" x="20" y="18" width="390" height="42.666667938232422"/>
+                                        <rect key="frame" x="20" y="18" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uib-fm-obp" id="e8u-BW-Uo5">
-                                            <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="42.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se connecter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPz-gV-f1t">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="331.66666666666669" height="20.666666666666671"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="331.66666666666669" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1174,14 +1174,14 @@ Comme par exemple la possibilité de suggérer un nouveau lieu qui ne serait pas
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="DgQ-e0-RT5">
-                                        <rect key="frame" x="20" y="60.666667938232422" width="390" height="43.333332061767578"/>
+                                        <rect key="frame" x="20" y="61.666667938232422" width="390" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DgQ-e0-RT5" id="hCO-Ka-ISf">
-                                            <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="43.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S'inscrire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pi0-yd-cRP">
-                                                    <rect key="frame" x="20" y="10.999999999999998" width="331.66666666666669" height="21.333333333333329"/>
+                                                    <rect key="frame" x="20" y="11" width="331.66666666666669" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1204,7 +1204,7 @@ Comme par exemple la possibilité de suggérer un nouveau lieu qui ne serait pas
                             <tableViewSection id="lVa-AS-T2c">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Eta-0O-wbH">
-                                        <rect key="frame" x="20" y="140" width="390" height="45.333332061767578"/>
+                                        <rect key="frame" x="20" y="140.66666793823242" width="390" height="45.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eta-0O-wbH" id="2qY-Fw-2FY">
                                             <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="45.333332061767578"/>
@@ -1244,7 +1244,7 @@ Comme par exemple la possibilité de suggérer un nouveau lieu qui ne serait pas
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="7Wb-V1-KiE">
-                                        <rect key="frame" x="20" y="185.33333206176758" width="390" height="45.333332061767578"/>
+                                        <rect key="frame" x="20" y="186" width="390" height="45.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Wb-V1-KiE" id="FOj-ND-fmr">
                                             <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="45.333332061767578"/>
@@ -1288,14 +1288,14 @@ Comme par exemple la possibilité de suggérer un nouveau lieu qui ne serait pas
                             <tableViewSection id="A8E-dU-TrF">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Id8-mk-kqy">
-                                        <rect key="frame" x="20" y="266.66666412353516" width="390" height="42.666667938232422"/>
+                                        <rect key="frame" x="20" y="267.33333206176758" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Id8-mk-kqy" id="nxY-eY-sus">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="42.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se déconnecter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbY-gx-NQP">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="350" height="20.666666666666671"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="350" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemRedColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1319,6 +1319,12 @@ Comme par exemple la possibilité de suggérer un nouveau lieu qui ne serait pas
                     </tableView>
                     <navigationItem key="navigationItem" id="9Hd-mc-2vJ">
                         <barButtonItem key="backBarButtonItem" title="Précédent" id="r6e-QT-qwV"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="Q2J-pi-vx6">
+                            <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <action selector="dismissAccount:" destination="7IU-s8-Qbn" id="cz3-Hn-rLy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hi3-lJ-iDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

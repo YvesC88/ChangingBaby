@@ -19,10 +19,9 @@ class HomeViewController: UIViewController {
     }
     
     private func updateDateLabel() {
-        let now = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .full
         dateFormatter.locale = Locale(identifier: "FR-fr")
-        dateLabel.text = "\(dateFormatter.string(from: now))"
+        dateLabel.text = "\(dateFormatter.string(from: Date()))"
     }
 }

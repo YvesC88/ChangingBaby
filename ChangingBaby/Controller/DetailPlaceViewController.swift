@@ -19,29 +19,20 @@ class DetailPlaceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUIPlace()
+        setUIPlace(place: place.first!)
     }
     
-    // set ui for place
-    func setUIPlace() {
-        for i in self.place {
-            self.title = i.name
-            self.addressLabel.text = "\(i.streetNumber) \(i.streetName) \n\(i.zip) \(i.city)\nFrance"
-            self.categoryLabel.text = i.category
-            var hoursLine: String = ""
-            for hour in i.hours {
-                hoursLine += "\(hour)\n"
-            }
-            self.openingHoursTextView.text = hoursLine
-        }
+    func setUIPlace(place: Place) {
+        title = place.name
+        addressLabel.text = "\(place.streetNumber) \(place.streetName) \n\(place.zip) \(place.city)\nFrance"
+        categoryLabel.text = place.category
+        openingHoursTextView.text = place.hours.joined(separator: "\n")
     }
     
-    // dismiss DetailPlaceViewController
     @IBAction func dismissDetailPlaceViewController() {
         dismiss(animated: true, completion: nil)
     }
     
-    // to use apple plan for itinerary
     @IBAction func itineraryTo() {
         let coordinate = CLLocationCoordinate2D(latitude: place.first?.lat ?? 0.0, longitude: place.first?.long ?? 0.0)
         let placemark = MKPlacemark(coordinate: coordinate)

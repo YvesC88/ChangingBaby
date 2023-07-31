@@ -21,7 +21,6 @@ class SignUpViewController: UIViewController {
         self.setUIButton(button: [signUpButton])
     }
     
-    // to dismiss keyboard with a gesture
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         let textField = [userNameTextField, emailTextField, passwordTextField]
         for field in textField {
@@ -29,7 +28,6 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    // call create func with error's checking
     @IBAction func signUpTapped() {
         if let userName = userNameTextField.text, let email = emailTextField.text, let password = passwordTextField.text, let confirm = confirmTextField.text {
             if password == confirm {

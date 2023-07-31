@@ -24,33 +24,26 @@ class AccountTableViewController: UITableViewController {
         isUserLogin()
     }
     
+    @IBAction func dismissAccount(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func isUserLogin() {
         guard userService.isLogin else {
             title = "Bienvenue"
             return
         }
-        // show name'user
         title = "Bienvenue \(userService.getUser()?.displayName ?? "")"
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var hideRows = false
         if userService.isLogin {
-            if indexPath.section == 0 {
-                if indexPath.row == 0 || indexPath.row == 1 {
-                    return 0
-                }
-            }
+            hideRows = (indexPath.section == 0 && (indexPath.row == 0 || indexPath.row == 1))
         } else {
-            if indexPath.section == 1 {
-                if indexPath.row == 0 || indexPath.row == 1 {
-                    return 0
-                }
-            }
-            if indexPath.section == 2 {
-                return 0
-            }
+            hideRows = (indexPath.section == 1 && (indexPath.row == 0 || indexPath.row == 1)) || indexPath.section == 2
         }
-        return tableView.rowHeight
+        return hideRows ? 0 : tableView.rowHeight
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
